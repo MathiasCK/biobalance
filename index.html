@@ -20,55 +20,97 @@
     <body id="page-top">
 
         <!-- Navbar -->
-        <nav class="nav-bar">
+        <nav class="nav-bar white">
             <button role="button" title="navbar" class="navbar-btn flexed-10">
                 <i class="fas fa-bars"></i>
             </button>
             <a href="#page-top" class="logo"><i class="fab fa-acquisitions-incorporated"></i></a>
             <ul class="nav-items justify-content-center flexed-90">
-                <li class="nav-link"><a href="#">Link 1</a></li>
-                <li class="nav-link"><a href="#">Link 1</a></li>
-                <li class="nav-link"><a href="#">Link 1</a></li>
-                <li class="nav-link"><a href="#">Link 1</a></li>
+                <li class="nav-link"><a href="#problem">Problem</a></li>
+                <li class="nav-link"><a href="#solution">Solution</a></li>
+                <li class="nav-link"><a href="#how-it-works">How It Works</a></li>
+                <li class="nav-link"><a href="#gallery">Gallery</a></li>
+                <li class="nav-link"><a href="#why-it-works">Why It Works</a></li>
             </ul>
         </nav>
         <!-- Navbar end -->
        
         <!-- Welcome section -->
-        <section class="stacking-slide">
-            <img src="https://images.unsplash.com/photo-1564460549828-f0219a31bf90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+        <section id="welcome" class="sticky-section" style="background-image: url(img/welcome.jpg); user-select: none;" data-background="transparent">
+         <div class="overlay"></div>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <i class="welcome-icon fab fa-acquisitions-incorporated"></i>
+                        <h1 class="welcome-header">Treecubator</h1>
+                    </div>
+                    <h2 class="welcome-text">Our solution to save the rainforest</h2>
+                </div>
+            </div>
+            <a href="#problem" class="down-arrows" style="color: var(--light)">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </section>
         <!-- Welcome Section End -->
 
-        <!--  section -->
-        <section class="stacking-slide">
-            <img src="https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2018&q=80">
+        <!-- Problem Section -->
+        <!-- Explains why the problem is important from a social or technological perspective.  -->
+        <section id="problem" class="page-section-1 sticky-section" data-background="white">
+            <div class="container">
+                <h1 class="section-header">Problem</h1>
+                <div class="row justify-content-center">
+                    <img class="section-img" src="img/rainforest.jpg">
+                </div>
+                <div class="row">
+                    <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero atque incidunt repudiandae provident, temporibus tempore dolor esse est corrupti enim consectetur ab at quaerat eum earum ratione. Expedita exercitationem est eligendi consequuntur repellat dolorem tempora excepturi alias, perferendis similique nulla blanditiis. Excepturi expedita eum deleniti dolorem incidunt minima quidem sapiente, obcaecati, aliquam, beatae pariatur saepe doloribus optio repudiandae ab earum accusantium est consequatur porro soluta ratione tenetur voluptates cumque ipsum. Quas laudantium sapiente animi ea quo id voluptas ratione fugit! Itaque quia in dolore numquam aut maxime! Mollitia id aspernatur temporibus possimus ipsam autem doloremque nobis saepe, accusantium illo nihil.</p>
+                </div>
+            </div>
         </section>
-        <!--  Section End -->
+        <!-- Problem Section End -->
 
-        <!--  section -->
-        <section class="stacking-slide">
-            <img src="https://images.unsplash.com/photo-1562939568-91cdb83881ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80">
+        <!-- Solution Section solution  -->
+         <!-- Describes how the problem relates to the solution that you have identified. -->
+        <section id="solution" class="page-section-2 sticky-section" data-background="dark">
+            <div class="container">
+                <h1 class="section-header">Solution</h1>
+                <div class="row">
+                    <div class="flexed-50">
+                        <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi hic cum repellat perferendis id deserunt dolor iste, modi voluptate quasi. Excepturi labore odit hic ab assumenda nemo quae, eligendi repellat eaque illo cum? Quaerat, qui aliquam sapiente debitis ipsam minima non facere reprehenderit est sit, necessitatibus explicabo magni corrupti a, repudiandae et tempora consequatur fugiat. Ipsa illum temporibus sequi aperiam animi dicta corrupti magnam rerum, recusandae ducimus distinctio odio quidem optio sit tempora officia eos vero, vitae voluptatibus voluptas architecto! Labore harum temporibus unde porro. Veniam a, repudiandae nihil laborum numquam doloremque repellat quo praesentium modi perferendis. Incidunt, officiis reprehenderit?</p>
+                    </div>
+                <div class="flexed-50">
+                    <img class="section-img" src="img/solution.jpg">
+                </div>
+                </div>
+            </div>
         </section>
-        <!--  Section End -->
+        <!-- Solution Section End -->
 
-        <!-- Welcome section -->
-        <section class="stacking-slide">
-            <img src="https://images.unsplash.com/photo-1564460549828-f0219a31bf90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+        <!-- How it works -->
+        <!-- Describes what the solution is. For example, if your solution is a mobile app, then describe the app. You do not need to code the solution, but it is recommended that you create a lo-fi prototype to showcase your solution. -->
+        <section id="how-it-works" class="page-section-1 sticky-section" data-background="white">
+            <div class="container">
+                <h1 class="section-header">How it works</h1>
+                
+            </div>
         </section>
-        <!-- Welcome Section End -->
+        <!-- How it works end -->
 
-        <!--  section -->
-        <section class="stacking-slide">
-            <img src="https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2018&q=80">
+        <!-- Gallery -->
+        <section class="sticky-section" data-background="transparent-dark">
+            <img src="img/welcome.jpg">
         </section>
-        <!--  Section End -->
+        <!-- Gallery End -->
 
-        <!--  section -->
-        <section class="stacking-slide">
-            <img src="https://images.unsplash.com/photo-1562939568-91cdb83881ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80">
+        <!-- Why it works -->
+        <!-- In depth of how it works -->
+        <section id="why-it-works" class="page-section-2 sticky-section" data-background="dark">
+            <div class="container">
+                <h1 class="section-header">Why it works</h1>
+            </div>
         </section>
-        <!--  Section End -->
+        <!-- Why it works end -->
 
         <!-- Script -->
         <script src="js/app.js"></script>
