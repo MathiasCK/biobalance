@@ -1,135 +1,185 @@
 <html lang="en">
-    <head>
-        <!--Meta -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <!--Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Stylesheet for this website -->
-        <link rel="stylesheet" href="./css/style.css">
+    <!-- Stylesheet for this website -->
+    <link rel="stylesheet" href="./css/style.css" />
 
-        <!-- Font awesome -->
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-        crossorigin="anonymous"/>
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/jpg" href="img/tree.jpg"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="img/tree.jpg" />
 
-        <!-- Title -->
-        <title>Treecubator | Saving the rainforest</title>
-    </head>
-    <body id="page-top">
+    <!-- Title -->
+    <title>Treecubator | Saving the rainforest</title>
+  </head>
+  <body id="home">
+    <!-- Navbar -->
+    <nav class="nav-bar white">
+      <button role="button" title="navbar" class="navbar-btn flexed-10">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="#home" class="logo"><i class="fab fa-acquisitions-incorporated"></i></a>
+      <ul class="nav-items justify-content-center flexed-90">
+        <li style="visibility: hidden" class="nav-link">
+          <a class="nav-item" href="#welcome"></a>
+        </li>
+        <li class="nav-link"><a class="nav-item" href="#problem">Problem</a></li>
+        <li class="nav-link"><a class="nav-item" href="#solution">Solution</a></li>
+        <li class="nav-link"><a class="nav-item" href="#how-it-works">How It Works</a></li>
+        <li class="nav-link"><a class="nav-item" href="#gallery">Gallery</a></li>
+        <li class="nav-link"><a class="nav-item" href="#why-it-works">Why It Works</a></li>
+      </ul>
+    </nav>
+    <!-- Navbar end -->
 
-        <!-- Navbar -->
-        <nav class="nav-bar white">
-            <button role="button" title="navbar" class="navbar-btn flexed-10">
-                <i class="fas fa-bars"></i>
-            </button>
-            <a href="#page-top" class="logo"><i class="fab fa-acquisitions-incorporated"></i></a>
-            <ul class="nav-items justify-content-center flexed-90">
-                <li style="visibility: hidden;" class="nav-link"><a class="nav-item" href="#welcome"></a></li>
-                <li class="nav-link"><a class="nav-item" href="#problem">Problem</a></li>
-                <li class="nav-link"><a class="nav-item" href="#solution">Solution</a></li>
-                <li class="nav-link"><a class="nav-item" href="#how-it-works">How It Works</a></li>
-                <li class="nav-link"><a class="nav-item" href="#gallery">Gallery</a></li>
-                <li class="nav-link"><a class="nav-item" href="#why-it-works">Why It Works</a></li>
-            </ul>
-        </nav>
-        <!-- Navbar end -->
-       
-        <!-- Welcome section -->
-        <section id="welcome" class="sticky-section" style="background-image: url(img/welcome.jpg); user-select: none;" data-background="transparent">
-         <div class="overlay"></div>
-            <div class="content">
-                <div class="container">
-                    <div class="row">
-                        <i class="welcome-icon fab fa-acquisitions-incorporated"></i>
-                        <h1 class="welcome-header">Treecubator</h1>
-                    </div>
-                    <h2 class="welcome-text">Our solution to save the rainforest</h2>
-                </div>
-            </div>
-            <a href="#problem" class="down-arrows" style="color: var(--light)">
-                <i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i>
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </section>
-        <!-- Welcome Section End -->
+    <!-- Welcome section -->
+    <section
+      id="welcome"
+      class="sticky-section"
+      style="background-image: url(img/welcome.jpg); user-select: none"
+      data-background="transparent"
+    >
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <i class="welcome-icon fab fa-acquisitions-incorporated"></i>
+            <h1 class="welcome-header">Treecubator</h1>
+          </div>
+          <h2 class="welcome-text">Our solution to save the rainforest</h2>
+        </div>
+      </div>
+      <a href="#problem" class="down-arrows" style="color: var(--light)">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+    <!-- Welcome Section End -->
 
-        <!-- Problem Section -->
-        <!-- Explains why the problem is important from a social or technological perspective. -->
-        <section id="problem" class="page-section-1 sticky-section" data-background="white">
-            <div class="container">
-                <h1 class="section-header">Problem</h1>
-                <div class="row justify-content-center">
-                    <img class="section-img-dark" src="img/rainforest.jpg">
-                </div>
-                <div class="row">
-                    <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero atque incidunt repudiandae provident, temporibus tempore dolor esse est corrupti enim consectetur ab at quaerat eum earum ratione. Expedita exercitationem est eligendi consequuntur repellat dolorem tempora excepturi alias, perferendis similique nulla blanditiis. Excepturi expedita eum deleniti dolorem incidunt minima quidem sapiente, obcaecati, aliquam, beatae pariatur saepe doloribus optio repudiandae ab earum accusantium est consequatur porro soluta ratione tenetur voluptates cumque ipsum. Quas laudantium sapiente animi ea quo id voluptas ratione fugit! Itaque quia in dolore numquam aut maxime! Mollitia id aspernatur temporibus possimus ipsam autem doloremque nobis saepe, accusantium illo nihil.</p>
-                </div>
-            </div>
-        </section>
-        <!-- Problem Section End -->
+    <!-- Problem Section -->
+    <!-- Explains why the problem is important from a social or technological perspective. -->
+    <section id="problem" class="page-section-1 sticky-section" data-background="white">
+      <div class="container">
+        <h1 class="section-header">Problem</h1>
+        <div class="row justify-content-center">
+          <img class="section-img-dark" src="img/rainforest.jpg" />
+        </div>
+        <div class="row">
+          <p class="section-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero atque incidunt
+            repudiandae provident, temporibus tempore dolor esse est corrupti enim consectetur ab at
+            quaerat eum earum ratione. Expedita exercitationem est eligendi consequuntur repellat
+            dolorem tempora excepturi alias, perferendis similique nulla blanditiis. Excepturi
+            expedita eum deleniti dolorem incidunt minima quidem sapiente, obcaecati, aliquam,
+            beatae pariatur saepe doloribus optio repudiandae ab earum accusantium est consequatur
+            porro soluta ratione tenetur voluptates cumque ipsum. Quas laudantium sapiente animi ea
+            quo id voluptas ratione fugit! Itaque quia in dolore numquam aut maxime! Mollitia id
+            aspernatur temporibus possimus ipsam autem doloremque nobis saepe, accusantium illo
+            nihil.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Problem Section End -->
 
-        <!-- Solution Section solution  -->
-         <!-- Describes how the problem relates to the solution that you have identified. -->
-        <section id="solution" class="page-section-2 sticky-section" data-background="dark">
-            <div class="container">
-                <h1 class="section-header">Solution</h1>
-                <div class="row">
-                    <div class="flexed-50">
-                        <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi hic cum repellat perferendis id deserunt dolor iste, modi voluptate quasi. Excepturi labore odit hic ab assumenda nemo quae, eligendi repellat eaque illo cum? Quaerat, qui aliquam sapiente debitis ipsam minima non facere reprehenderit est sit, necessitatibus explicabo magni corrupti a, repudiandae et tempora consequatur fugiat. Ipsa illum temporibus sequi aperiam animi dicta corrupti magnam rerum, recusandae ducimus distinctio odio quidem optio sit tempora officia eos vero, vitae voluptatibus voluptas architecto! Labore harum temporibus unde porro. Veniam a, repudiandae nihil laborum numquam doloremque repellat quo praesentium modi perferendis. Incidunt, officiis reprehenderit?</p>
-                    </div>
-                <div class="flexed-50">
-                    <img class="section-img-light" src="img/solution.jpg">
-                </div>
-                </div>
-            </div>
-        </section>
-        <!-- Solution Section End -->
+    <!-- Solution Section solution  -->
+    <!-- Describes how the problem relates to the solution that you have identified. -->
+    <section id="solution" class="page-section-2 sticky-section" data-background="dark">
+      <div class="container">
+        <h1 class="section-header">Solution</h1>
+        <div class="row">
+          <div class="flexed-50">
+            <p class="section-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi hic cum repellat
+              perferendis id deserunt dolor iste, modi voluptate quasi. Excepturi labore odit hic ab
+              assumenda nemo quae, eligendi repellat eaque illo cum? Quaerat, qui aliquam sapiente
+              debitis ipsam minima non facere reprehenderit est sit, necessitatibus explicabo magni
+              corrupti a, repudiandae et tempora consequatur fugiat. Ipsa illum temporibus sequi
+              aperiam animi dicta corrupti magnam rerum, recusandae ducimus distinctio odio quidem
+              optio sit tempora officia eos vero, vitae voluptatibus voluptas architecto! Labore
+              harum temporibus unde porro. Veniam a, repudiandae nihil laborum numquam doloremque
+              repellat quo praesentium modi perferendis. Incidunt, officiis reprehenderit?
+            </p>
+          </div>
+          <div class="flexed-50">
+            <img class="section-img-light" src="img/solution.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Solution Section End -->
 
-        <!-- How it works -->
-        <!-- Describes what the solution is. For example, if your solution is a mobile app, then describe the app. You do not need to code the solution, but it is recommended that you create a lo-fi prototype to showcase your solution. -->
-        <section id="how-it-works" class="page-section-1 sticky-section" data-background="white">
-            <div class="container">
-                <h1 class="section-header">How it works</h1>
-                
-            </div>
-        </section>
-        <!-- How it works end -->
+    <!-- How it works -->
+    <!-- Describes what the solution is. For example, if your solution is a mobile app, then describe the app. You do not need to code the solution, but it is recommended that you create a lo-fi prototype to showcase your solution. -->
+    <section id="how-it-works" class="page-section-1 sticky-section" data-background="white">
+      <div class="container">
+        <h1 class="section-header">How it works</h1>
+      </div>
+    </section>
+    <!-- How it works end -->
 
-        <!-- Gallery -->
-        <section id="gallery" class="sticky-section" data-background="transparent-dark">
-            <img src="img/welcome.jpg">
-        </section>
-        <!-- Gallery End -->
+    <!-- Gallery -->
+    <section id="gallery" class="sticky-section" data-background="transparent-dark">
+      <img src="img/welcome.jpg" />
+    </section>
+    <!-- Gallery End -->
 
-        <!-- Why it works -->
-        <!-- In depth of how it works -->
-        <section id="why-it-works" class="page-section-2 sticky-section" data-background="dark">
-            <div class="container">
-                <h1 class="section-header">Why it works</h1>
-                <div class="row">
-                    <div class="flexed-33">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, suscipit perspiciatis! Nesciunt, quos nam. Et eveniet beatae exercitationem consequuntur itaque delectus debitis ex iure illo animi laboriosam sequi consectetur, vitae obcaecati voluptate provident? Suscipit et, voluptatum beatae repellat tempore dignissimos quos a impedit hic itaque temporibus amet corporis nam reiciendis harum cum ipsa. Explicabo eaque a reprehenderit ipsum impedit sequi officiis illo dolorem dignissimos dolorum veniam omnis laboriosam ut dicta nisi doloribus accusantium eveniet officia molestias vero, minima, quam laudantium? Sapiente dignissimos aperiam consequuntur, laborum ducimus atque neque, eos nulla mollitia tenetur rerum, nemo ipsam consectetur? Eaque distinctio est quidem!
-                    </div>
-                    <div class="flexed-33">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolorem officia ducimus vel a magnam laborum ab aliquam iste veritatis, minima odio ipsum aspernatur molestias nesciunt nisi eum voluptas accusantium! Nulla veritatis ipsa fugit optio facilis officia labore expedita et error, minima repudiandae omnis debitis perspiciatis in sunt autem doloremque dolores. Fugiat dignissimos similique laudantium ducimus nihil corrupti excepturi obcaecati molestiae esse, consequatur debitis quidem illum maxime eligendi blanditiis, est reprehenderit asperiores, maiores sed nulla inventore culpa necessitatibus natus? Officiis odio eum quidem reiciendis, error sunt minima odit doloremque cupiditate dicta consequatur aliquid exercitationem architecto voluptatem fugit doloribus, ea impedit?
-                    </div>
-                    <div class="flexed-33">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores placeat excepturi tempore molestiae voluptatum eaque nemo sapiente, cum officia tempora, hic quam, nisi ea quis quasi aliquid labore minus sit asperiores! Repudiandae nulla distinctio voluptates numquam id sapiente enim perspiciatis animi, beatae nostrum ea sunt, dolorem necessitatibus libero similique est repellat dolorum, optio cum porro laudantium facilis iste a ipsa. Facilis aliquam culpa quasi cupiditate quae obcaecati itaque provident illo aperiam numquam recusandae quos sed, ipsum at impedit fuga, debitis temporibus nobis adipisci accusantium magni ad ut incidunt eius? Beatae vero consectetur voluptas laboriosam, corrupti quae quisquam totam excepturi eius.
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Why it works end -->
+    <!-- Why it works -->
+    <!-- In depth of how it works -->
+    <section id="why-it-works" class="page-section-2 sticky-section" data-background="dark">
+      <div class="container">
+        <h1 class="section-header">Why it works</h1>
+        <div class="row">
+          <div class="flexed-33">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, suscipit perspiciatis!
+            Nesciunt, quos nam. Et eveniet beatae exercitationem consequuntur itaque delectus
+            debitis ex iure illo animi laboriosam sequi consectetur, vitae obcaecati voluptate
+            provident? Suscipit et, voluptatum beatae repellat tempore dignissimos quos a impedit
+            hic itaque temporibus amet corporis nam reiciendis harum cum ipsa. Explicabo eaque a
+            reprehenderit ipsum impedit sequi officiis illo dolorem dignissimos dolorum veniam omnis
+            laboriosam ut dicta nisi doloribus accusantium eveniet officia molestias vero, minima,
+            quam laudantium? Sapiente dignissimos aperiam consequuntur, laborum ducimus atque neque,
+            eos nulla mollitia tenetur rerum, nemo ipsam consectetur? Eaque distinctio est quidem!
+          </div>
+          <div class="flexed-33">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia dolorem officia
+            ducimus vel a magnam laborum ab aliquam iste veritatis, minima odio ipsum aspernatur
+            molestias nesciunt nisi eum voluptas accusantium! Nulla veritatis ipsa fugit optio
+            facilis officia labore expedita et error, minima repudiandae omnis debitis perspiciatis
+            in sunt autem doloremque dolores. Fugiat dignissimos similique laudantium ducimus nihil
+            corrupti excepturi obcaecati molestiae esse, consequatur debitis quidem illum maxime
+            eligendi blanditiis, est reprehenderit asperiores, maiores sed nulla inventore culpa
+            necessitatibus natus? Officiis odio eum quidem reiciendis, error sunt minima odit
+            doloremque cupiditate dicta consequatur aliquid exercitationem architecto voluptatem
+            fugit doloribus, ea impedit?
+          </div>
+          <div class="flexed-33">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores placeat excepturi
+            tempore molestiae voluptatum eaque nemo sapiente, cum officia tempora, hic quam, nisi ea
+            quis quasi aliquid labore minus sit asperiores! Repudiandae nulla distinctio voluptates
+            numquam id sapiente enim perspiciatis animi, beatae nostrum ea sunt, dolorem
+            necessitatibus libero similique est repellat dolorum, optio cum porro laudantium facilis
+            iste a ipsa. Facilis aliquam culpa quasi cupiditate quae obcaecati itaque provident illo
+            aperiam numquam recusandae quos sed, ipsum at impedit fuga, debitis temporibus nobis
+            adipisci accusantium magni ad ut incidunt eius? Beatae vero consectetur voluptas
+            laboriosam, corrupti quae quisquam totam excepturi eius.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why it works end -->
 
-
-
-        <!-- Script -->
-        <script src="js/app.js"></script>
-    </body>
+    <!-- Script -->
+    <script src="js/app.js"></script>
+  </body>
 </html>
