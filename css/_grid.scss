@@ -13,13 +13,6 @@ Framework
     display: flex;
     margin: auto;
   }
-  
-  @media screen and (max-width: 774px) {
-    .row {
-      display: block;
-    }
-}
-
 
 .flexed-10 {
 -ms-flex: 0 0 10%;
@@ -61,4 +54,30 @@ max-width: 67%;
 -ms-flex: 0 0 100%;
 flex: 0 0 67%;
 max-width: 100%;
+}
+
+@media screen and (max-width: 774px) {
+  .row {
+    display: block;
+  }
+
+  .flexed-10,
+  .flexed-25,
+  .flexed-33,
+  .flexed-50,
+  .flexed-67,
+  .flexed-90,
+  .flexed-100 {
+    -ms-flex: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    }
+    .sticky-section {
+      position: static !important;
+      min-height: 100vh !important;
+      height: auto !important;
+    }
+    #welcome {
+      padding-top: 50%;
+    }
 }
