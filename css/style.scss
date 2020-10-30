@@ -1,6 +1,7 @@
 @import url('https://rsms.me/inter/inter.css');
 @import './reset';
 @import './whyitworks';
+@import'./grid';
 
 
 /*
@@ -111,69 +112,7 @@ w-max-100 {
   display: flex;
 }
 
-/*
----------
-Framework
----------
-*/
 
-.container {
-  width: 70%;
-  margin: auto;
-}
-
-.row {
-  display: flex;
-  margin: auto;
-}
-
-@media screen and (max-width: 500px) {
-  .row {
-    display: block;
-  }
-}
-
-.flexed-10 {
-  -ms-flex: 0 0 10%;
-  flex: 0 0 10%;
-  max-width: 10%;
-}
-
-.flexed-25 {
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.flexed-33 {
-  -ms-flex: 0 0 33%;
-  flex: 0 0 33%;
-  max-width: 33%;
-}
-
-.flexed-50 {
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.flexed-90 {
-  -ms-flex: 0 0 90%;
-  flex: 0 0 90%;
-  max-width: 90%;
-}
-
-.flexed-67 {
-  -ms-flex: 0 0 67%;
-  flex: 0 0 67%;
-  max-width: 67%;
-}
-
-.flexed-100 {
-  -ms-flex: 0 0 100%;
-  flex: 0 0 67%;
-  max-width: 100%;
-}
 
 /*
   ------- 
@@ -271,6 +210,9 @@ Framework
     .logo {
       color: black;
     }
+    .nav-btn {
+      color: black;
+    }
     box-shadow: var(--shadow);
   }
   &.transparent {
@@ -279,6 +221,9 @@ Framework
       color: var(--light);
     }
     .logo {
+      color: var(--light);
+    }
+    .nav-btn {
       color: var(--light);
     }
   }
@@ -291,6 +236,9 @@ Framework
     .logo {
       color: black;
     }
+    .nav-btn {
+      color: black;
+    }
   }
 }
 
@@ -298,39 +246,11 @@ Framework
     border-bottom: 1px solid var(--secondary);
   }
 
-
-  .navbar-btn {
-    float: right;
-    color: var(--bg-3);
-    font-size: 30px;
-    display: none;
-    &.welcome {
-      background-color: transparent;
-      .nav-link {
-        color: var(--light);
-      }
-      .logo {
-        color: var(--light);
-      }
-    }
-    &.dark {
-      background-color: #212121;
-      .nav-link {
-        color: var(--light);
-      }
-      .logo {
-        color: var(--light);
-      }
-      backdrop-filter: unset;
-      opacity: 1;
-    }
-}
-
-.navbar-btn {
-  float: right;
-  color: var(--bg-3);
-  font-size: 30px;
+.nav-btn {
   display: none;
+  color: var(--light);
+  font-size: 40px;
+  padding: 20px 20px;
 }
 
 .logo {
@@ -347,11 +267,7 @@ Framework
 
 .nav-link {
   padding: 10px 20px;
-  color: var(--light);
-  border-bottom: 1px solid transparent;
-  &:hover {
-    border-bottom: 1px solid var(--secondary);
-  }
+  color: var(--light)
 }
 
 .nav-link a {
@@ -360,33 +276,47 @@ Framework
   color: var(--text-on-bg-1);
 }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: #000;
-  z-index: 2;
-  opacity: 0.6;
+@media screen and (max-width: 774px) {
+  .nav-btn {
+    display: inline-block !important;
+  }
+  .nav-link {
+    display: none;
+  }
+  .nav-bar {
+    justify-content: space-between;
+  }
 }
 
-.content {
-  position: relative;
-  width: 100%;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  z-index: 10;
-}
 
 /*
   -------
   Welcome
   -------
   */
+
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    z-index: 2;
+    opacity: 0.6;
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 10;
+  }
 
 .welcome-header {
   padding: 10px;
