@@ -1,0 +1,64 @@
+/*
+---------
+Framework
+---------
+*/
+
+.container {
+    width: 70%;
+    margin: auto;
+  }
+  
+  .row {
+    display: flex;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 774px) {
+    .row {
+      display: block;
+    }
+}
+
+
+.flexed-10 {
+-ms-flex: 0 0 10%;
+flex: 0 0 10%;
+max-width: 10%;
+}
+
+.flexed-25 {
+-ms-flex: 0 0 25%;
+flex: 0 0 25%;
+max-width: 25%;
+}
+
+.flexed-33 {
+-ms-flex: 0 0 33%;
+flex: 0 0 33%;
+max-width: 33%;
+}
+
+.flexed-50 {
+-ms-flex: 0 0 50%;
+flex: 0 0 50%;
+max-width: 50%;
+}
+
+.flexed-90 {
+-ms-flex: 0 0 90%;
+flex: 0 0 90%;
+max-width: 90%;
+}
+
+.flexed-67 {
+-ms-flex: 0 0 67%;
+flex: 0 0 67%;
+max-width: 67%;
+}
+
+.flexed-100 {
+-ms-flex: 0 0 100%;
+flex: 0 0 67%;
+max-width: 100%;
+}
