@@ -1,7 +1,7 @@
 @import url('https://rsms.me/inter/inter.css');
 @import './reset';
 @import './whyitworks';
-
+@import './howitworks';
 
 /*
 -------
@@ -294,36 +294,35 @@ Framework
   }
 }
 
-  .active {
-    border-bottom: 1px solid var(--secondary);
+.active {
+  border-bottom: 1px solid var(--secondary);
+}
+
+.navbar-btn {
+  float: right;
+  color: var(--bg-3);
+  font-size: 30px;
+  display: none;
+  &.welcome {
+    background-color: transparent;
+    .nav-link {
+      color: var(--light);
+    }
+    .logo {
+      color: var(--light);
+    }
   }
-
-
-  .navbar-btn {
-    float: right;
-    color: var(--bg-3);
-    font-size: 30px;
-    display: none;
-    &.welcome {
-      background-color: transparent;
-      .nav-link {
-        color: var(--light);
-      }
-      .logo {
-        color: var(--light);
-      }
+  &.dark {
+    background-color: #212121;
+    .nav-link {
+      color: var(--light);
     }
-    &.dark {
-      background-color: #212121;
-      .nav-link {
-        color: var(--light);
-      }
-      .logo {
-        color: var(--light);
-      }
-      backdrop-filter: unset;
-      opacity: 1;
+    .logo {
+      color: var(--light);
     }
+    backdrop-filter: unset;
+    opacity: 1;
+  }
 }
 
 .navbar-btn {
