@@ -314,6 +314,10 @@ Framework
     
   }
 
+  .active {
+    border-bottom: 1px solid var(--secondary);
+  }
+
 
   .navbar-btn {
     float: right;
