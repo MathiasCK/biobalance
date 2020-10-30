@@ -642,7 +642,8 @@ body {
   --text-on-bg-3: var(--light);
   --border: 1px solid rgba(0, 0, 0, 0.1);
   --border-bottom: 1px solid var(--secondary);
-  --shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0px 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-white: 0px 8px 30px rgba(1, 1, 1, 0.12);
   --border-hover-color: var(--secondary);
   --h-font: 'Inter', sans-serif !important;
   --p-font: 'Recoleta', sans-serif !important;
@@ -806,6 +807,12 @@ Framework
   margin-top: 57px;
 }
 
+section {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+}
+
 .sticky-section {
   height: 100vh;
   width: 100%;
@@ -842,13 +849,22 @@ Framework
   background: var(--secondary);
 }
 
-.section-img {
+.section-img-dark {
   -o-object-fit: cover;
      object-fit: cover;
   height: 80%;
   width: 80%;
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow-dark);
+          box-shadow: var(--shadow-dark);
+}
+
+.section-img-light {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80%;
+  width: 80%;
+  -webkit-box-shadow: var(--shadow-light);
+          box-shadow: var(--shadow-light);
 }
 
 .section-text {
