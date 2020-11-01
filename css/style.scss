@@ -166,8 +166,8 @@ w-max-100 {
 
 .section-img-dark {
 	object-fit: cover;
-	height: 80%;
 	width: 80%;
+  	height: auto;
 	box-shadow: var(--shadow-dark);
 }
 
