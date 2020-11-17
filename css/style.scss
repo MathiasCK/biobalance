@@ -4,6 +4,7 @@
 @import './grid';
 @import './drawer';
 @import './gallery';
+@import './intro';
 
 /*
 -------
@@ -338,6 +339,7 @@ w-max-100 {
 }
 
 .down-arrows {
+	color: var(--light);
 	text-decoration: none;
 	display: block;
 	position: absolute;
@@ -388,3 +390,23 @@ section#problem {
 .solution {
 	background-color: var(--richblack) !important;
 }
+
+/*
+----------
+Animations
+---------- 
+*/
+.fade {
+	transition: all 0.5s ease-in;
+	transition-property: opacity, transform;
+  }
+  
+  .fadeOut {
+	opacity: 0;
+	transform: translateY(30px);
+  }
+  
+  .fadeIn {
+	opacity: 1;
+	transform: translateY(0px);
+  }
