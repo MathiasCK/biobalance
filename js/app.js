@@ -85,6 +85,6 @@ const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
 tl.set('.content', {css: {opacity: 0}})
 tl.set('.nav-bar', {css: {opacity: 0}})
 
-tl.to('.text', {y: '0%', duration: 1, stagger: 0.33},);
+tl.to('.text', {y: '0%', duration: 1.5, stagger: 0.33},);
 tl.to('.intro', {y: '-100%', duration: 1, delay: 1}, "-=1");
 tl.to(['.content', '.nav-bar'], {opacity: 1, duration: 1}, "-=0.5" );
