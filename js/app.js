@@ -14,6 +14,7 @@ window.addEventListener('scroll',() => {
     const currentSection = sections[currentIndex];
     navBar.className = `nav-bar ${currentSection.dataset.background}`;
 
+
     // Add class active to nav links 
     navItems.forEach((navItem) => {
         navItem.classList.remove('active');
@@ -57,3 +58,32 @@ sideNavItems.forEach((sideNavItem) => {
 })
 
 navBar.classList.remove('white');
+
+// Fade animations 
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.7
+};
+
+function observerCallback(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersectiong) {
+            entry.target.classList.replace('fadeOut', 'fadeIn')
+        }
+    });
+}
+
+const fadeElms = document.querySelectorAll('.fade');
+fadeElms.forEach((elm) => elm.classList.add('fadeOut'));
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+fadeElms.forEach((el) => observer.observe(el));
+
+// Animations for intro section
+const tl = gsap.timeline({defaults: {ease: 'power1.out'}});
+
+tl.set('.content', {css: {opacity: 0}})
+
+tl.to('.text', {y: '0%', duration: 1, stagger: 0.33},);
+tl.to('.intro', {y: '-100%', duration: 1, delay: 1}, "-=1");
+tl.to('.content', {opacity: 1, duration: 1}, "-=0.5" );
