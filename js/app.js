@@ -1,3 +1,4 @@
+const PRODUCT_NAME = 'BioBalance™';
 // Variables
 const sections = document.querySelectorAll('section');
 const navBar = document.querySelector('.nav-bar');
@@ -29,8 +30,8 @@ window.addEventListener('scroll', () => {
 
 	// Change title name on scroll
 	if (currentIndex === sections.length)
-		return (document.title = `Treecubator | Saving the rainforest`);
-	const title = `Treecubator | ${
+		return (document.title = `${PRODUCT_NAME} | Saving the rainforest`);
+	const title = `${PRODUCT_NAME} | ${
 		currentItem.innerHTML || 'Saving the rainforest'
 	}`;
 	if (document.title !== title) document.title = title;
@@ -94,7 +95,7 @@ const introHTML = /*html*/ `
 			<span class="text">Saving the rainforest</span>
 		</h1>
 		<h1 class="hide">
-			<span class="text">Has never been easier</span>
+			<span class="text">Has never been easier.</span>
 		</h1>
 		 
     </div>
