@@ -98,7 +98,6 @@ const introHTML = /*html*/ `
 		<h1 class="hide">
 			<span class="text">Has never been easier.</span>
 		</h1>
-		 
     </div>
 </div>
 `;
