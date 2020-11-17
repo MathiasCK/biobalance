@@ -1,3 +1,4 @@
+
 const PRODUCT_NAME = 'BioBalance™';
 // Variables
 const sections = document.querySelectorAll('section');
