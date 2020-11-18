@@ -1,0 +1,59 @@
+$spaces: (
+	0: 0px,
+	1: 0.25rem,
+	2: 0.5rem,
+	3: 0.75rem,
+	4: 1rem,
+	5: 1.5rem,
+);
+
+// Generating margin & padding utils
+@each $spaceIndex, $space in $spaces {
+	.m-#{$spaceIndex} {
+		margin: $space;
+	}
+	.mx-#{$spaceIndex} {
+		margin-left: $space;
+		margin-right: $space;
+	}
+	.my-#{$spaceIndex} {
+		margin-top: $space;
+		margin-bottom: $space;
+	}
+	.mr-#{$spaceIndex} {
+		margin-right: $space;
+	}
+	.ml-#{$spaceIndex} {
+		margin-left: $space;
+	}
+	.mt-#{$spaceIndex} {
+		margin-top: $space;
+	}
+	.mb-#{$spaceIndex} {
+		margin-bottom: $space;
+	}
+
+	.p-#{$spaceIndex} {
+		padding: $space;
+	}
+	.px-#{$spaceIndex} {
+		padding-left: $space;
+		padding-right: $space;
+	}
+	.py-#{$spaceIndex} {
+		padding-top: $space;
+		padding-bottom: $space;
+	}
+	.pr-#{$spaceIndex} {
+		padding-right: $space;
+	}
+	.pl-#{$spaceIndex} {
+		padding-left: $space;
+	}
+	.pt-#{$spaceIndex} {
+		padding-top: $space;
+	}
+	.pb-#{$spaceIndex} {
+		padding-bottom: $space;
+	}
+}
