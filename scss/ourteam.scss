@@ -20,7 +20,7 @@
 	> div {
 		&:hover {
 			img {
-				filter: blur(8px);
+				//filter: blur(8px);
 			}
 		}
 	}
@@ -28,7 +28,8 @@
 .slider {
 	transition: transform 0.3s ease;
 	transform: translateX(-100%);
-	background-color: rgba(255, 255, 255, 0.521);
+	background-color: rgba(255, 255, 255, 0.616);
+	backdrop-filter: blur(8px);
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -54,10 +55,10 @@
 
 .slider-text {
 	font-size: 20px;
-	text-shadow: -1px 0 5px rgba(255, 255, 255, 0.466),
-		0 1px 5px rgba(255, 255, 255, 0.452),
-		1px 0 5px rgba(255, 255, 255, 0.445),
-		0 -1px 5px rgba(255, 255, 255, 0.452);
+	text-shadow: -1px 0 5px rgba(255, 255, 255, 0.24),
+		0 1px 5px rgba(255, 255, 255, 0.226),
+		1px 0 5px rgba(255, 255, 255, 0.199),
+		0 -1px 5px rgba(255, 255, 255, 0.199);
 	color: black;
 	width: 100%;
 	text-align: center;
