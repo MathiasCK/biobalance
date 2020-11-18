@@ -1,5 +1,25 @@
 .footer {
 	margin-top: 2rem;
 	min-height: 250px;
-	background-color: black;
+	background-color: rgb(29, 29, 29);
+	display: flex;
+	text-align: center;
+	h4 {
+		margin-bottom: 15px;
+	}
+}
+.contact-info {
+	margin: 20px;
+	width: 50%;
+	li {
+		list-style: none;
+	}
+}
+
+.location {
+	margin: 20px;
+	width: 50%;
+	li {
+		list-style: none;
+	}
 }
