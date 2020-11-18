@@ -86,26 +86,35 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 fadeElms.forEach((el) => observer.observe(el));
 
 // Animations for intro section
-const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
+// Check if user is in current session, show animation if user has animated to the page for the first time
+const isMounted = sessionStorage.getItem('isMounted');
+if (!isMounted) showStartAnimation();
 
-const introContainer = document.querySelector('.intro-container');
-const introHTML = /*html*/ `
-<div class="intro">
-    <div class="intro-text">
-		<h1 class="hide">
-			<span class="text">Saving the rainforest</span>
-		</h1>
-		<h1 class="hide">
-			<span class="text">Has never been easier.</span>
-		</h1>
-    </div>
-</div>
-`;
-// introContainer.innerHTML = introHTML;
+// Set session mounted status
+sessionStorage.setItem('isMounted', JSON.parse(true));
 
-// tl.set('.content', { css: { opacity: 0 } });
-// tl.set('.nav-bar', { css: { opacity: 0 } });
+function showStartAnimation() {
+	const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
+	const introContainer = document.querySelector('.intro-container');
+	const introHTML = /*html*/ `
+	<div class="intro">
+		<div class="intro-text">
+			<h1 class="hide">
+				<span class="fade-text">Saving the rainforest</span>
+			</h1>
+			<h1 class="hide">
+				<span class="fade-text">Has never been easier.</span>
+			</h1>
+		</div>
+	</div>
+	`;
 
-// tl.to('.text', { y: '0%', duration: 1, stagger: 0.33 });
-// tl.to('.intro', { y: '-100%', duration: 1, delay: 1 }, '-=1');
-// tl.to(['.content', '.nav-bar'], { opacity: 1, duration: 1 }, '-=0.5');
+	introContainer.innerHTML = introHTML;
+
+	tl.set('.content', { css: { opacity: 0 } });
+	tl.set('.nav-bar', { css: { opacity: 0 } });
+
+	tl.to('.fade-text', { y: '0%', duration: 1, stagger: 0.33 });
+	tl.to('.intro', { y: '-100%', duration: 1, delay: 1 }, '-=1');
+	tl.to(['.content', '.nav-bar'], { opacity: 1, duration: 1 }, '-=0.5');
+}
