@@ -158,52 +158,6 @@ w-max-100 {
 	padding: 50px;
 }
 
-.active {
-	border-bottom: 1px solid var(--secondary);
-}
-
-.nav-btn {
-	display: none;
-	color: var(--light);
-	font-size: 40px;
-	padding: 20px 20px;
-}
-
-.logo {
-	color: var(--light);
-	font-size: 40px;
-	padding: 20px 20px;
-}
-
-.nav-items {
-	display: flex;
-	list-style: none;
-	padding: 10px;
-}
-
-.nav-link {
-	padding: 10px 20px;
-	color: var(--light);
-}
-
-.nav-link a {
-	text-decoration: none;
-	padding: 5px;
-	color: var(--text-on-bg-1);
-}
-
-@media screen and (max-width: 774px) {
-	.nav-btn {
-		display: inline-block !important;
-	}
-	.nav-link {
-		display: none;
-	}
-	.nav-bar {
-		justify-content: space-between;
-	}
-}
-
 /*
   -------
   Welcome
