@@ -1,6 +1,5 @@
 @import url('https://rsms.me/inter/inter.css');
 @import './reset';
-@import './whyitworks';
 @import './grid';
 @import './drawer';
 @import './gallery';
@@ -457,3 +456,7 @@ Animations
 	opacity: 1;
 	transform: translateY(0px);
 }
+
+// Page sections
+@import './whyitworks';
+@import './footer';
