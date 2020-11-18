@@ -1,11 +1,12 @@
 @import url('https://rsms.me/inter/inter.css');
 @import './reset';
 @import './grid';
-@import './drawer';
 @import './gallery';
 @import './intro';
 @import './problem';
 @import './utils/utils';
+@import './components/drawer';
+@import './components/navbar';
 
 /*
 -------
@@ -25,34 +26,6 @@ html {
 
 body {
 	font-family: var(--h-font);
-}
-
-:root {
-	--dark: #000;
-	--light: #fff;
-	--richblack: #00171f;
-	--black: #212121;
-	--dodgerblue: #4392f1;
-	--bittersweet: #ff6b6b;
-	--eggplant: #6f5060;
-
-	--primary: var(--dodgerblue);
-	--secondary: var(--bittersweet);
-	--dark: var(--dark);
-	--bg-1: var(--light);
-	--bg-2: var(--richblack);
-	--bg-3: var(--eggplant);
-	--text-on-bg-1: var(--dark);
-	--text-on-bg-2: var(--light);
-	--text-on-bg-3: var(--light);
-	--border: 1px solid rgba(0, 0, 0, 0.1);
-	--border-bottom: 1px solid var(--secondary);
-	--shadow-dark: 0px 8px 30px rgba(0, 0, 0, 0.12);
-	--shadow-white: 0px 8px 30px rgba(1, 1, 1, 0.12);
-	--border-hover-color: var(--secondary);
-
-	--h-font: 'Inter', sans-serif !important;
-	--p-font: 'Recoleta', sans-serif !important;
 }
 
 h1,
@@ -183,83 +156,6 @@ w-max-100 {
 
 .section-text {
 	padding: 50px;
-}
-
-/*
-  ------ 
-  Navbar
-  ------ 
-  */
-
-.nav-bar {
-	display: flex;
-	width: 100%;
-	position: fixed;
-	overflow: hidden;
-	align-items: center;
-	left: 0;
-	top: 0;
-	z-index: 1000;
-	overflow: hidden;
-	height: 57px;
-	transition: all 0.3s ease;
-	color: white;
-	@media screen and (min-width: 768px) {
-		backdrop-filter: blur(20px);
-		opacity: 0.8;
-	}
-	.nav-link,
-	.logo,
-	.nav-btn {
-		color: inherit;
-	}
-
-	// box-shadow: var(--shadow-dark);
-	&.white {
-		background-color: var(--light);
-		color: black;
-		// .nav-link {
-		// 	color: black;
-		// }
-		// .logo {
-		// 	color: black;
-		// }
-		// .nav-btn {
-		// 	color: black;
-		// }
-		box-shadow: var(--shadow-dark);
-	}
-	&.transparent {
-		color: var(--light);
-		background-color: transparent;
-		// .nav-link {
-		// 	color: var(--light);
-		// }
-		// .logo {
-		// 	color: var(--light);
-		// }
-		// .nav-btn {
-		// 	color: var(--light);
-		// }
-	}
-	&.dark {
-		background-color: var(--black);
-		color: var(--light);
-	}
-	&.transparent-dark {
-		background-color: rgba(0, 0, 0, 0.1);
-		box-shadow: var(--shadow-dark);
-		color: black;
-		// .nav-link {
-		// 	color: black;
-		// }
-		// .logo {
-		// 	color: black;
-		// }
-		// .nav-btn {
-		// 	color: black;
-		// }
-	}
 }
 
 .active {

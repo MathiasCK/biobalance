@@ -1,0 +1,58 @@
+/*
+  ------ 
+  Navbar
+  ------ 
+  */
+
+.nav-bar {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	overflow: hidden;
+	align-items: center;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	overflow: hidden;
+	height: 57px;
+	transition: all 0.3s ease;
+	color: white;
+	@media screen and (min-width: 768px) {
+		backdrop-filter: blur(20px);
+		opacity: 0.8;
+	}
+	.nav-link,
+	.logo,
+	.nav-btn {
+		color: inherit;
+	}
+
+	// box-shadow: var(--shadow-dark);
+	&.white {
+		background-color: var(--light);
+		color: black;
+		// .nav-link {
+		// 	color: black;
+		// }
+		// .logo {
+		// 	color: black;
+		// }
+		// .nav-btn {
+		// 	color: black;
+		// }
+		box-shadow: var(--shadow-dark);
+	}
+	&.transparent {
+		color: var(--light);
+		background-color: transparent;
+	}
+	&.dark {
+		background-color: var(--black);
+		color: var(--light);
+	}
+	&.transparent-dark {
+		background-color: rgba(0, 0, 0, 0.1);
+		box-shadow: var(--shadow-dark);
+		color: black;
+	}
+}
