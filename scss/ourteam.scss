@@ -20,25 +20,70 @@
 	> div {
 		&:hover {
 			img {
-				opacity: 0.8;
+				filter: blur(8px);
 			}
 		}
 	}
+}
+.slider {
+	transition: transform 0.3s ease;
+	transform: translateX(-100%);
+	background-color: rgba(255, 255, 255, 0.521);
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+.person-right:hover .slider {
+	transform: translateX(0%);
+}
+.person-left:hover .slider {
+	transform: translateX(0%);
+}
+.person-full:hover .slider {
+	transform: translateX(0%);
+}
+.person-bottom:hover .slider {
+	transform: translateX(0%);
+}
+
+.slider-text {
+	font-size: 20px;
+	text-shadow: -1px 0 5px rgba(255, 255, 255, 0.466),
+		0 1px 5px rgba(255, 255, 255, 0.452),
+		1px 0 5px rgba(255, 255, 255, 0.445),
+		0 -1px 5px rgba(255, 255, 255, 0.452);
+	color: black;
+	width: 100%;
+	text-align: center;
 }
 
 .person-left {
 	flex-basis: 50%;
 	height: 100vh;
+	overflow: hidden;
+	position: relative;
 }
 .person-right {
 	flex-basis: 50%;
 	height: 100vh;
+	overflow: hidden;
+	position: relative;
 }
 .person-full {
 	flex-basis: 100%;
 	height: 100vh;
+	overflow: hidden;
+	position: relative;
 }
 .person-bottom {
 	flex-basis: 33.33333333333%;
 	height: 100vh;
+	overflow: hidden;
+	position: relative;
 }
