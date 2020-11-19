@@ -1,12 +1,17 @@
 .footer {
 	margin-top: 2rem;
-	min-height: 250px;
+	min-height: 200px;
 	background-color: rgb(255, 255, 255);
 	display: flex;
-	text-align: center;
+	align-items: center;
 	color: black;
 	h4 {
 		margin-bottom: 15px;
+	}
+	> div {
+		border-left: var(--secondary) 1px solid;
+		height: 100px;
+		padding-left: 20px;
 	}
 }
 .contact-info {
@@ -42,24 +47,15 @@
 		&:hover {
 			transform: scale(1.1);
 		}
+		transition: all 0.2s ease;
 	}
 	ul {
 		margin: 0;
 		padding: 0;
 		display: flex;
-		justify-content: center;
 	}
 }
 
 .instagram-icon {
-	background: -webkit-linear-gradient(
-		45deg,
-		#f09433 0%,
-		#e6683c 25%,
-		#dc2743 50%,
-		#cc2366 75%,
-		#bc1888 100%
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #282828;
 }
