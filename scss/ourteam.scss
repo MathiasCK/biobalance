@@ -37,6 +37,7 @@
 		}
 	}
 }
+//the logic of the slider has been used before by Tobias Fremming in "make it responsive". Its not the same code, but the same logic.
 .slider {
 	transition: transform 0.3s ease;
 	transform: translateX(-100%);
