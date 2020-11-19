@@ -10,7 +10,7 @@
 }
 
 body {
-	background: yellow;
+	background: white;
 	background-size: cover;
 	height: 100vh;
 }
@@ -26,7 +26,7 @@ body {
 .contact-form {
 	max-width: 550px;
 	margin: 0 auto;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(233, 233, 233, 0.8);
 	padding: 30px;
 	border-radius: 5px;
 	display: flex;
@@ -37,6 +37,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin-right: 4%;
+	width: 50%;
 }
 
 .input-fields .msg {
