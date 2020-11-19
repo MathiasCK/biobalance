@@ -1,12 +1,5 @@
 @import url('https://rsms.me/inter/inter.css');
-@import './reset';
-@import './grid';
-@import './gallery';
-@import './intro';
-@import './problem';
-@import './utils/utils';
-@import './components/drawer';
-@import './components/navbar';
+@import './common';
 
 /*
 -------
@@ -308,6 +301,7 @@ Animations
 }
 
 // Page sections
-@import './solution';
-@import './whyitworks';
-@import './footer';
+@import './home/gallery';
+@import './home/intro';
+@import './home/solution';
+@import './home/whyitworks';
