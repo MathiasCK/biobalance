@@ -25,3 +25,12 @@
 	--h-font: 'Inter', sans-serif !important;
 	--p-font: 'Recoleta', sans-serif !important;
 }
+
+hr.divider {
+	border: none;
+	display: block;
+	width: 100px;
+	height: 1px;
+	margin: 20px 0 20px;
+	background: var(--secondary);
+}
