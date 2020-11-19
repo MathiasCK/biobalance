@@ -4,7 +4,6 @@
 	background-color: rgb(255, 255, 255);
 	display: flex;
 	flex-wrap: wrap;
-	text-align: center;
 	align-items: center;
 	color: black;
 	h4 {
@@ -14,6 +13,9 @@
 		border-left: var(--secondary) 1px solid;
 		height: 100px;
 		padding-left: 20px;
+	}
+	@media screen and (min-width: 768px) {
+		flex-wrap: nowrap;
 	}
 }
 .footer-column {
