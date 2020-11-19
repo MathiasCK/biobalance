@@ -43,6 +43,9 @@ body {
 .input-fields .msg {
 	width: 48%;
 }
+input {
+	width: 200px;
+}
 
 .input-fields .input,
 .msg textarea {
@@ -50,7 +53,9 @@ body {
 	background: transparent;
 	border: 0;
 	border-bottom: 2px solid #c5ecc5;
-	width: 100px;
+	border-top: 2px solid #c5ecc5;
+	border-left: 2px solid #c5ecc5;
+	border-right: 2px solid #c5ecc5;
 }
 
 .msg textarea {
