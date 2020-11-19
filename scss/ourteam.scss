@@ -9,6 +9,17 @@
 	height: 100vh;
 	background-image: url('https://images.unsplash.com/photo-1598520059393-1fd1b7f85e35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');
 	background-size: cover;
+	position: relative;
+}
+.banner-text {
+	color: white;
+	text-align: left;
+	font-size: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 200px;
+	transform: translateY(-50%);
+	max-width: 45%;
 }
 .persons {
 	display: flex;
@@ -63,10 +74,18 @@
 	color: black;
 	width: 100%;
 	text-align: center;
+	text-decoration: none;
 	h2 {
 		margin: 30px;
 	}
 }
+.slider-text a {
+	color: #000;
+	text-decoration: none;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
 .text-column {
 	display: flex;
 	justify-content: space-between;
