@@ -1,3 +1,5 @@
+@import url('https://rsms.me/inter/inter.css');
+
 :root {
 	--dark: #000;
 	--light: #fff;
@@ -24,6 +26,32 @@
 
 	--h-font: 'Inter', sans-serif !important;
 	--p-font: 'Recoleta', sans-serif !important;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--h-font);
+	line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--h-font);
+}
+
+p {
+	font-family: var(--p-font);
+}
+
+h1 {
+	font-weight: 600;
 }
 
 hr.divider {
