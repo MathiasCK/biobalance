@@ -41,10 +41,10 @@
 	z-index: 10;
 }
 
-.person-right:hover .slider {
+.person:hover .slider {
 	transform: translateX(0%);
 }
-.person-left:hover .slider {
+.person:hover .slider {
 	transform: translateX(0%);
 }
 .person-full:hover .slider {
@@ -73,27 +73,33 @@
 	padding: 20px;
 }
 
-.person-left {
+.person {
 	flex-basis: 50%;
-	height: 100vh;
+	height: 70vh;
 	overflow: hidden;
 	position: relative;
-}
-.person-right {
-	flex-basis: 50%;
-	height: 100vh;
-	overflow: hidden;
-	position: relative;
+	@media screen and (min-width: 768px) {
+		height: 100vh;
+	}
 }
 .person-full {
+	@extend .person;
 	flex-basis: 100%;
-	height: 100vh;
-	overflow: hidden;
-	position: relative;
 }
 .person-bottom {
-	flex-basis: 33.33333333333%;
-	height: 100vh;
+	height: 70vh;
 	overflow: hidden;
 	position: relative;
+	flex-basis: 50%;
+	@media screen and (min-width: 768px) {
+		flex-basis: 33.33333333333%;
+		height: 100vh;
+	}
+}
+
+.mobile-full {
+	flex-basis: 100%;
+	@media screen and (min-width: 768px) {
+		flex-basis: 33.33333333333%;
+	}
 }
