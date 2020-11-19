@@ -1,0 +1,27 @@
+{
+	"name": "treecubator",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "rimraf css && gulp sass"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sannajammeh/treecubator.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sannajam/treecubator/issues"
+	},
+	"homepage": "https://github.com/sannajam/treecubator#readme",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-load-plugins": "^2.0.5",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"rimraf": "^3.0.2"
+	}
+}
