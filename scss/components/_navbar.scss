@@ -31,18 +31,13 @@
 	&.white {
 		background-color: var(--light);
 		color: black;
-		// .nav-link {
-		// 	color: black;
-		// }
-		// .logo {
-		// 	color: black;
-		// }
-		// .nav-btn {
-		// 	color: black;
-		// }
 		box-shadow: var(--shadow-dark);
 	}
 	&.transparent {
+		color: var(--light);
+		background-color: transparent;
+	}
+	&.transparent-light {
 		color: var(--light);
 		background-color: transparent;
 	}

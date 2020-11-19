@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(-h-font);
+	font-family: var(--h-font);
 }
 
 p {
@@ -308,5 +308,6 @@ Animations
 }
 
 // Page sections
+@import './solution';
 @import './whyitworks';
 @import './footer';
