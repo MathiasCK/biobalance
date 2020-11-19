@@ -11,16 +11,42 @@
 }
 .contact-info {
 	margin: 20px;
-	width: 50%;
+	width: 33%;
 	li {
 		list-style: none;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
 	}
 }
 
 .location {
 	margin: 20px;
-	width: 50%;
+	width: 33%;
 	li {
 		list-style: none;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+}
+.socials {
+	margin: 20px;
+	width: 33%;
+	li {
+		list-style: none;
+		margin: 5px;
+		font-size: 1.5rem;
+		& :hover {
+			transform: scale(1.1);
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
 	}
 }
