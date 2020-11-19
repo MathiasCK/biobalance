@@ -24,7 +24,7 @@ body {
 }
 
 .contact-form {
-	max-width: 550px;
+	max-width: 80%;
 	margin: 0 auto;
 	background: rgba(233, 233, 233, 0.8);
 	padding: 30px;
@@ -56,6 +56,10 @@ input {
 	border-top: 2px solid #c5ecc5;
 	border-left: 2px solid #c5ecc5;
 	border-right: 2px solid #c5ecc5;
+	padding: 8px 16px;
+	&:focus {
+		border: 2px solid black;
+	}
 }
 
 .msg textarea {
