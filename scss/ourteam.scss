@@ -64,13 +64,27 @@
 	width: 100%;
 	text-align: center;
 	h2 {
-		margin: 30px;
+		margin: 30px 0;
 	}
 }
 .text-column {
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
+}
+.column-left {
+	text-align: left;
+	hr {
+		margin-right: auto;
+		margin-left: 0;
+	}
+}
+.column-right {
+	text-align: right;
+	hr {
+		margin-left: auto;
+		margin-right: 0;
+	}
 }
 
 .person {
