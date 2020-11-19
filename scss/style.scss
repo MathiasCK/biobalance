@@ -89,6 +89,14 @@ w-max-100 {
 	display: flex;
 }
 
+hr.divider {
+	display: block;
+	width: 100px;
+	height: 1px;
+	margin: 20px 0 20px;
+	background: var(--secondary);
+}
+
 /*
   ------- 
   Section 
