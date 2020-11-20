@@ -116,20 +116,30 @@ h2 {
 	}
 }
 
+.rainforest-image {
+	margin-top: 50px;
+	z-index: 0;
+	width: 100%;
+	img {
+		width: 100%;
+	}
+}
+
 #problemSub {
 	padding-top: 60px;
 }
 
 //footer overwrite
-// .footer {
-// 	background-color: rgb(22, 22, 22);
-// 	h4 {
-// 		color: white;
-// 	}
-// 	li {
-// 		color: white;
-// 	}
-// 	a {
-// 		color: white;
-// 	}
-// }
+.footer {
+	z-index: 100;
+	// 	background-color: rgb(22, 22, 22);
+	// 	h4 {
+	// 		color: white;
+	// 	}
+	// 	li {
+	// 		color: white;
+	// 	}
+	// 	a {
+	// 		color: white;
+	// 	}
+}
