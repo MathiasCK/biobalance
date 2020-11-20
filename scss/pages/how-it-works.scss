@@ -60,6 +60,9 @@ body {
 .section-text {
 	padding-top: 5vh;
 }
+p {
+	font-size: 1.5rem;
+}
 
 .columns-container {
 	display: flex;
@@ -98,6 +101,18 @@ body {
 		padding: 10px 30px 20px 1px;
 	}
 }
+.youtube-container {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.youtube-description {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
 .youtube-video {
 	width: 100%;
 	display: flex;
@@ -112,11 +127,36 @@ body {
 #problemSub {
 	padding-top: 60px;
 }
-.youtube-description {
+
+.container2 {
+	padding-top: 50px;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 70px;
-	width: 75%;
+	.container-text {
+		width: 58%;
+		float: left;
+	}
+	.container-image {
+		width: 39%;
+		float: right;
+		img {
+			box-shadow: var(--shadow-white);
+			border-radius: 4px;
+		}
+		p {
+			font-size: 20px;
+			text-align: right;
+			padding-bottom: 30px;
+		}
+	}
+}
+.vision-image {
+	img {
+		margin-top: 50px;
+		box-shadow: var(--shadow-white);
+		border-radius: 4px;
+	}
 }
 
 //footer overwrite
