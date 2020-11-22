@@ -47,7 +47,11 @@ body {
 @media screen and (max-width: 774px) {
 	.form-group {
 		display: block;
+		.input-div {
+			padding-top: 2rem;
+		}
 	}
+
 	.container {
 		width: 90%;
 	}

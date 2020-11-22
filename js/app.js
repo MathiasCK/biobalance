@@ -65,25 +65,7 @@ sideNavItems.forEach((sideNavItem) => {
 
 navBar.classList.remove('white');
 
-// Fade animations
-const observerOptions = {
-	root: null,
-	rootMargin: '0px',
-	threshold: 0.7,
-};
 
-function observerCallback(entries, observer) {
-	entries.forEach((entry) => {
-		if (entry.isIntersectiong) {
-			entry.target.classList.replace('fadeOut', 'fadeIn');
-		}
-	});
-}
-
-const fadeElms = document.querySelectorAll('.fade');
-fadeElms.forEach((elm) => elm.classList.add('fadeOut'));
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-fadeElms.forEach((el) => observer.observe(el));
 
 // Animations for intro section
 // Check if user is in current session, show animation if user has animated to the page for the first time

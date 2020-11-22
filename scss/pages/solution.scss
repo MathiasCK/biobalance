@@ -9,6 +9,9 @@
 	@media screen and (min-width: 768px) {
 		width: 75%;
 	}
+	.section-text {
+		margin: 0 2rem;
+	}
 }
 // Rem Overwrite
 body {
@@ -129,6 +132,17 @@ h2 {
 	display: flex;
 	width: 100%;
 }
+
+@media screen and (max-width: 774px) {
+	.goals-container {
+		display: block;
+	}
+	.columns-container {
+		display: block;
+		width: 90%;
+	}
+}
+
 .goals {
 	width: 68%;
 	display: flex;
@@ -143,7 +157,7 @@ h2 {
 	}
 }
 .goals-image {
-	float: right;
+	flex: 1;
 	width: 30%;
 	justify-content: floor($number: 20);
 	img {
