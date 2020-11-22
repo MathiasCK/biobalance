@@ -64,6 +64,9 @@
 	}
 }
 
-.instagram-icon {
+.icon {
 	color: #282828;
+	&:hover {
+		color: var(--secondary);
+	}
 }

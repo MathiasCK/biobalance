@@ -96,4 +96,9 @@
 	.nav-bar {
 		justify-content: space-between;
 	}
+	&.white {
+		.nav-btn {
+			color: var(--secondary);
+		}
+	}
 }

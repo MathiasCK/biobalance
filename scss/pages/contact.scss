@@ -1,6 +1,7 @@
 @import '../common';
 
 body {
+	// background-image: url('/img/welcome.jpg');
 	background: whitesmoke;
 	background-size: cover;
 	height: 100vh;
@@ -8,7 +9,9 @@ body {
 
 .container {
 	width: 70%;
+	margin-top: 6rem;
 	padding: 6rem 0 1rem 1rem;
+	background: whitesmoke;
 }
 
 /*sticky footer
@@ -34,19 +37,29 @@ body {
 	background: var(--secondary);
 }
 
-.contact-form {
+.form-group {
 	padding: 0.5rem 2rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	label {
 		flex: 25%;
+		user-select: none;
 	}
 	input {
 		flex: 75%;
 	}
 	textarea {
 		flex: 75%;
+	}
+}
+
+@media screen and (max-width: 774px) {
+	.form-group {
+		display: block;
+	}
+	.container {
+		width: 90%;
 	}
 }
 
@@ -59,14 +72,12 @@ body {
 
 .input,
 .text-area {
-	margin: 0.5rem 0;
 	background: white;
 	border: 1px solid transparent;
 	padding: 1.5rem 2rem;
 	width: 90%;
 	transition: all 0.3s ease-in-out;
 	&:hover {
-		transform: scale(1.01);
 		box-shadow: var(--shadow-dark);
 	}
 }
@@ -104,4 +115,27 @@ body {
 	background-position: left bottom;
 	cursor: pointer;
 	color: var(--light);
+}
+
+// Input animations
+
+.input ~ .border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--secondary);
+}
+
+.input:focus ~ .border {
+	width: 100%;
+	transition: 0.5s;
+}
+
+.input-div {
+	display: flex;
+	flex: 75%;
+	width: 100%;
+	position: relative;
 }
