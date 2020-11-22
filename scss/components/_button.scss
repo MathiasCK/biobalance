@@ -6,6 +6,10 @@
 		--color: var(--black);
 		--focus-color: var(--light);
 	}
+	&.secondary {
+		--color: var(--secondary);
+		--focus-color: var(--light);
+	}
 	display: inline-block;
 	width: auto;
 	outline: none !important;
