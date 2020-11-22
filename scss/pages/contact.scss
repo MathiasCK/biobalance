@@ -1,92 +1,124 @@
 @import '../common';
 
 body {
-	background: white;
+	// background-image: url('/img/welcome.jpg');
+	background: whitesmoke;
 	background-size: cover;
 	height: 100vh;
 }
 
 .container {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 100%;
-	padding: 0 20px;
-}
-
-//sticky footer
-.wrapper {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	.content {
-		flex-grow: 1;
+	width: 70%;
+	margin-top: 6rem;
+	padding: 6rem 0 1rem 1rem;
+	background: whitesmoke;
+	h2 {
+		padding: 1.5rem 2rem;
+	}
+	h2:after {
+		content: ' ';
+		display: block;
+		width: 100px;
+		height: 1px;
+		margin: 20px 0 20px;
+		background: var(--secondary);
 	}
 }
 
-.contact-form {
-	max-width: 70%;
-	margin: 0 auto;
-	background: rgba(233, 233, 233, 0.8);
-	padding: 30px;
-	border-radius: 5px;
+.form-group {
+	padding: 0.5rem 2rem;
 	display: flex;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.13);
+	align-items: center;
+	justify-content: space-between;
+	label {
+		flex: 25%;
+		user-select: none;
+	}
+	input {
+		flex: 75%;
+	}
+	textarea {
+		flex: 75%;
+		resize: none;
+		height: 10rem;
+	}
 }
 
-.input-fields {
-	display: flex;
-	flex-direction: column;
-	margin-right: 4%;
-	width: 100%;
+@media screen and (max-width: 774px) {
+	.form-group {
+		display: block;
+	}
+	.container {
+		width: 90%;
+	}
 }
 
-.input-fields .msg {
-	width: 48%;
-}
-input {
-	width: 200px;
-}
-
-.input-fields .input,
-.msg textarea {
-	margin: 10px 0;
-	background: transparent;
-	border: 0;
-	border-bottom: 2px solid #c5ecc5;
-	border-top: 2px solid #c5ecc5;
-	border-left: 2px solid #c5ecc5;
-	border-right: 2px solid #c5ecc5;
-	padding: 8px 16px;
-	width: 100%;
+.input,
+.text-area {
+	background: white;
+	border: 1px solid transparent;
+	padding: 1.5rem 2rem;
+	width: 90%;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		box-shadow: var(--shadow-dark);
+	}
 	&:focus {
-		border: 2px solid black;
+		outline: none;
 	}
 }
 
-.msg textarea {
-	height: 212px;
-}
+// Input animations
 
-v ::-webkit-input-placeholder {
-	color: #c5ecc5;
-}
-
-::-moz-input-placeholder {
-	color: #c5ecc5;
+.input ~ .border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--secondary);
 }
 
 .input:focus ~ .border {
 	width: 100%;
-	transition: 0.7s;
+	transition: 0.5s;
+}
+
+.input-div {
+	display: flex;
+	flex: 75%;
+	width: 100%;
+	position: relative;
+}
+
+.contact-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .btn {
-	background: #39b7dd;
-	text-align: center;
-	padding: 15px;
-	border-radius: 5px;
-	color: #fff;
 	cursor: pointer;
+	text-decoration: none;
+	color: black;
+	float: right;
+	border: 1px solid var(--secondary);
+	padding: 0.8rem;
+	margin: 2rem;
+	width: 20%;
+	text-align: center;
 	text-transform: uppercase;
+	background: linear-gradient(
+		to right,
+		var(--secondary) 50%,
+		transparent 50%
+	);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+	background-position: left bottom;
+	color: var(--light);
 }
