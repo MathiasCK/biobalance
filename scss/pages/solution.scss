@@ -78,7 +78,7 @@ body {
 		height: 90%;
 		border-radius: 4px;
 	}
-	box-shadow: var(--shadow-dark);
+	//box-shadow: var(--shadow-dark);
 }
 .columns {
 	width: 40%;
@@ -147,7 +147,6 @@ h2 {
 	width: 68%;
 	display: flex;
 	flex-wrap: wrap;
-	display: flex;
 	flex-wrap: wrap;
 
 	li {
@@ -161,6 +160,7 @@ h2 {
 	width: 30%;
 	justify-content: floor($number: 20);
 	img {
+		margin-left: auto;
 		margin-top: 100px;
 		object-fit: cover;
 		width: 100%;
