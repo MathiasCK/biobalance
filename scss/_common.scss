@@ -112,6 +112,9 @@ Animations
 .fadeOut {
 	opacity: 0;
 	transform: translateY(30px);
+	&.up {
+		transform: translateY(-30px);
+	}
 }
 
 .fadeIn {
