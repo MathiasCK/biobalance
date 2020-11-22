@@ -92,20 +92,44 @@
 			</aside>
 			<div class="drawer-backdrop"></div>
 		</div>
-		<div class="container">
-			<div class="contact-form">
-				<div class="input-fields">
-					<input type="text" class="input" placeholder="Name" />
-					<input type="text" class="input" placeholder="Email" />
-					<input type="text" class="input" placeholder="Phone" />
-					<input type="text" class="input" placeholder="Subject" />
+		
+		<!-- Contact us -->
+		<form class="container">
+			<h2 class="contact-header">Get in touch</h2>
+
+				<div class="contact-form">
+					<label for="name">Your full name *</label>
+					<input class="input" type="text"
+					name="name"
+					class="form-input"
+					placeholder="Please enter your name ..."
+					required/>
 				</div>
-				<div class="msg">
-					<textarea placeholder="Message"></textarea>
-					<div class="btn">Send</div>
+
+				<div class="contact-form">
+					<label for="subject">Subject *</label>
+					<input class="input" type="text"
+					name="subject"
+					class="form-input"
+					placeholder="Subject ..."
+					required/>
 				</div>
+
+				<div class="contact-form">
+					<label for="email">Your email adress *</label>
+    				<input name="email" type="email" class="input" placeholder="Your email adress ..." requried/>
+				</div>
+
+				<div class="contact-form">
+					<label for="email">Your message for us *</label>
+    				<textarea class="text-area" placeholder="Your message for us ..."></textarea>
+				</div>
+				
+
+			<div class="contact-btn">
+				<button class="btn">Send</button>
 			</div>
-		</div>
+		</form>
 
 		<div class="wrapper">
 			<main class="content"></main>
