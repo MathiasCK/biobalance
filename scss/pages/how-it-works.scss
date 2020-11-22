@@ -114,7 +114,11 @@ p {
 	.container-text {
 		width: 58%;
 		float: left;
+		h2 {
+			padding-bottom: 20px;
+		}
 	}
+
 	.container-image {
 		width: 39%;
 		float: right;
