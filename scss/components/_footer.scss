@@ -18,12 +18,20 @@
 		flex-wrap: nowrap;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.footer {
+		display: block;
+	}
+}
+
 .footer-column {
 	@media screen and (min-width: 768px) {
 		width: 33%;
 	}
 	width: 100%;
 }
+
 .contact-info {
 	margin: 20px;
 

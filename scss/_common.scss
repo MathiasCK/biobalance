@@ -98,3 +98,26 @@ hr.divider {
 	margin: 20px auto;
 	background: var(--secondary);
 }
+
+/*
+----------
+Animations
+---------- 
+*/
+.fade {
+	transition: all 0.5s ease-in;
+	transition-property: opacity, transform;
+}
+
+.fadeOut {
+	opacity: 0;
+	transform: translateY(30px);
+	&.up {
+		transform: translateY(-30px);
+	}
+}
+
+.fadeIn {
+	opacity: 1;
+	transform: translateY(0px);
+}
