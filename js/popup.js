@@ -1,56 +1,78 @@
 const CONTAINER_ID = 'popperContainer';
 function createElement(type = 'div', props = {}) {
 	const elm = document.createElement(type);
-	Object.entries(props).forEach(([key, val]) => (elm[key] = val));
+	Object.entries(props).forEach(([key, val]) => {
+		if (key === 'style') return;
+		elm[key] = val;
+	});
 	return elm;
 }
 
 function getContainer() {
-	const popperContainer =
-		document.getElementById(CONTAINER_ID) ||
-		createElement('div', {
-			id: CONTAINER_ID,
-		});
-	return popperContainer;
-}
-
-function popperElementFactory({ x, y }, content) {
-	const cssText = /*css*/ `
-    background-color: red;
-    width: 300px;
-    height: 300px;
-`;
-	const elm = createElement('div', { style: { cssText } });
-	elm.innerHTML = content;
+	const prevContainer = document.querySelector(CONTAINER_ID);
+	if (prevContainer) return prevContainer;
+	const elm = createElement('div', { id: CONTAINER_ID });
+	document.body.appendChild(elm);
 	return elm;
 }
 
-function createPopper(target, content) {
+let popperCount = 0;
+function popperFactory(target, content, options = {}) {
+	const { placement } = options;
 	const container = getContainer();
-	console.log(
-		'🚀 ~ file: popup.js ~ line 29 ~ createPopper ~ content',
-		content
-	);
+	const cssText = /*css*/ `
+	background-color: var(--light);
+	box-shadow: var(--shadow-dark);
+	border-radius: 16px;
+	padding: 16px;
+    width: 300px;
+	height: 300px;
+	position: absolute;
+	top: ${target.offsetTop + 30}px;
+	left: ${target.offsetLeft}px;
+	visibility: hidden;
+`;
+	const elm = createElement('div', {
+		id: `popper_${popperCount}`,
+	});
+	elm.innerHTML = content;
+	elm.style.cssText = cssText;
+	container.appendChild(elm);
+	popperCount++;
+	const show = () => {
+		elm.style.visibility = 'visible';
+		if (placement === 'top') {
+			const p = `${
+				-30 - elm.getBoundingClientRect().height + target.offsetTop
+			}px`;
+			console.log('🚀 ~ file: popup.js ~ line 46 ~ show ~ placement', p);
 
-	console.log(
-		'🚀 ~ file: popup.js ~ line 30 ~ createPopper ~ container',
-		container
-	);
-	console.log(
-		'🚀 ~ file: popup.js ~ line 29 ~ createPopper ~ target',
-		target
-	);
+			elm.style.top = p;
+		}
+	};
+	const hide = () => {
+		elm.style.visibility = 'hidden';
+	};
+	return { target: elm, show, hide };
 }
 
 // Init
 document.addEventListener('DOMContentLoaded', () => {
 	const popperElms = document.querySelectorAll('.popper');
 	popperElms.forEach((node) => {
+		const popper = popperFactory(node, 'Hello world', {
+			placement: 'top',
+		});
+
 		// Hover
-		if (node.classList.contains('popper:hover'))
+		if (node.classList.contains('popper:hover')) {
 			node.addEventListener('mouseover', (e) => {
-				console.log('Hovering', e.target);
+				popper.show();
 			});
+			node.addEventListener('mouseout', (e) => {
+				popper.hide();
+			});
+		}
 
 		// Click
 		if (node.classList.contains('popper:click'))
