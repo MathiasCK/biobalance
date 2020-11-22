@@ -1,20 +1,20 @@
 @import '../common';
 
 body {
-	// background-image: url('/img/welcome.jpg');
-	background: whitesmoke;
+	background: white;
 	background-size: cover;
 	height: 100vh;
 }
 
 .container {
-	width: 70%;
-	margin-top: 6rem;
-	padding: 6rem 0 1rem 1rem;
-	background: whitesmoke;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	padding: 0 20px;
 }
 
-/*sticky footer
+//sticky footer
 .wrapper {
 	height: 100%;
 	display: flex;
@@ -22,120 +22,76 @@ body {
 	.content {
 		flex-grow: 1;
 	}
-}*/
-
-.contact-header {
-	padding: 0.5rem 2rem;
 }
 
-.contact-header:after {
-	content: ' ';
-	display: block;
-	width: 6rem;
-	height: 1px;
-	margin: 1rem 0 0.5rem;
-	background: var(--secondary);
-}
-
-.form-group {
-	padding: 0.5rem 2rem;
+.contact-form {
+	max-width: 70%;
+	margin: 0 auto;
+	background: rgba(233, 233, 233, 0.8);
+	padding: 30px;
+	border-radius: 5px;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	label {
-		flex: 25%;
-		user-select: none;
-	}
-	input {
-		flex: 75%;
-	}
-	textarea {
-		flex: 75%;
-	}
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.13);
 }
 
-@media screen and (max-width: 774px) {
-	.form-group {
-		display: block;
-	}
-	.container {
-		width: 90%;
-	}
-}
-
-.input,
-.text-area:focus,
-.input,
-.text-area:active {
-	outline: none;
-}
-
-.input,
-.text-area {
-	background: white;
-	border: 1px solid transparent;
-	padding: 1.5rem 2rem;
-	width: 90%;
-	transition: all 0.3s ease-in-out;
-	&:hover {
-		box-shadow: var(--shadow-dark);
-	}
-}
-
-.text-area {
-	height: 12rem;
-	resize: none;
-}
-
-.contact-btn {
+.input-fields {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.btn {
-	text-decoration: none;
-	color: black;
-	float: right;
-	border: 1px solid var(--secondary);
-	padding: 0.8rem;
-	width: 20%;
-	text-align: center;
-	text-transform: uppercase;
-	background: linear-gradient(
-		to right,
-		var(--secondary) 50%,
-		transparent 50%
-	);
-	background-size: 200% 100%;
-	background-position: right bottom;
-	transition: all 0.3s ease-out;
+	flex-direction: column;
+	margin-right: 4%;
+	width: 100%;
 }
 
-.btn:hover {
-	background-position: left bottom;
-	cursor: pointer;
-	color: var(--light);
+.input-fields .msg {
+	width: 48%;
+}
+input {
+	width: 200px;
 }
 
-// Input animations
-
-.input ~ .border {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 2px;
-	background-color: var(--secondary);
+.input-fields .input,
+.msg textarea {
+	margin: 10px 0;
+	background: transparent;
+	border: 0;
+	border-bottom: 2px solid #c5ecc5;
+	border-top: 2px solid #c5ecc5;
+	border-left: 2px solid #c5ecc5;
+	border-right: 2px solid #c5ecc5;
+	padding: 8px 16px;
+	width: 100%;
+	&:focus {
+		border: 2px solid black;
+	}
 }
+
+.msg textarea {
+	height: 212px;
+}
+
+v ::-webkit-input-placeholder {
+	color: #c5ecc5;
+}
+
+::-moz-input-placeholder {
+	color: #c5ecc5;
+}
+<<<<<<< HEAD
 
 .input:focus ~ .border {
 	width: 100%;
 	transition: 0.7s;
+=======
+::-ms-input-placeholder {
+	color: #c5ecc5;
+>>>>>>> df356796340a7842b15c0f2e98a5ee62bca4879a
 }
 
-.input-div {
-	display: flex;
-	flex: 75%;
-	width: 100%;
-	position: relative;
+.btn {
+	background: #39b7dd;
+	text-align: center;
+	padding: 15px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	text-transform: uppercase;
 }
