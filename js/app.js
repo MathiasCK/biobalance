@@ -85,7 +85,7 @@ function showStartAnimation() {
 				<span class="fade-text">Saving the rainforest</span>
 			</h1>
 			<h1 class="hide">
-				<span class="fade-text">Has never been easier.</span>
+				<span class="fade-text">Has never been <span>easier</span>.</span>
 			</h1>
 		</div>
 	</div>

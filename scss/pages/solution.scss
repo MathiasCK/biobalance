@@ -32,8 +32,8 @@ body {
 	width: 100%;
 	height: 60vh;
 	background-image: url('/img/biobalancevisionjpeg.jpg');
-	background-attachment: floor($number: 0);
-	background-position: bottom;
+	background-attachment: fixed;
+	background-position: top;
 	position: relative;
 	background-size: cover;
 	&::after {
