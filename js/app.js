@@ -28,13 +28,13 @@ window.addEventListener('scroll', () => {
 	if (!currentItem.classList.contains('active'))
 		currentItem.classList.add('active');*/
 
-	// Change title name on scroll
-	if (currentIndex === sections.length)
-		return (document.title = `${PRODUCT_NAME} | Saving the rainforest`);
-	const title = `${PRODUCT_NAME} | ${
-		currentItem.innerHTML || 'Saving the rainforest'
-	}`;
-	if (document.title !== title) document.title = title;
+	// // Change title name on scroll
+	// if (currentIndex === sections.length)
+	// 	return (document.title = `${PRODUCT_NAME} | Saving the rainforest`);
+	// const title = `${PRODUCT_NAME} | ${
+	// 	currentItem.innerHTML || 'Saving the rainforest'
+	// }`;
+	// if (document.title !== title) document.title = title;
 });
 
 // Responsive Navbar
@@ -64,8 +64,6 @@ sideNavItems.forEach((sideNavItem) => {
 });
 
 navBar.classList.remove('white');
-
-
 
 // Animations for intro section
 // Check if user is in current session, show animation if user has animated to the page for the first time
