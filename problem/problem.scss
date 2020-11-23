@@ -47,7 +47,7 @@ html {
 .section-layout {
 	margin-bottom: 5rem;
 	@media screen and (min-width: 768px) {
-		margin-bottom: 15rem;
+		margin-bottom: 20rem;
 	}
 }
 
@@ -99,7 +99,7 @@ html {
 .section-item {
 	padding: 1rem 0;
 	@media screen and (min-width: 768px) {
-		padding: 2rem;
+		padding: 3rem;
 	}
 }
 
@@ -109,7 +109,7 @@ html {
 	height: 100vh;
 	width: 100%;
 	object-fit: cover;
-	filter: brightness(80%);
+	filter: brightness(70%);
 }
 
 .youtube-description {
