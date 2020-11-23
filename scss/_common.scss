@@ -8,6 +8,7 @@
 	--black: #080808;
 	--dodgerblue: #4392f1;
 	--bittersweet: #ff6b6b;
+	--blue-light: #6bffff;
 	--eggplant: #6f5060;
 
 	--primary: var(--dodgerblue);
@@ -133,12 +134,21 @@ Animations
 }
 
 // SVG animations
-.path {
-	stroke-dashoffset: -2000;
-	stroke-dasharray: 2000;
-	animation: svg-anim 1s linear forwards;
-	&.right {
-		stroke-dashoffset: 2000;
+.stroke-line {
+	path {
+		stroke-dashoffset: -2000;
+		stroke-dasharray: 2000;
+		stroke-width: 3px;
+		stroke-opacity: 0.3;
+		transition: stroke-dashoffset 1s ease;
+		&.right {
+			stroke-dashoffset: 2000;
+		}
+	}
+	&.in {
+		path {
+			stroke-dashoffset: 0;
+		}
 	}
 }
 

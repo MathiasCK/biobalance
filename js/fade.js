@@ -23,7 +23,6 @@ const isIntersecting = (entry) => {
 function observerCallback(entries) {
 	entries.forEach((entry) => {
 		entry.target.classList.remove('up');
-		console.log(entry);
 		if (isIntersecting(entry)) {
 			entry.target.classList.replace('fadeOut', 'fadeIn');
 		} else {
