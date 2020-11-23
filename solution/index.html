@@ -38,9 +38,7 @@
 					<a class="nav-item" href="/solution">Solution</a>
 				</li>
 				<li class="nav-link" aria-hidden="true" style="display: none">
-					<a class="nav-item" href="#product-description"
-						>Solution</a
-					>
+					<a class="nav-item" href="#product-description">Solution</a>
 				</li>
 				<li class="nav-link">
 					<a class="nav-item" href="/how-it-works">How It Works</a>
@@ -67,9 +65,7 @@
 							<a class="side-nav-item" href="/">Home</a>
 						</li>
 						<li class="side-nav-link">
-							<a class="side-nav-item" href="/problem"
-								>Problem</a
-							>
+							<a class="side-nav-item" href="/problem">Problem</a>
 						</li>
 						<li class="side-nav-link">
 							<a class="side-nav-item" href="/solution"
@@ -93,7 +89,6 @@
 		</div>
 		<!-- Side nav end -->
 		<!-- Navbar end -->
-		<div class="hero"></div>
 		<div class="container">
 			<div>
 				<h1 class="section-header">
@@ -218,8 +213,14 @@
 				<div class="columns-container">
 					<div class="columns2 pt-4">
 						<div class="column">
-							<div class="title popper popper:hover">
-								Material
+							<div class="title">
+								<span
+									class="popper popper:hover"
+									data-placement="bottom"
+									data-content="#tooltip"
+								>
+									Material
+								</span>
 							</div>
 							<p class="text">
 								PBAT, PBST and PLA, fully compostable plastic
@@ -247,7 +248,7 @@
 					</div>
 					<div class="columns3 pt-4">
 						<div class="column">
-							<div class="title">
+							<div class="title popper popper:click">
 								Soil inside the Rainforest Lunchbox
 							</div>
 							<p class="text">
@@ -334,6 +335,7 @@
 			</div>
 		</footer>
 
+		<div id="tooltip" class="popper-tooltip">Tooltip</div>
 		<!-- footer end -->
 		<!-- Scripts -->
 		<script src="/js/popup.js"></script>
