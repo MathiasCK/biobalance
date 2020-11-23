@@ -49,17 +49,17 @@
 	function createPopper(target, content, options = {}) {
 		let isVisible = false;
 		// Create popper element
-		const { placement = '' } = options;
+		const { placement = '', marginY = 10, marginX = 0 } = options;
 		const container = getContainer();
 		const cssText = /*css*/ `
-	position: absolute;
-	top: ${target.offsetTop}px;
-	left: ${target.offsetLeft}px;
-	visibility: hidden;
-	opacity: 0;
-	transition: all 0.3s ease;
-	transition-property: opacity, visibility;
-	z-index: 9999;
+		position: absolute;
+		top: ${target.offsetTop}px;
+		left: ${target.offsetLeft}px;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.3s ease;
+		transition-property: opacity, visibility;
+		z-index: 9999;
 `;
 		const popperElm = createElement('div', {
 			id: `popper_${popperCount}`,
@@ -75,12 +75,12 @@
 		popperCount++;
 
 		// Define show and hide methods
-		const show = () => {
+		const setPopperPlacement = () => {
 			// Set default props
 			popperElm.style.top = `${target.offsetTop}px`;
 			popperElm.style.left = `${target.offsetLeft}px`;
-			let top = getTopPlacement(target, popperElm) + 'px';
-			let left = getNormalPlacement(target) + 'px';
+			let top = getTopPlacement(target, popperElm) - marginY + 'px';
+			let left = getNormalPlacement(target) + marginX + 'px';
 			const hasTop = placement.includes('top');
 			const hasLeft = placement.includes('left');
 			const hasBottom = placement.includes('bottom');
@@ -90,27 +90,34 @@
 			const placements = checkPlacement(target, popperElm, 0);
 			// Set predefined placements where possible
 			if (hasTop && !hasBottom && placements.top)
-				top = getTopPlacement(target, popperElm) + 'px';
+				top = getTopPlacement(target, popperElm) - marginY + 'px';
 			if (hasLeft && !hasRight && placements.left)
-				left = getLeftPlacement(target, popperElm) + 'px';
+				left = getLeftPlacement(target, popperElm) + marginX + 'px';
 			if (hasBottom && !hasTop && placements.bottom)
-				top = getBottomPlacement(target) + 'px';
+				top = getBottomPlacement(target) + marginY + 'px';
 			if (hasRight && !hasLeft && placements.right) {
-				left = getRightPlacement(target, popperElm) + 'px';
+				left = getRightPlacement(target, popperElm) + marginX + 'px';
 			}
 
 			// Overwrite with possible positions
 			if (!placements.top && placements.bottom) {
-				top = getBottomPlacement(target) + 'px';
+				top = getBottomPlacement(target) + marginY + 'px';
 			}
 			if (!placements.left && !placements.right) {
 				left = getNormalPlacement(target, popperElm) + 'px';
 			}
 			popperElm.style.top = top;
 			popperElm.style.left = left;
+		};
+		const scrollPositionHandler = (e) => {
+			setPopperPlacement();
+		};
+		const show = () => {
+			setPopperPlacement();
 			popperElm.style.visibility = 'visible';
 			popperElm.style.opacity = 1;
 
+			window.addEventListener('scroll', scrollPositionHandler);
 			popperElm.ontransitionend = () => {
 				isVisible = true;
 			};
@@ -118,6 +125,7 @@
 		const hide = () => {
 			popperElm.style.visibility = 'hidden';
 			popperElm.style.opacity = 0;
+			window.removeEventListener('scroll', scrollPositionHandler);
 			popperElm.ontransitionend = () => {
 				isVisible = false;
 			};
