@@ -209,6 +209,40 @@ section#problem {
 	color: var(--secondary);
 }
 
+/*
+Intro section
+*/
+
+.intro {
+	background: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+.intro-text {
+	color: white;
+	font-family: 'Heebo', sans-serif;
+	font-size: 2rem;
+}
+
+.hide {
+	background: black;
+	overflow: hidden;
+}
+
+.fade-text {
+	transform: translateY(100%);
+	display: inline-block;
+	color: white;
+}
+
 // Page sections
 @import './home/gallery';
 @import './home/intro';
