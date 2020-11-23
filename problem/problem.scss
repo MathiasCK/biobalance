@@ -1,7 +1,5 @@
 @import '../scss/common';
 
-//navbar overwrite
-
 //container overwrite
 .container {
 	@media screen and (min-width: 768px) {
@@ -10,7 +8,7 @@
 }
 // Rem Overwrite
 body {
-	background-color: #161616;
+	background-color: black;
 	color: #f6f6f6;
 }
 
@@ -46,7 +44,10 @@ body {
 }
 
 .section {
-	margin-bottom: 15rem;
+	margin-bottom: 2rem;
+	@media screen and (min-width: 768px) {
+		margin-bottom: 15rem;
+	}
 }
 
 .section-header {
@@ -60,8 +61,15 @@ body {
 }
 
 .section-text {
-	font-size: 1.2rem;
-	margin-top: 1.5rem;
+	color: #a1a1a6;
+	font-size: 1.5rem;
+	line-height: 1.5;
+}
+
+.section-text-small {
+	padding-right: 1rem;
+	color: #a1a1a6;
+	font-size: 1.1rem;
 	line-height: 1.5;
 }
 
@@ -81,34 +89,28 @@ body {
 	box-shadow: var(--shadow-dark);
 }
 .columns {
-	width: 50%;
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	@media screen and (min-width: 768px) {
+		width: 100%;
+	}
 }
 .column {
 	flex-basis: 50%;
 	margin-top: 5rem;
 	@media screen and (min-width: 768px) {
-		flex-basis: 100%;
+		flex-basis: 50%;
 	}
-	.title {
-		@extend .text-reset;
-		font-size: 1.5rem;
-		font-weight: bold;
-		margin-bottom: 0.5rem;
-	}
-	.text {
-		@extend .text-reset;
-		font-size: 1.1rem;
-		font-weight: normal;
-		padding: 10px 30px 20px 1px;
-		line-height: 1.5;
+	h1 {
+		font-size: 2rem;
+		color: white;
+		text-align: left;
+		padding-top: 4rem;
+		padding-bottom: 20px;
 	}
 }
 
-#problemSub {
-	padding-top: 60px;
-}
 .youtube-description {
 	margin-left: auto;
 	margin-right: auto;
@@ -126,12 +128,10 @@ body {
 	box-shadow: var(--shadow-dark);
 	border-radius: 4px;
 }
-.youtubevideo {
-}
 
 //footer overwrite
 .footer {
-	background-color: rgb(22, 22, 22);
+	background-color: var(--black);
 	h4 {
 		color: white;
 	}
