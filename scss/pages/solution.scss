@@ -2,7 +2,7 @@
 
 //navbar overwrite
 .nav-bar {
-	position: sticky;
+	position: fixed;
 }
 //container overwrite
 .container {
@@ -15,8 +15,6 @@
 }
 // Rem Overwrite
 body {
-	// background-color: #161616;
-	// color: #f6f6f6;
 	background-color: #ffffff;
 	color: #000000;
 }
@@ -81,19 +79,25 @@ body {
 	//box-shadow: var(--shadow-dark);
 }
 .columns {
-	width: 40%;
+	@media screen and (min-width: 768px) {
+		width: 40%;
+	}
 	display: flex;
 	flex-wrap: wrap;
 }
 .columns2 {
-	width: 50%;
+	@media screen and (min-width: 768px) {
+		width: 50%;
+	}
 	margin-top: 30px;
 	display: flex;
 	flex-wrap: wrap;
 }
 .columns3 {
 	margin-top: 30px;
-	width: 50%;
+	@media screen and (min-width: 768px) {
+		width: 50%;
+	}
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -144,7 +148,9 @@ h2 {
 }
 
 .goals {
-	width: 68%;
+	@media screen and (min-width: 768px) {
+		width: 68%;
+	}
 	display: flex;
 	flex-wrap: wrap;
 	flex-wrap: wrap;
