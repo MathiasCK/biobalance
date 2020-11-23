@@ -15,16 +15,8 @@ html {
 }
 // Rem Overwrite
 body {
-	background-color: #ffffff;
-	color: #000000;
-}
-
-// Util
-.text-reset {
-	font-weight: 400;
-	font-size: 1rem;
-	margin: 0;
-	padding: 0;
+	background-color: white;
+	color: black;
 }
 
 // Hero
@@ -109,18 +101,6 @@ h2 {
 	@media screen and (min-width: 768px) {
 		flex-basis: 100%;
 	}
-	.title {
-		@extend .text-reset;
-		font-size: 1.5rem;
-		font-weight: bold;
-		margin-bottom: 0.5rem;
-	}
-	.text {
-		@extend .text-reset;
-		font-size: 1.1rem;
-		font-weight: normal;
-		padding: 10px 30px 20px 1px;
-	}
 }
 
 .rainforest-image {
@@ -183,16 +163,6 @@ h2 {
 //footer overwrite
 .footer {
 	z-index: 100;
-	// 	background-color: rgb(22, 22, 22);
-	// 	h4 {
-	// 		color: white;
-	// 	}
-	// 	li {
-	// 		color: white;
-	// 	}
-	// 	a {
-	// 		color: white;
-	// 	}
 }
 
 .solution-btn {
