@@ -1,5 +1,4 @@
-@import '../common';
-
+@import '../scss/common';
 //navbar overwrite
 
 //container overwrite
@@ -10,7 +9,7 @@
 }
 // Rem Overwrite
 body {
-	background-color: #161616;
+	background-color: black;
 	color: #f6f6f6;
 }
 
@@ -60,8 +59,15 @@ body {
 }
 
 .section-text {
-	font-size: 1.2rem;
-	margin-top: 1.5rem;
+	color: #a1a1a6;
+	font-size: 1.5rem;
+	line-height: 1.5;
+}
+
+.section-text-small {
+	padding-right: 1rem;
+	color: #a1a1a6;
+	font-size: 1.1rem;
 	line-height: 1.5;
 }
 
@@ -126,12 +132,10 @@ body {
 	box-shadow: var(--shadow-dark);
 	border-radius: 4px;
 }
-.youtubevideo {
-}
 
 //footer overwrite
 .footer {
-	background-color: rgb(22, 22, 22);
+	background-color: var(--black);
 	h4 {
 		color: white;
 	}

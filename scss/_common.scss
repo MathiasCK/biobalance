@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&display=swap');
 
 :root {
 	--dark: #000;
 	--light: #fff;
 	--richblack: #00171f;
-	--black: #212121;
+	--black: #080808;
 	--dodgerblue: #4392f1;
 	--bittersweet: #ff6b6b;
 	--eggplant: #6f5060;
@@ -28,7 +29,7 @@
 	--border-hover-color: var(--secondary);
 
 	--h-font: 'Inter', sans-serif !important;
-	--p-font: 'Recoleta', sans-serif !important;
+	--p-font: 'Karla', sans-serif !important;
 }
 
 @import './utils/utils';
