@@ -189,36 +189,37 @@ body {
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		height: 70vh;
-		//background-color: rgba(0, 0, 0, 0.5);
-		backdrop-filter: blur(5px);
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		margin-bottom: 10rem;
 
 		.product-image {
-			background-image: url('/img/biobalance_drenation.png');
+			background-image: url('/img/biobalance_drenation_fade.png');
 			background-size: contain;
 			background-repeat: no-repeat;
-			background-position: bottom -50px center;
+			background-position: bottom 0px center;
 			background-size: 200%;
 			@media screen and (min-width: 768px) {
 				background-size: cover;
-				background-position: bottom -200px center;
+				background-position: bottom 000px center;
 			}
 			width: 100%;
 			height: 100%;
+			backdrop-filter: blur(5px);
 		}
 
-		img {
+		.product-bg {
 			position: absolute;
-			bottom: 0;
-			width: 200%;
-
-			@media screen and (min-width: 768px) {
-				bottom: -100px;
-			}
-
-			object-fit: contain;
+			top: -100px;
+			left: 0;
+			z-index: -1;
+			background-image: url('/img/welcome_fade.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			// background-position: top 250px center;
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
