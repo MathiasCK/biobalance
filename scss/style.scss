@@ -111,14 +111,14 @@ body {
 	animation: moving 3s infinite linear;
 }
 
-@keyframes moving {
+/*@keyframes moving {
 	from {
 		background-position-y: 0vh;
 	}
 	to {
 		background-position-y: 200vh;
 	}
-}
+} */
 
 .content {
 	position: relative;
