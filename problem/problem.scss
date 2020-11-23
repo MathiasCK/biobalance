@@ -99,6 +99,15 @@ body {
 	}
 }
 
+.burnt-image {
+	background-image: url('/img/burnt_rainforest.jpg');
+	background-attachment: fixed;
+	height: 100vh;
+	width: 100%;
+	object-fit: cover;
+	filter: brightness(80%);
+}
+
 .youtube-description {
 	margin-left: auto;
 	margin-right: auto;
