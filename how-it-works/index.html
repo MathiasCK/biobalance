@@ -146,15 +146,86 @@
 			</div>
 		</div>
 
-		<!-- Placeholder for gallery -->
+		<!-- Product Showcase -->
 		<div id="gallery" data-background="transparent-light">
 			<div class="product fade fadeIn">
 				<div class="product-image"></div>
 				<div class="product-bg"></div>
-				<!-- <img src="/img/biobalance_drenation_fade.png" /> -->
+
+				<i
+					class="info-circle fas fa-info popper popper:hover"
+					data-content="#info-plant"
+					style="bottom: 390px; left: 52vw"
+				></i>
+
+				<i
+					class="info-circle fas fa-info popper popper:hover"
+					data-content="#info-curved"
+					style="bottom: 300px; left: 47vw"
+				></i>
+
+				<i
+					class="info-circle fas fa-info popper popper:hover"
+					data-content="#info-drenation"
+					style="bottom: 290px; left: 57vw"
+				></i>
+
+				<i
+					class="info-circle fas fa-info popper popper:hover"
+					data-content="#info-soil"
+					style="bottom: 240px; left: 46vw"
+				></i>
+
+				<i
+					class="info-circle fas fa-info popper popper:hover"
+					data-content="#info-ground"
+					style="bottom: 250px; left: 36vw"
+				></i>
 			</div>
-			<!-- <img src="/img/welcome.jpg" /> -->
 		</div>
+
+		<div class="popper-tooltip" id="info-plant">
+			<h2>The plant</h2>
+			<p>
+				The plants will be grown inside a greenhouse until they are
+				ready to be planted outside in the Rainforest Lunchbox. To
+				simulate the biodiversity of the rainforest they will be planted
+				as a polyculture, which means we will use a multitude of
+				different species, to trigger symbiosis and resistance to plant
+				diseases.
+			</p>
+		</div>
+
+		<div class="popper-tooltip" id="info-curved">
+			<h2>Curved surface</h2>
+			<p>
+				Curved surface to ensure rainwater and felt leaves to get inside
+				the Rainforest Lunchbox
+			</p>
+		</div>
+		<div class="popper-tooltip" id="info-drenation">
+			<h2>Drenation pit</h2>
+			<p>
+				The drenation pit will remove the overflowing water during
+				intense rainfall, in order to save the plants from drowning.
+			</p>
+		</div>
+		<div id="info-ground" class="popper-tooltip">
+			<h2>Burial</h2>
+			<p>
+				The incubator isn't buried too far into the ground, making it
+				easier to plant.
+			</p>
+		</div>
+		<div class="popper-tooltip" id="info-soil">
+			<h2>Nutritious soil</h2>
+			<p>
+				The soil is adapted to each plant, containing all the nutrients
+				the plants need, like nitrogen, phosphorus, and calcium.
+			</p>
+		</div>
+
+		<!-- Product Showcase End -->
 
 		<!-- Text section -->
 		<div class="svg">
@@ -296,5 +367,6 @@
 		</footer>
 		<!-- footer end -->
 		<script src="/js/fade.js"></script>
+		<script src="/js/popup.js"></script>
 	</body>
 </html>
