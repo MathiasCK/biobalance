@@ -19,6 +19,21 @@ body {
 	color: #f6f6f6;
 }
 
+.svg {
+	position: relative;
+	svg {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 .flexed {
 	display: flex;
 	align-items: center;

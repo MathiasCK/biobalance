@@ -1,8 +1,7 @@
 @import '../scss/common';
 
-//navbar overwrite
-.nav-bar {
-	position: fixed;
+html {
+	scroll-behavior: smooth;
 }
 //container overwrite
 .container {
