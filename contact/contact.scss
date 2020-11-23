@@ -7,6 +7,10 @@ body {
 	height: 100vh;
 }
 
+html {
+	scroll-behavior: smooth !important;
+}
+
 .container {
 	width: 70%;
 	margin-top: 6rem;

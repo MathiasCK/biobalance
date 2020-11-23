@@ -17,6 +17,10 @@ body {
 	color: #f6f6f6;
 }
 
+html {
+	scroll-behavior: smooth !important;
+}
+
 // Hero
 .hero {
 	width: 100%;
