@@ -28,7 +28,9 @@
 
 		<!-- Navbar -->
 		<nav class="nav-bar white">
-			<span onclick="window.scrollTo({top: 0, behaviour: 'smooth'})" class="logo"
+			<span
+				onclick="window.scrollTo({top: 0, behaviour: 'smooth'})"
+				class="logo"
 				><i class="fab fa-acquisitions-incorporated"></i
 			></span>
 			<ul class="nav-items">
@@ -46,9 +48,7 @@
 					<a class="nav-item" href="/solution">Solution</a>
 				</li>
 				<li class="nav-link">
-					<a class="nav-item" href="/how-it-works"
-						>How It Works</a
-					>
+					<a class="nav-item" href="/how-it-works">How It Works</a>
 				</li>
 				<li class="nav-link">
 					<a class="nav-item" href="/our-team/">Our Team</a>
@@ -83,7 +83,6 @@
 							<a class="side-nav-item" href="/how-it-works"
 								>How It Works</a
 							>
-						</li>
 						</li>
 						<li class="side-nav-link">
 							<a class="side-nav-item" href="/our-team/"
@@ -158,43 +157,13 @@
 					Solution
 				</h1>
 
-				<img
-					class="section-img-light solution-image"
-					src="/img/biobalance_display.png"
-				/>
-
-				<div class="row">
-					<!-- <div class="flexed-50">
-						<p class="section-text">
-							Our solution is regrowing parts at the partly
-							deforested rainforests to reconnect the fragments of
-							the forest areas that are separated due to
-							agriculture and logging. This is necessary to bring
-							back balance of the ecosystem, to reverse the
-							damages committed by humans, in order to stop
-							further massive destruction that an unbalanced
-							ecosystem will cause to the fragile biodiversity of
-							the rainforest. <br />
-							<br />
-							 Planting tree species that belong to the rainforest
-							on deforested grounds is not an easy task. According
-							to botanist Charlotte Bjorå, every plant in the
-							rainforest gets almost their entire source of
-							nutrients from the 25 cm layer of biomass on the
-							ground, since the ground is made of clay. Deforested
-							grounds are missing the neutricius biomass, due to
-							rain and extreme sunlight. In addition to this, the
-							sunlight will kill the entirety of new vegetations
-							planted in these conditions. Therefore we found a
-							solution, the Rainforest Lunchbox together with
-							large shadow cloths, that protect the new plants
-							from the sun. The Rainforest Lunchbox is designed to
-							keep moisture inside, while simultaneously providing
-							the planted vegetation with all the nutrients the
-							ground is lacking, simulating the perfect
-							environment for the regrowing plants to thrive.
-						</p>
-					</div> -->
+				<div class="solution-container">
+					<div class="solution-inner">
+						<img
+							class="section-img-light solution-image"
+							src="/img/biobalance_display.png"
+						/>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -230,62 +199,61 @@
 		</section>
 		<!-- How it works end -->
 
-		
-			<!-- footer start -->
-			<footer class="footer">
-				<div class="contact-info footer-column">
-					<h4>Contact Information</h4>
-					<ul>
-						<li>E-Mail: biobalance@bio.com</li>
-						<li>PhoneNumber: 12345678</li>
-					</ul>
-				</div>
-				<div class="location footer-column">
-					<h4>Location</h4>
-					<ul>
-						<li>Adress:</li>
-						<li>Pilestredet 32, Oslo</li>
-					</ul>
-				</div>
-				<div class="socials footer-column">
-					<h4>Social Media</h4>
-					<ul>
-						<li>
-							<a
-								href="https://www.facebook.com/BioBalance-100261931923249"
-								target="_blank"
-								class="instagram-icon"
-								><i class="fab fa-facebook"></i
-							></a>
-						</li>
-						<li>
-							<a
-								href="//instagram.com/biobalanceorg/"
-								target="_blank"
-								class="instagram-icon"
-								><i class="fab fa-instagram"></i
-							></a>
-						</li>
-						<li>
-							<a
-								href="//youtube.com"
-								target="_blank"
-								class="instagram-icon"
-								><i class="fab fa-youtube"></i
-							></a>
-						</li>
-						<li>
-							<a
-								href="//twitter.com"
-								target="_blank"
-								class="instagram-icon"
-								><i class="fab fa-twitter"></i
-							></a>
-						</li>
-					</ul>
-				</div>
-			</footer>
-		
+		<!-- footer start -->
+		<footer class="footer">
+			<div class="contact-info footer-column">
+				<h4>Contact Information</h4>
+				<ul>
+					<li>E-Mail: biobalance@bio.com</li>
+					<li>PhoneNumber: 12345678</li>
+				</ul>
+			</div>
+			<div class="location footer-column">
+				<h4>Location</h4>
+				<ul>
+					<li>Adress:</li>
+					<li>Pilestredet 32, Oslo</li>
+				</ul>
+			</div>
+			<div class="socials footer-column">
+				<h4>Social Media</h4>
+				<ul>
+					<li>
+						<a
+							href="https://www.facebook.com/BioBalance-100261931923249"
+							target="_blank"
+							class="instagram-icon"
+							><i class="fab fa-facebook"></i
+						></a>
+					</li>
+					<li>
+						<a
+							href="//instagram.com/biobalanceorg/"
+							target="_blank"
+							class="instagram-icon"
+							><i class="fab fa-instagram"></i
+						></a>
+					</li>
+					<li>
+						<a
+							href="//youtube.com"
+							target="_blank"
+							class="instagram-icon"
+							><i class="fab fa-youtube"></i
+						></a>
+					</li>
+					<li>
+						<a
+							href="//twitter.com"
+							target="_blank"
+							class="instagram-icon"
+							><i class="fab fa-twitter"></i
+						></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+
 		<!-- Why it works end -->
 		<!-- Script -->
 		<script
@@ -294,5 +262,14 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="js/app.js"></script>
+		<script src="js/skew.js"></script>
+		<script>
+			// document.addEventListener('DOMContentLoaded', function () {
+			// 	const skewSolution = mouseSkew(
+			// 		document.querySelector('.solution-container'),
+			// 		document.querySelector('.solution-inner')
+			// 	);
+			// });
+		</script>
 	</body>
 </html>
