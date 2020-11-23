@@ -5,15 +5,39 @@
 	 */
 	const getRect = (elm) => elm.getBoundingClientRect();
 	const getTotalHeight = (t, margin = 0) => margin + t.offsetHeight;
-	const getTopPlacement = (target, popperElm) =>
-		-getTotalHeight(popperElm) + target.offsetTop;
+	const getTopPlacement = (target, popperElm) => {
+		const cords = getRelativeCords(target);
+		return -getTotalHeight(popperElm) + cords.top;
+	};
+
 	const getBottomPlacement = (target) =>
-		target.offsetTop + target.offsetHeight;
+		getRelativeCords(target).top + target.offsetHeight;
 	const getLeftPlacement = (target, popperElm) =>
 		target.offsetLeft - popperElm.offsetLeft;
 	const getNormalPlacement = (target) => target.offsetLeft;
 	const getRightPlacement = (target) =>
 		target.offsetLeft + getRect(target).width;
+
+	function getRelativeCords(elem) {
+		// crossbrowser version
+		const box = elem.getBoundingClientRect();
+
+		const body = document.body;
+		const docEl = document.documentElement;
+
+		const scrollTop =
+			window.pageYOffset || docEl.scrollTop || body.scrollTop;
+		const scrollLeft =
+			window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+		const clientTop = docEl.clientTop || body.clientTop || 0;
+		const clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+		const top = box.top + scrollTop - clientTop;
+		const left = box.left + scrollLeft - clientLeft;
+
+		return { top: Math.round(top), left: Math.round(left) };
+	}
 
 	/**
 	 * Creators
@@ -68,7 +92,11 @@
 		});
 
 		if (typeof content === 'string') popperElm.innerHTML = content;
-		else popperElm.appendChild(content);
+		else {
+			const node = content.cloneNode(true);
+			node.id = `popper_content_${popperCount}`;
+			popperElm.appendChild(node);
+		}
 
 		popperElm.style.cssText = cssText;
 		container.appendChild(popperElm);

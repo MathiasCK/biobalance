@@ -28,18 +28,6 @@ body {
   -------
   */
 
-.page-section-1 {
-	background-color: var(--light);
-	color: black;
-	// padding-top: 57px;
-}
-
-.page-section-2 {
-	background-color: #212121;
-	color: var(--light);
-	// padding-top: 57px;
-}
-
 .page-section {
 	background-color: var(--bg-1);
 }
@@ -111,14 +99,14 @@ body {
 	animation: moving 3s infinite linear;
 }
 
-@keyframes moving {
+/*@keyframes moving {
 	from {
 		background-position-y: 0vh;
 	}
 	to {
 		background-position-y: 200vh;
 	}
-}
+} */
 
 .content {
 	position: relative;
@@ -184,22 +172,10 @@ body {
 }
 
 /*
-  -------
-  Problem
-  -------
-  */
-
-section#problem {
-	min-height: 100vh;
-	padding-bottom: 100px;
-	height: auto;
-}
-
-/*
   --------
   Solution
   --------
-  */
+ 
 
 .solution {
 	background-color: var(--richblack) !important;
@@ -212,10 +188,12 @@ section#problem {
 
 .secondary {
 	color: var(--secondary);
-}
+}  */
 
 /*
+------------- 
 Intro section
+-------------
 */
 
 .intro {
