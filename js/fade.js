@@ -13,7 +13,7 @@ window.addEventListener('scroll', () => {
 const observerOptions = {
 	root: null,
 	rootMargin: '0px',
-	threshold: 0.7,
+	threshold: 0.2,
 };
 
 const isIntersecting = (entry) => {
@@ -40,7 +40,12 @@ function observerCallback(entries) {
 	});
 }
 
-const fadeElms = document.querySelectorAll('.fade');
-fadeElms.forEach((elm) => elm.classList.add('fadeOut'));
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-fadeElms.forEach((el) => observer.observe(el));
+document.addEventListener('DOMContentLoaded', () => {
+	const fadeElms = document.querySelectorAll('.fade');
+	fadeElms.forEach((elm) => elm.classList.add('fadeOut'));
+	const observer = new IntersectionObserver(
+		observerCallback,
+		observerOptions
+	);
+	fadeElms.forEach((el) => observer.observe(el));
+});
