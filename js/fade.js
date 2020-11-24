@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const fadeElms = document.querySelectorAll('.fade');
 	fadeElms.forEach((elm) => {
 		elm.style.opacity = 0;
-		elm.classList.add('fadeOut');
+		elm.classList.add('fade-out');
 	});
 
 	const observer = new IntersectionObserver(
