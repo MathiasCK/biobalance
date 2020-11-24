@@ -15,8 +15,8 @@ html {
 }
 // Rem Overwrite
 body {
-	background-color: black;
-	color: #f6f6f6;
+	color: black;
+	background-color: #f6f6f6;
 }
 
 // Hero
@@ -87,7 +87,7 @@ body {
 
 .solution-header {
 	font-size: 3rem;
-	color: white;
+	color: black;
 	margin-bottom: 1rem;
 	padding-top: 0rem;
 	@media screen and (min-width: 768px) {
@@ -98,14 +98,14 @@ body {
 .solution-header-small {
 	font-size: 1.5rem;
 	padding: 1rem 0.5rem;
-	color: white;
+	color: black;
 	@media screen and (min-width: 768px) {
 		padding: 1rem;
 	}
 }
 
 .solution-text {
-	color: #a1a1a6;
+	color: black;
 	font-size: 1.25rem;
 	line-height: 1.5;
 	padding: 1rem 0.5rem;
