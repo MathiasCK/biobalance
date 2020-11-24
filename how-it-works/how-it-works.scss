@@ -215,9 +215,9 @@ html {
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: bottom 0px center;
-			background-size: 200%;
+			background-size: contain;
 			@media screen and (min-width: 768px) {
-				background-size: cover;
+				background-size: contain;
 				background-position: bottom 000px center;
 			}
 			width: 100%;
