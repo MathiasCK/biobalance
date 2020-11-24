@@ -40,6 +40,7 @@
 	&.transparent {
 		color: var(--light);
 		background-color: transparent;
+		backdrop-filter: none;
 	}
 	&.transparent-light {
 		color: var(--light);

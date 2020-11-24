@@ -136,39 +136,43 @@ Animations
 	transition-property: opacity, transform;
 }
 .fade-test {
-	opacity: 0;
 	transition: all 0.5s ease-in;
 	transition-property: opacity, transform;
 }
-.fadeOut {
-	opacity: 0;
+.fade-out {
+	opacity: 0 !important;
 	transform: translateY(30px);
 	&.up {
 		transform: translateY(-30px);
 	}
 }
 
-.fadeIn {
-	opacity: 1;
+.fade-in {
+	opacity: 1 !important;
 	transform: translateY(0px);
 }
 
 // SVG animations
 .stroke-line {
 	path {
-		stroke-dashoffset: -2000;
-		stroke-dasharray: 2000;
 		stroke-width: 3px;
 		stroke-opacity: 0.3;
-		transition: stroke-dashoffset 1.5s ease;
-		transition-delay: 0.5s;
 		&.right {
 			stroke-dashoffset: 2000;
 		}
 	}
-	&.in {
+
+	&.animated {
 		path {
-			stroke-dashoffset: 0;
+			transition: stroke-dashoffset 1.5s ease;
+			transition-delay: 0.5s;
+			stroke-dashoffset: -2000;
+			stroke-dasharray: 2000;
+		}
+		&.in {
+			path {
+				stroke-dashoffset: 0;
+			}
 		}
 	}
 }
@@ -177,15 +181,6 @@ Animations
 	to {
 		stroke-dashoffset: 0;
 	}
-}
-
-.page-section-1 {
-	background: white;
-}
-
-.page-section-2 {
-	color: white;
-	background: var(--black);
 }
 
 .svg {
