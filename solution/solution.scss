@@ -15,8 +15,8 @@ html {
 }
 // Rem Overwrite
 body {
-	background-color: white;
-	color: black;
+	background-color: black;
+	color: #f6f6f6;
 }
 
 // Hero
@@ -45,53 +45,105 @@ body {
 .solution-flex {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 	justify-content: center;
+	&.secondary {
+		align-items: center;
+	}
 }
 
 .flex-item {
-	flex: 50%;
-	padding: 1rem;
+	flex: 100%;
+	padding: 2rem 0;
+
 	&.big {
 		flex: 100%;
+		padding: 0rem;
+	}
+	@media screen and (min-width: 768px) {
+		flex: 50%;
 		padding: 1rem;
+
+		&.big {
+			flex: 100%;
+			padding: 1rem;
+		}
 	}
 }
 
 .solution-section {
-	padding-top: 10vh;
+	padding-top: 15vh;
+	@media screen and (min-width: 768px) {
+		padding-top: 15vh;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.img-small {
+	padding: 1rem;
 }
 
 .solution-header {
-	font-size: 2rem;
-	color: black;
+	font-size: 3rem;
+	color: white;
 	margin-bottom: 1rem;
-	&:after {
-		content: ' ';
-		display: block;
-		width: 100px;
-		height: 1px;
-		margin: 20px 0 20px;
-		background: var(--secondary);
+	padding-top: 0rem;
+	@media screen and (min-width: 768px) {
+		padding-top: 10rem;
+	}
+}
+
+.svg {
+	position: relative;
+	svg {
+		position: absolute;
+		width: 100%;
+		top: 30%;
+		left: 50%;
+		transform: translate(-50%, -30%);
 	}
 }
 
 .solution-header-small {
-	font-size: 1rem;
-	color: black;
-	margin-bottom: 1rem;
-	margin-top: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem 0.5rem;
+	color: white;
+	@media screen and (min-width: 768px) {
+		padding: 1rem;
+	}
 }
 
 .solution-text {
+	color: #a1a1a6;
 	font-size: 1.25rem;
 	line-height: 1.5;
-	padding: 1rem;
+	padding: 1rem 0.5rem;
+	@media screen and (min-width: 768px) {
+		padding: 1rem;
+	}
+}
+
+.pb-20 {
+	padding-bottom: 5rem;
+	@media screen and (min-width: 768px) {
+		padding-bottom: 20rem;
+	}
 }
 
 //footer overwrite
 .footer {
-	z-index: 100;
+	background-color: var(--black);
+	h4 {
+		color: white;
+	}
+	li {
+		color: white;
+	}
+	a {
+		color: white;
+	}
 }
 
 .solution-btn {
