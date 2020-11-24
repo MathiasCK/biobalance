@@ -141,3 +141,17 @@ html {
 		flex-basis: 33.33333333333%;
 	}
 }
+
+.footer {
+	background-color: var(--black);
+	h4 {
+		color: white;
+	}
+	li {
+		color: white;
+	}
+	a {
+		color: white;
+	}
+	margin-top: 0rem;
+}

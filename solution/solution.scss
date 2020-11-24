@@ -42,122 +42,51 @@ body {
 	}
 }
 
-.section-header {
-	font-size: 3rem;
-	color: rgb(0, 0, 0);
-	text-align: left;
-	padding-top: 4rem;
-	padding-bottom: 20px;
-	// text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.section-text {
-	padding-top: 5vh;
-}
-
-.columns-container {
-	display: flex;
-	width: 100%;
-}
-
-.column-image {
-	width: 60%;
-	img {
-		object-fit: cover;
-		width: 100%;
-		height: 90%;
-		border-radius: 4px;
-	}
-	//box-shadow: var(--shadow-dark);
-}
-.columns {
-	@media screen and (min-width: 768px) {
-		width: 40%;
-	}
+.solution-flex {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
-.columns2 {
-	@media screen and (min-width: 768px) {
-		width: 50%;
-	}
-	margin-top: 30px;
-	display: flex;
-	flex-wrap: wrap;
-}
-.columns3 {
-	margin-top: 30px;
-	@media screen and (min-width: 768px) {
-		width: 50%;
-	}
-	display: flex;
-	flex-wrap: wrap;
-}
-h2 {
-	margin-top: 100px;
-}
-.column {
-	flex-basis: 100%;
-	@media screen and (min-width: 768px) {
-		flex-basis: 100%;
+
+.flex-item {
+	flex: 50%;
+	padding: 1rem;
+	&.big {
+		flex: 100%;
+		padding: 1rem;
 	}
 }
 
-.rainforest-image {
-	margin-top: 50px;
-	z-index: 0;
-	width: 100%;
-	img {
-		width: 100%;
-	}
+.solution-section {
+	padding-top: 10vh;
 }
 
-.goals-container {
-	display: flex;
-	width: 100%;
-}
-
-@media screen and (max-width: 774px) {
-	.goals-container {
+.solution-header {
+	font-size: 2rem;
+	color: black;
+	margin-bottom: 1rem;
+	&:after {
+		content: ' ';
 		display: block;
-	}
-	.columns-container {
-		display: block;
-		width: 90%;
-	}
-}
-
-.goals {
-	@media screen and (min-width: 768px) {
-		width: 68%;
-	}
-	display: flex;
-	flex-wrap: wrap;
-	flex-wrap: wrap;
-
-	li {
-		font-size: 1.25rem;
-		padding-top: 15px;
-		padding-right: 3%;
-	}
-}
-.goals-image {
-	flex: 1;
-	width: 30%;
-	justify-content: floor($number: 20);
-	img {
-		margin-left: auto;
-		margin-top: 100px;
-		object-fit: cover;
-		width: 100%;
-		height: 70%;
-		border-radius: 4px;
-		box-shadow: var(--shadow-dark);
+		width: 100px;
+		height: 1px;
+		margin: 20px 0 20px;
+		background: var(--secondary);
 	}
 }
 
-#problemSub {
-	padding-top: 60px;
+.solution-header-small {
+	font-size: 1rem;
+	color: black;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.solution-text {
+	font-size: 1.25rem;
+	line-height: 1.5;
+	padding: 1rem;
 }
 
 //footer overwrite
