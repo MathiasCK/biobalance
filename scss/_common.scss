@@ -141,7 +141,7 @@ Animations
 	transition: all 0.5s ease-in;
 	transition-property: opacity, transform;
 }
-.fadeOut {
+.fade-out {
 	opacity: 0 !important;
 	transform: translateY(30px);
 	&.up {
@@ -151,7 +151,7 @@ Animations
 	// transition-property: opacity, transform;
 }
 
-.fadeIn {
+.fade-in {
 	opacity: 1 !important;
 	transform: translateY(0px);
 }
