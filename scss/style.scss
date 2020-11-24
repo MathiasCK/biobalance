@@ -240,6 +240,37 @@ Intro section
 }
 .problem-img {
 	margin-top: -50px;
+	box-shadow: var(--shadow-dark);
+	border-radius: 4px;
+}
+
+//Solution
+.solution-container {
+	padding-top: 2rem;
+	width: 90%;
+	display: flex;
+	margin-right: auto;
+	flex-wrap: wrap;
+	// align-items: center;
+	// justify-content: center;
+
+	.solution-img {
+		flex: 60%;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.solution-txt {
+		flex: 35%;
+		color: white;
+		padding-right: 1rem;
+		.solution-txt-header {
+			font-size: 1.5rem;
+			padding-bottom: 0.5rem;
+		}
+	}
 }
 
 // Page sections
