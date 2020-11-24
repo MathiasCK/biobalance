@@ -27,4 +27,7 @@
 		box-shadow: 0 0 0 0 var(--color), inset 6em -6em 0 0 var(--color);
 		color: var(--focus-color);
 	}
+	&.pt-3 {
+		padding-top: 3rem;
+	}
 }
