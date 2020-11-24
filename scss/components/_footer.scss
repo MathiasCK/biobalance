@@ -9,10 +9,16 @@
 	h4 {
 		margin-bottom: 15px;
 	}
+
 	> div {
 		border-left: var(--secondary) 1px solid;
 		height: 100px;
 		padding-left: 20px;
+	}
+	&.green {
+		> div {
+			border-color: var(--green-2);
+		}
 	}
 	@media screen and (min-width: 768px) {
 		flex-wrap: nowrap;

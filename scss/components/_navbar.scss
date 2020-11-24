@@ -48,6 +48,11 @@
 	&.dark {
 		background-color: var(--black);
 		color: var(--light);
+		&.green {
+			.active {
+				border-color: var(--green-2);
+			}
+		}
 	}
 	&.transparent-dark {
 		background-color: rgba(0, 0, 0, 0.1);
@@ -58,6 +63,9 @@
 
 .active {
 	border-bottom: 1px solid var(--secondary);
+	&.green {
+		border-color: var(--green-2);
+	}
 }
 
 .nav-btn {

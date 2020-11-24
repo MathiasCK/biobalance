@@ -28,22 +28,23 @@ body {
   -------
   */
 
-.page-section {
-	background-color: var(--bg-1);
-}
-
 .section-header {
 	padding: 60px 0;
 	line-height: 3rem;
-}
+	&::after {
+		content: ' ';
+		display: block;
+		width: 100px;
+		height: 1px;
+		margin: 1px 0 10px;
+		background: var(--secondary);
+	}
 
-.section-header:after {
-	content: ' ';
-	display: block;
-	width: 100px;
-	height: 1px;
-	margin: 1px 0 10px;
-	background: var(--secondary);
+	&.green-2 {
+		&::after {
+			background: var(--green-2);
+		}
+	}
 }
 
 .section-img-dark {
@@ -249,14 +250,16 @@ Intro section
 
 //Solution
 .solution-container {
-	height: 80vh;
-	padding-top: 2rem;
 	width: 90%;
-	display: flex;
+	display: block;
 	margin-right: auto;
-	flex-wrap: wrap;
-	//align-items: center;
-	justify-content: center;
+	@media screen and (min-width: 768px) {
+		height: 80vh;
+		padding-top: 2rem;
+
+		display: flex;
+		justify-content: center;
+	}
 
 	.solution-img {
 		flex: 65%;

@@ -21,6 +21,11 @@ const isIntersecting = (entry) => {
 };
 
 function observerCallback(entries) {
+	const [entry1] = entries;
+	console.log(
+		'🚀 ~ file: fade.js ~ line 25 ~ observerCallback ~ entry1',
+		entry1
+	);
 	entries.forEach((entry) => {
 		entry.target.classList.remove('up');
 		if (isIntersecting(entry)) {
@@ -42,9 +47,11 @@ function observerCallback(entries) {
 document.addEventListener('DOMContentLoaded', () => {
 	const fadeElms = document.querySelectorAll('.fade');
 	fadeElms.forEach((elm) => elm.classList.add('fadeOut'));
+
 	const observer = new IntersectionObserver(
 		observerCallback,
 		observerOptions
 	);
+
 	fadeElms.forEach((el) => observer.observe(el));
 });

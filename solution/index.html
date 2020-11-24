@@ -34,7 +34,7 @@
 				<li class="nav-link">
 					<a class="nav-item" href="/problem">Problem</a>
 				</li>
-				<li class="nav-link active">
+				<li class="nav-link active green">
 					<a class="nav-item" href="/solution">Solution</a>
 				</li>
 				<li class="nav-link" aria-hidden="true" style="display: none">
@@ -104,21 +104,30 @@
 						d="M1440 27.4774C1352.73 19.8184 1122.41 49.0556 899.331
 				227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165
 				49.0556 -4.21721 8.32998 0.487081 5"
-						stroke="var(--secondary)"
+						stroke="var(--green-1)"
 						strokeOpacity="0.5"
 						strokeWidth="10"
 					/>
 				</svg>
 				<div class="container">
-					<h1 class="solution-header text-center fade">
-						Our <span>solution</span> to save the rainforest.
+					<h1
+						class="solution-header text-center fade-test"
+						data-observer-in="fadeIn"
+						data-observer-out="fadeOut"
+					>
+						Our <span class="green">solution</span> to save the
+						rainforest.
 					</h1>
 					<div class="solution-flex secondary">
 						<div class="flex-item big">
 							<!--<h2 class="solution-header-small">
 							Decrease <span>death</span> rate.
 						</h2>-->
-							<p class="solution-text pb-20 text-center fade">
+							<p
+								class="solution-text pb-20 text-center fade-test"
+								data-observer-in="fadeIn"
+								data-observer-out="fadeOut"
+							>
 								The Rainforest Lunchbox is designed to provide
 								neutrients, keep the humidity inside the soil
 								and the shade cloth will protect the plants from
@@ -139,7 +148,7 @@
 						<div class="flex-item fade">
 							<h2 class="solution-header-small">
 								Turns the inhabitable into
-								<span>habitable.</span>
+								<span class="green">habitable.</span>
 							</h2>
 							<p class="solution-text">
 								As the rainforest is cut down, what is left is a
@@ -170,13 +179,15 @@
 						d="M1440 27.4774C1352.73 19.8184 1122.41 49.0556 899.331
 				227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165
 				49.0556 -4.21721 8.32998 0.487081 5"
-						stroke="var(--secondary)"
+						stroke="var(--green-1)"
 						strokeOpacity="0.5"
 						strokeWidth="10"
 					/>
 				</svg>
 				<div class="container">
-					<h1 class="solution-header">Our <span>goals</span>.</h1>
+					<h1 class="solution-header">
+						Our <span class="green">goals</span>.
+					</h1>
 					<div class="solution-flex">
 						<div class="flex-item">
 							<img
@@ -229,7 +240,7 @@
 						d="M1440 27.4774C1352.73 19.8184 1122.41 49.0556 899.331
 				227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165
 				49.0556 -4.21721 8.32998 0.487081 5"
-						stroke="var(--secondary)"
+						stroke="var(--green-1)"
 						strokeOpacity="0.5"
 						strokeWidth="10"
 					/>
@@ -238,7 +249,8 @@
 					<div class="solution-flex">
 						<div class="flex-item fade">
 							<h2 class="solution-header-small">
-								Material <span>Lorem</span> ipsum dolor sit.
+								Material <span class="green">Lorem</span> ipsum
+								dolor sit.
 							</h2>
 							<p class="solution-text">
 								PBAT, PBST and PLA, fully compostable plastic
@@ -255,7 +267,8 @@
 						</div>
 						<div class="flex-item fade">
 							<h2 class="solution-header-small">
-								Soil inside the Rainforest <span>Lunchbox</span>
+								Soil inside the Rainforest
+								<span class="green">Lunchbox</span>
 							</h2>
 							<p class="solution-text">
 								The soil will contain the most fundamental
@@ -271,7 +284,7 @@
 						</div>
 						<div class="flex-item fade">
 							<h2 class="solution-header-small">
-								<span>Durability</span>
+								<span class="green">Durability</span>
 							</h2>
 							<p class="solution-text">
 								PBAT and PBST alone will decompose within two
@@ -283,7 +296,7 @@
 						</div>
 						<div class="flex-item fade">
 							<h2 class="solution-header-small">
-								<span>Economic</span> incentives
+								<span class="green">Economic</span> incentives
 							</h2>
 							<p class="solution-text">
 								The materials will cost approximately 32 USD for
@@ -304,7 +317,7 @@
 		<!-- Solution end -->
 
 		<!-- footer start -->
-		<footer class="footer">
+		<footer class="footer green">
 			<div class="contact-info footer-column">
 				<h4>Contact Information</h4>
 				<ul>
@@ -365,6 +378,12 @@
 					once: true,
 					threshhold: 1,
 					rootMargin: '-50px',
+				});
+
+				observe('.fade-test', undefined, {
+					once: false,
+					threshhold: 0.1,
+					rootMargin: '0px',
 				});
 			});
 		</script>

@@ -10,6 +10,8 @@
 	--bittersweet: #ff6b6b;
 	--blue-light: #6bffff;
 	--eggplant: #6f5060;
+	--green-1: #1ebc61;
+	--green-2: #00a187;
 
 	--primary: var(--dodgerblue);
 	--secondary: var(--bittersweet);
@@ -39,6 +41,10 @@
 @import './components/footer';
 @import './components/button';
 @import './components/popup';
+
+* {
+	box-sizing: border-box;
+}
 
 h1,
 h2,
@@ -112,6 +118,12 @@ hr.divider {
 
 span {
 	color: var(--secondary);
+	&.green {
+		color: var(--green-1);
+	}
+	&.green-2 {
+		color: var(--green-2);
+	}
 }
 
 /*
@@ -123,7 +135,11 @@ Animations
 	transition: all 0.5s ease-in;
 	transition-property: opacity, transform;
 }
-
+.fade-test {
+	opacity: 0;
+	transition: all 0.5s ease-in;
+	transition-property: opacity, transform;
+}
 .fadeOut {
 	opacity: 0;
 	transform: translateY(30px);
@@ -181,6 +197,9 @@ Animations
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+	&.green {
+		color: var(--green-1);
+	}
 }
 
 .svg-secondary {
@@ -191,6 +210,9 @@ Animations
 		top: 30%;
 		left: 50%;
 		transform: translate(-50%, -30%);
+	}
+	&.green {
+		color: var(--green-1);
 	}
 }
 .section-text-small {
@@ -206,3 +228,8 @@ Animations
 		padding-top: 5rem;
 	}
 }
+
+// Text colors
+// .green-2 {
+// 	color: var(--green-2) !important;
+// }
