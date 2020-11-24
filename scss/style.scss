@@ -42,7 +42,7 @@ body {
 	display: block;
 	width: 100px;
 	height: 1px;
-	margin: 20px 0 20px;
+	margin: 1px 0 10px;
 	background: var(--secondary);
 }
 
@@ -224,6 +224,22 @@ Intro section
 	transform: translateY(100%);
 	display: inline-block;
 	color: white;
+}
+
+//problem
+.container-problem {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	p {
+		font-size: 0.9rem;
+	}
+}
+.h-problem {
+	font-size: 1.75rem;
+}
+.problem-img {
+	margin-top: -50px;
 }
 
 // Page sections
