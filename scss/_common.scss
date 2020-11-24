@@ -62,7 +62,7 @@ hr {
 	margin: 50px 0;
 }
 
-.text-center {
+img .text-center {
 	text-align: center;
 }
 
@@ -140,7 +140,8 @@ Animations
 		stroke-dasharray: 2000;
 		stroke-width: 3px;
 		stroke-opacity: 0.3;
-		transition: stroke-dashoffset 2s ease;
+		transition: stroke-dashoffset 1s ease;
+		transition-delay: 0.5s;
 		&.right {
 			stroke-dashoffset: 2000;
 		}
