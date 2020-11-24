@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	const fadeElms = document.querySelectorAll('.fade');
 	fadeElms.forEach((elm) => {
 		elm.style.opacity = 0;
-		elm.classList.add('fade-transition');
 		elm.classList.add('fadeOut');
 	});
 
@@ -52,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		observerOptions
 	);
 
+	fadeElms.forEach((el) => {
+		observer.observe(el);
+	});
 	// const run = async () => {
 	// 	await Promise.all(
 	// 		[...fadeElms].map(
@@ -64,8 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 		)
 	// 	);
 
-	// 	fadeElms.forEach((el) => observer.observe(el));
+	// 	fadeElms.forEach((el) => {
+	// 		observer.observe(el);
+	// 	});
 	// };
 	// run();
-	fadeElms.forEach((el) => observer.observe(el));
 });
