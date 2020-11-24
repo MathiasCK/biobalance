@@ -112,3 +112,16 @@ html {
 	margin-top: 1rem;
 	color: black;
 }
+
+.footer {
+	background-color: var(--black);
+	h4 {
+		color: white;
+	}
+	li {
+		color: white;
+	}
+	a {
+		color: white;
+	}
+}

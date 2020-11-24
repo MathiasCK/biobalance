@@ -18,8 +18,8 @@
 	transition: all 0.3s ease;
 	color: white;
 	@media screen and (min-width: 768px) {
-		// backdrop-filter: blur(20px);
-		opacity: 0.95;
+		backdrop-filter: saturate(180%) blur(5px);
+		opacity: 0.9;
 		img {
 			width: 10px;
 			height: 10px;
