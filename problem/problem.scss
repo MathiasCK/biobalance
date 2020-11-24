@@ -17,17 +17,6 @@ body {
 	color: #f6f6f6;
 }
 
-.svg {
-	position: relative;
-	svg {
-		position: absolute;
-		width: 100%;
-		top: 30%;
-		left: 50%;
-		transform: translate(-50%, -30%);
-	}
-}
-
 html {
 	scroll-behavior: smooth !important;
 }

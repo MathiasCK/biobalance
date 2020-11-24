@@ -95,17 +95,6 @@ body {
 	}
 }
 
-.svg {
-	position: relative;
-	svg {
-		position: absolute;
-		width: 100%;
-		top: 30%;
-		left: 50%;
-		transform: translate(-50%, -30%);
-	}
-}
-
 .solution-header-small {
 	font-size: 1.5rem;
 	padding: 1rem 0.5rem;
