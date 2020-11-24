@@ -1,4 +1,3 @@
-@import url('https://rsms.me/inter/inter.css');
 @import './common';
 
 /*
@@ -15,71 +14,12 @@ General
 
 html {
 	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
 }
 
 body {
 	font-family: var(--h-font);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: var(--h-font);
-}
-
-p {
-	font-family: var(--p-font);
-}
-
-h1 {
-	font-weight: 600;
-}
-
-hr {
-	border-bottom: 1px solid var(--secondary);
-	margin: 50px 0;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.font-weight-bold {
-	font-weight: 600;
-}
-.font-weight-medium {
-	font-weight: 500;
-}
-
-w-100 {
-	width: 100% !important;
-}
-w-max-100 {
-	max-width: 100% !important;
-	overflow-x: hidden !important;
-}
-
-.align-items-center {
-	align-items: center;
-}
-
-.justify-content-center {
-	justify-content: center;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.d-inline {
-	display: inline-block;
-}
-
-.d-flex {
-	display: flex;
+	scroll-snap-type: y proximity;
 }
 
 /*
@@ -88,49 +28,23 @@ w-max-100 {
   -------
   */
 
-.page-section-1 {
-	background-color: var(--light);
-	color: black;
-	margin-top: 57px;
-}
-
-.page-section-2 {
-	background-color: #212121;
-	color: var(--light);
-	margin-top: 57px;
-}
-
-.sticky-section {
-	height: 100vh;
-	width: 100%;
-	position: sticky;
-	top: 0;
-	> img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	}
-}
-
-.page-section {
-	background-color: var(--bg-1);
-}
-
 .section-header {
 	padding: 60px 0;
 	line-height: 3rem;
-}
+	&::after {
+		content: ' ';
+		display: block;
+		width: 100px;
+		height: 1px;
+		margin: 1px 0 10px;
+		background: var(--secondary);
+	}
 
-.section-header:after {
-	content: ' ';
-	display: block;
-	width: 100px;
-	height: 1px;
-	margin: 20px 0 20px;
-	background: var(--secondary);
+	&.green-2 {
+		&::after {
+			background: var(--green-2);
+		}
+	}
 }
 
 .section-img-dark {
@@ -141,7 +55,7 @@ w-max-100 {
 }
 
 .section-img-light {
-	object-fit: cover;
+	object-fit: contain;
 	height: 80%;
 	width: 80%;
 	box-shadow: var(--shadow-light);
@@ -259,49 +173,119 @@ w-max-100 {
 }
 
 /*
-  -------
-  Problem
-  -------
-  */
-
-section#problem {
-	min-height: 100vh;
-	padding-bottom: 100px;
-	height: auto;
-}
-
-/*
   --------
   Solution
   --------
-  */
+ 
 
 .solution {
 	background-color: var(--richblack) !important;
 }
+.solution-container {
+	width: 100%;
+}
+.solution-inner {
+}
+
+.secondary {
+	color: var(--secondary);
+}  */
 
 /*
-----------
-Animations
----------- 
+------------- 
+Intro section
+-------------
 */
-.fade {
-	transition: all 0.5s ease-in;
-	transition-property: opacity, transform;
+
+.intro {
+	background: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
 }
 
-.fadeOut {
-	opacity: 0;
-	transform: translateY(30px);
+.intro-text {
+	color: white;
+	font-family: 'Heebo', sans-serif;
+	font-size: 2rem;
 }
 
-.fadeIn {
-	opacity: 1;
-	transform: translateY(0px);
+.hide {
+	background: black;
+	overflow: hidden;
 }
+
+.fade-text {
+	transform: translateY(100%);
+	display: inline-block;
+	color: white;
+}
+
+//problem
+.container-problem {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	p {
+		font-size: 0.9rem;
+	}
+	.flex-img {
+		padding: 2rem 0;
+	}
+}
+.h-problem {
+	font-size: 1.75rem;
+}
+.problem-img {
+	margin-top: -50px;
+	box-shadow: var(--shadow-dark);
+	border-radius: 4px;
+}
+
+//Solution
+.solution-container {
+	width: 90%;
+	display: block;
+	margin-right: auto;
+	@media screen and (min-width: 768px) {
+		height: 80vh;
+		padding-top: 2rem;
+
+		display: flex;
+		justify-content: center;
+	}
+
+	.solution-img {
+		flex: 65%;
+		object-fit: cover;
+
+		img {
+			width: 100%;
+			height: 80%;
+		}
+	}
+	.solution-txt {
+		flex: 35%;
+		color: white;
+		//padding-right: 1rem;
+		.solution-txt-header {
+			font-size: 1.5rem;
+			padding-bottom: 0.5rem;
+		}
+	}
+}
+/*
+Test*/
 
 // Page sections
-@import './home/gallery';
-@import './home/intro';
-@import './home/solution';
-@import './home/whyitworks';
+// @import './home/gallery';
+// @import './home/intro';
+// @import './home/solution';
+// @import './home/whyitworks';
+// @import './home/howitworks';

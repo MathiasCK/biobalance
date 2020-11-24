@@ -20,21 +20,21 @@ window.addEventListener('scroll', () => {
 	const currentSection = sections[currentIndex];
 	navBar.className = `nav-bar ${currentSection.dataset.background}`;
 
-	// Add class active to nav links
+	/* Add class active to nav links
 	navItems.forEach((navItem) => {
 		navItem.classList.remove('active');
 	});
 	const currentItem = navItems[currentIndex];
 	if (!currentItem.classList.contains('active'))
-		currentItem.classList.add('active');
+		currentItem.classList.add('active');*/
 
-	// Change title name on scroll
-	if (currentIndex === sections.length)
-		return (document.title = `${PRODUCT_NAME} | Saving the rainforest`);
-	const title = `${PRODUCT_NAME} | ${
-		currentItem.innerHTML || 'Saving the rainforest'
-	}`;
-	if (document.title !== title) document.title = title;
+	// // Change title name on scroll
+	// if (currentIndex === sections.length)
+	// 	return (document.title = `${PRODUCT_NAME} | Saving the rainforest`);
+	// const title = `${PRODUCT_NAME} | ${
+	// 	currentItem.innerHTML || 'Saving the rainforest'
+	// }`;
+	// if (document.title !== title) document.title = title;
 });
 
 // Responsive Navbar
@@ -65,26 +65,6 @@ sideNavItems.forEach((sideNavItem) => {
 
 navBar.classList.remove('white');
 
-// Fade animations
-const observerOptions = {
-	root: null,
-	rootMargin: '0px',
-	threshold: 0.7,
-};
-
-function observerCallback(entries, observer) {
-	entries.forEach((entry) => {
-		if (entry.isIntersectiong) {
-			entry.target.classList.replace('fadeOut', 'fadeIn');
-		}
-	});
-}
-
-const fadeElms = document.querySelectorAll('.fade');
-fadeElms.forEach((elm) => elm.classList.add('fadeOut'));
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-fadeElms.forEach((el) => observer.observe(el));
-
 // Animations for intro section
 // Check if user is in current session, show animation if user has animated to the page for the first time
 const isMounted = sessionStorage.getItem('isMounted');
@@ -103,7 +83,7 @@ function showStartAnimation() {
 				<span class="fade-text">Saving the rainforest</span>
 			</h1>
 			<h1 class="hide">
-				<span class="fade-text">Has never been easier.</span>
+				<span class="fade-text">Has never been <span>easier</span>.</span>
 			</h1>
 		</div>
 	</div>

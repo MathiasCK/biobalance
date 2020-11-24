@@ -18,8 +18,12 @@
 	transition: all 0.3s ease;
 	color: white;
 	@media screen and (min-width: 768px) {
-		backdrop-filter: blur(20px);
-		opacity: 0.95;
+		backdrop-filter: saturate(180%) blur(5px);
+		opacity: 0.9;
+		img {
+			width: 10px;
+			height: 10px;
+		}
 	}
 	.nav-link,
 	.logo,
@@ -44,6 +48,11 @@
 	&.dark {
 		background-color: var(--black);
 		color: var(--light);
+		&.green {
+			.active {
+				border-color: var(--green-2);
+			}
+		}
 	}
 	&.transparent-dark {
 		background-color: rgba(0, 0, 0, 0.1);
@@ -54,6 +63,9 @@
 
 .active {
 	border-bottom: 1px solid var(--secondary);
+	&.green {
+		border-color: var(--green-2);
+	}
 }
 
 .nav-btn {

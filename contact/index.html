@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>BioBalance | Contact</title>
+		<title>BioBalance™ | Contact</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -15,33 +15,28 @@
 		<link rel="icon" type="image/jpg" href="/img/tree.jpg" />
 		<link rel="stylesheet" href="/css/contact.min.css" />
 	</head>
-	<body>
+	<body id="page-top">
 		<!-- Navbar -->
-		<nav class="nav-bar white">
-			<a href="/" class="logo"
+		<nav class="nav-bar dark">
+			<a class="logo" href="#page-top"
 				><i class="fab fa-acquisitions-incorporated"></i
 			></a>
 			<ul class="nav-items">
 				<li style="visibility: hidden" class="nav-link">
-					<a class="nav-item" href="/#welcome"></a>
+					<a class="nav-item" href="/welcome"></a>
 				</li>
 				<li class="nav-link">
-					<a class="nav-item" href="/#problem">Problem</a>
+					<a class="side-nav-item" href="/">Home</a>
 				</li>
 				<li class="nav-link">
-					<a class="nav-item" href="/#solution">Solution</a>
+					<a class="nav-item" href="/problem">Problem</a>
 				</li>
 				<li class="nav-link">
-					<a class="nav-item" href="/#gallery">Gallery</a>
+					<a class="nav-item" href="/solution">Solution</a>
 				</li>
 				<li class="nav-link">
-					<a class="nav-item" href="/#how-it-works">How It Works</a>
+					<a class="nav-item" href="/how-it-works">How It Works</a>
 				</li>
-
-				<li class="nav-link">
-					<a class="nav-item" href="/#why-it-works">Why It Works</a>
-				</li>
-
 				<li class="nav-link" style="padding: 10px 5px">
 					<a class="nav-item" href="/our-team/">Our Team</a>
 				</li>
@@ -62,25 +57,21 @@
 				<ul class="side-nav-items justify-content-center">
 					<center>
 						<li class="side-nav-link">
-							<a class="side-nav-item" href="#problem">Problem</a>
+							<a class="side-nav-item" href="/">Home</a>
 						</li>
 						<li class="side-nav-link">
-							<a class="side-nav-item" href="#solution"
+							<a class="side-nav-item" href="/problem">Problem</a>
+						</li>
+						<li class="side-nav-link">
+							<a class="side-nav-item" href="/solution"
 								>Solution</a
 							>
 						</li>
 						<li class="side-nav-link">
-							<a class="side-nav-item" href="#gallery">Gallery</a>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#how-it-works"
+							<a class="side-nav-item" href="/how-it-works"
 								>How It Works</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#why-it-works"
-								>Why It Works</a
-							>
 						</li>
 						<li class="side-nav-link">
 							<a class="side-nav-item" href="/our-team/"
@@ -92,72 +83,112 @@
 			</aside>
 			<div class="drawer-backdrop"></div>
 		</div>
-		<div class="container">
-			<div class="contact-form">
-				<div class="input-fields">
-					<input type="text" class="input" placeholder="Name" />
-					<input type="text" class="input" placeholder="Email" />
-					<input type="text" class="input" placeholder="Phone" />
-					<input type="text" class="input" placeholder="Subject" />
+		
+		<!-- Contact us -->
+		<form class="container">
+			<h3 class="contact-header">Stay connected.</h3>
+
+				<div class="form-group">
+						<label for="name">Your full name *</label>
+						<div class="input-div">
+							<input class="input" type="text"
+							name="name"
+							class="form-input"
+							placeholder="Please enter your name ..."
+							required/>
+							<span class="border"></span>
+						</div>
 				</div>
-				<div class="msg">
-					<textarea placeholder="Message"></textarea>
-					<div class="btn">Send</div>
+
+				<div class="form-group">
+						<label for="subject">Subject *</label>
+						<div class="input-div">
+							<input class="input" type="text"
+							name="subject"
+							class="form-input"
+							placeholder="Subject ..."
+							required/>
+						<span class="border"></span>
+						</div>
 				</div>
+
+				<div class="form-group">
+						<label for="email">Your email adress *</label>
+						<div class="input-div">
+							<input name="email" type="email" class="input" placeholder="Email adress ..." requried/>
+							<span class="border"></span>
+						</div>
+				</div>
+
+				<div class="form-group">
+						<label for="email">Your message for us *</label>
+						<div class="input-div">
+							<textarea class="text-area" placeholder="Message ..."></textarea>
+							<span class="border"></span>
+					</div>
 			</div>
+
+			<div class="contact-btn">
+				<button class="button secondary btn">Send</button>
+			</div>
+		</form>
+
+
+		<div class="wrapper">
+			<main class="content"></main>
+			<footer class="footer">
+				<div class="contact-info footer-column">
+					<h4>Contact Information</h4>
+					<ul>
+						<li>E-Mail: biobalance@bio.com</li>
+						<li>PhoneNumber: 12345678</li>
+					</ul>
+				</div>
+				<div class="location footer-column">
+					<h4>Location</h4>
+					<ul>
+						<li>Adress:</li>
+						<li>Pilestredet 32, Oslo</li>
+					</ul>
+				</div>
+				<div class="socials footer-column">
+					<h4>Social Media</h4>
+					<ul>
+						<li>
+							<a
+								href="https://www.facebook.com/BioBalance-100261931923249"
+								target="_blank"
+								class="icon"
+								><i class="fab fa-facebook"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="//instagram.com/biobalanceorg/"
+								target="_blank"
+								class="icon"
+								><i class="fab fa-instagram"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="//youtube.com"
+								target="_blank"
+								class="icon"
+								><i class="fab fa-youtube"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="//twitter.com"
+								target="_blank"
+								class="icon"
+								><i class="fab fa-twitter"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</footer>
 		</div>
-		<footer class="footer">
-			<div class="contact-info footer-column">
-				<h4>Contact Information</h4>
-				<ul>
-					<li>E-Mail: biobalance@bio.com</li>
-					<li>PhoneNumber: 12345678</li>
-				</ul>
-			</div>
-			<div class="location footer-column">
-				<h4>Location</h4>
-				<ul>
-					<li>Adress:</li>
-					<li>Pilestredet 32, Oslo</li>
-				</ul>
-			</div>
-			<div class="socials footer-column">
-				<h4>Social Media</h4>
-				<ul>
-					<li>
-						<a
-							href="https://www.facebook.com/BioBalance-100261931923249"
-							target="_blank"
-							class="instagram-icon"
-							><i class="fab fa-facebook"></i
-						></a>
-					</li>
-					<li>
-						<a
-							href="//instagram.com/biobalanceorg/"
-							target="_blank"
-							class="instagram-icon"
-							><i class="fab fa-instagram"></i
-						></a>
-					</li>
-					<li>
-						<a
-							href="//youtube.com"
-							target="_blank"
-							class="instagram-icon"
-							><i class="fab fa-youtube"></i
-						></a>
-					</li>
-					<li>
-						<a
-							href="//twitter.com"
-							target="_blank"
-							class="instagram-icon"
-							><i class="fab fa-twitter"></i
-						></a>
-					</li>
-				</ul>
-			</div>
-		</footer>
 	</body>
 </html>

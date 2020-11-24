@@ -5,6 +5,11 @@ $spaces: (
 	3: 0.75rem,
 	4: 1rem,
 	5: 1.5rem,
+	6: 2rem,
+	7: 2.5rem,
+	8: 3rem,
+	9: 4rem,
+	10: 10rem,
 );
 
 // Generating margin & padding utils
@@ -13,47 +18,47 @@ $spaces: (
 		margin: $space;
 	}
 	.mx-#{$spaceIndex} {
-		margin-left: $space;
-		margin-right: $space;
+		margin-left: $space !important;
+		margin-right: $space !important;
 	}
 	.my-#{$spaceIndex} {
-		margin-top: $space;
-		margin-bottom: $space;
+		margin-top: $space !important;
+		margin-bottom: $space !important;
 	}
 	.mr-#{$spaceIndex} {
-		margin-right: $space;
+		margin-right: $space !important;
 	}
 	.ml-#{$spaceIndex} {
-		margin-left: $space;
+		margin-left: $space !important;
 	}
 	.mt-#{$spaceIndex} {
-		margin-top: $space;
+		margin-top: $space !important;
 	}
 	.mb-#{$spaceIndex} {
-		margin-bottom: $space;
+		margin-bottom: $space !important;
 	}
 
 	.p-#{$spaceIndex} {
-		padding: $space;
+		padding: $space !important;
 	}
 	.px-#{$spaceIndex} {
-		padding-left: $space;
-		padding-right: $space;
+		padding-left: $space !important;
+		padding-right: $space !important;
 	}
 	.py-#{$spaceIndex} {
-		padding-top: $space;
-		padding-bottom: $space;
+		padding-top: $space !important;
+		padding-bottom: $space !important;
 	}
 	.pr-#{$spaceIndex} {
-		padding-right: $space;
+		padding-right: $space !important;
 	}
 	.pl-#{$spaceIndex} {
-		padding-left: $space;
+		padding-left: $space !important;
 	}
 	.pt-#{$spaceIndex} {
-		padding-top: $space;
+		padding-top: $space !important;
 	}
 	.pb-#{$spaceIndex} {
-		padding-bottom: $space;
+		padding-bottom: $space !important;
 	}
 }

@@ -1,0 +1,256 @@
+@import '../scss/common';
+@import url('https://css.gg/info.css');
+
+//container overwrite
+.container {
+	@media screen and (min-width: 768px) {
+		width: 90%;
+	}
+	@media screen and(min-width: 950px) {
+		.container {
+			width: 70%;
+		}
+	}
+}
+
+// Rem Overwrite
+body {
+	background-color: black;
+	color: #f6f6f6;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.flexed {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Hero
+.hero {
+	width: 100%;
+	height: 60vh;
+	background-image: url('https://images.unsplash.com/photo-1567360615751-58281b426a5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80');
+	// picture from: https://unsplash.com/photos/lNZrozGdzy0
+	background-attachment: fixed;
+	background-position: center;
+	position: relative;
+	background-size: cover;
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		// transform: translateX(-50%);
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 999;
+		margin: 0;
+	}
+}
+
+.section-header {
+	font-size: 3rem;
+	color: white;
+	margin-top: 5rem;
+	padding-left: 1rem;
+	@media screen and (min-width: 768px) {
+		text-align: center;
+		padding-left: 0rem;
+	}
+}
+
+.page-text {
+	color: #a1a1a6;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	padding-left: 1rem;
+	@media screen and (min-width: 768px) {
+		text-align: center;
+		font-size: 1.5rem;
+		padding-left: 0;
+		&.w-70 {
+			width: 70%;
+		}
+	}
+	&.space-top {
+		margin-top: 3rem;
+		@media screen and (min-width: 768px) {
+			margin-top: 10rem;
+		}
+	}
+	&.space-bottom {
+		margin-bottom: 3rem;
+		@media screen and (min-width: 768px) {
+			margin-bottom: 10rem;
+		}
+	}
+	&.small {
+		color: #a1a1a6;
+		font-size: 1.1rem;
+		line-height: 1.5;
+	}
+}
+
+.column-image {
+	width: 50%;
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		border-radius: 4px;
+	}
+	box-shadow: var(--shadow-dark);
+}
+
+.youtube-container {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.youtube-description {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.youtube-video {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	//background-image: url('https://images.unsplash.com/photo-1584698019502-662f00ce1a06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2736&q=80');
+	background-position: -50rem;
+	background-repeat: no-repeat;
+	box-shadow: var(--shadow-dark);
+	border-radius: 4px;
+}
+
+.image {
+	display: flex;
+	justify-content: center;
+	img {
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
+		flex: 40%;
+		border-radius: 4px;
+		filter: brightness(50%);
+	}
+	p {
+		flex: 60%;
+		padding: 2rem 0;
+		@media screen and (min-width: 768px) {
+			padding: 0 2rem;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.image {
+		display: block;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.page-text-small {
+	padding-right: 1rem;
+	color: #a1a1a6;
+	font-size: 1.1rem;
+	line-height: 1.5;
+}
+
+//footer overwrite
+.footer {
+	background-color: var(--black);
+	h4 {
+		color: white;
+	}
+	li {
+		color: white;
+	}
+	a {
+		color: white;
+	}
+}
+
+#gallery {
+	position: relative;
+	@media screen and (min-width: 768px) {
+		position: sticky;
+	}
+	img {
+		z-index: 0;
+	}
+
+	.product {
+		position: relative;
+		z-index: 10;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.5);
+		overflow: hidden;
+		margin-bottom: 10rem;
+
+		.product-image {
+			background-image: url('/img/biobalance_drenation_fade.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: bottom 0px center;
+			background-size: contain;
+			@media screen and (min-width: 768px) {
+				background-size: contain;
+				background-position: bottom 000px center;
+			}
+			width: 100%;
+			height: 100%;
+			backdrop-filter: blur(5px);
+		}
+
+		.product-bg {
+			position: absolute;
+			top: -100px;
+			left: 0;
+			z-index: -1;
+			background-image: url('/img/welcome_fade.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+		}
+
+		.info-circle {
+			position: absolute;
+			cursor: pointer;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			border: 3px solid rgb(211, 211, 211);
+			background-color: rgba(rgb(0, 0, 0), 0.6);
+
+			z-index: 9999;
+			transition: all 0.3s ease;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 0.8rem;
+			&.small {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+			&:hover {
+				background-color: rgba(white, 0.5);
+			}
+		}
+	}
+}

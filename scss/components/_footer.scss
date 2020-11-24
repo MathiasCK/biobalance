@@ -9,21 +9,35 @@
 	h4 {
 		margin-bottom: 15px;
 	}
+
 	> div {
 		border-left: var(--secondary) 1px solid;
 		height: 100px;
 		padding-left: 20px;
 	}
+	&.green {
+		> div {
+			border-color: var(--green-2);
+		}
+	}
 	@media screen and (min-width: 768px) {
 		flex-wrap: nowrap;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.footer {
+		display: block;
+	}
+}
+
 .footer-column {
 	@media screen and (min-width: 768px) {
 		width: 33%;
 	}
 	width: 100%;
 }
+
 .contact-info {
 	margin: 20px;
 
@@ -64,6 +78,9 @@
 	}
 }
 
-.instagram-icon {
+.icon {
 	color: #282828;
+	&:hover {
+		color: var(--secondary);
+	}
 }

@@ -21,38 +21,35 @@
 		<!-- Title -->
 		<title>BioBalance™ | Saving the rainforest</title>
 	</head>
-	<body id="home">
+	<body id="page-top">
 		<!-- Intro -->
 		<div class="intro-container"></div>
 		<!-- Intro end -->
 
 		<!-- Navbar -->
 		<nav class="nav-bar white">
-			<a href="/#" class="logo"
+			<span
+				onclick="window.scrollTo({top: 0, behaviour: 'smooth'})"
+				class="logo"
+				href="#page-top"
 				><i class="fab fa-acquisitions-incorporated"></i
-			></a>
+			></span>
 			<ul class="nav-items">
 				<li style="visibility: hidden" class="nav-link">
-					<a class="nav-item" href="#welcome"></a>
+					<a class="nav-item" href="/welcome"></a>
 				</li>
 				<li class="nav-link">
-					<a class="nav-item" href="#problem">Problem</a>
-				</li>
-				<li class="nav-link">
-					<a class="nav-item" href="#solution">Solution</a>
-				</li>
-				<li class="nav-link" aria-hidden="true" style="display: none">
-					<a class="nav-item" href="#product-description">Solution</a>
-				</li>
-				<li class="nav-link">
-					<a class="nav-item" href="#gallery">Gallery</a>
-				</li>
-				<li class="nav-link">
-					<a class="nav-item" href="#how-it-works">How It Works</a>
+					<a class="nav-item active" href="/">Home</a>
 				</li>
 
 				<li class="nav-link">
-					<a class="nav-item" href="#why-it-works">Why It Works</a>
+					<a class="nav-item" href="/problem">Problem</a>
+				</li>
+				<li class="nav-link">
+					<a class="nav-item" href="/solution">Solution</a>
+				</li>
+				<li class="nav-link">
+					<a class="nav-item" href="/how-it-works">How It Works</a>
 				</li>
 				<li class="nav-link">
 					<a class="nav-item" href="/our-team/">Our Team</a>
@@ -73,24 +70,19 @@
 				<ul class="side-nav-items justify-content-center">
 					<center>
 						<li class="side-nav-link">
-							<a class="side-nav-item" href="#problem">Problem</a>
+							<a class="side-nav-item" href="/">Home</a>
 						</li>
 						<li class="side-nav-link">
-							<a class="side-nav-item" href="#solution"
+							<a class="side-nav-item" href="problem">Problem</a>
+						</li>
+						<li class="side-nav-link">
+							<a class="side-nav-item" href="/solution"
 								>Solution</a
 							>
 						</li>
 						<li class="side-nav-link">
-							<a class="side-nav-item" href="#gallery">Gallery</a>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#how-it-works"
+							<a class="side-nav-item" href="/how-it-works"
 								>How It Works</a
-							>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#why-it-works"
-								>Why It Works</a
 							>
 						</li>
 						<li class="side-nav-link">
@@ -128,7 +120,7 @@
 					</h2>
 				</div>
 			</div>
-			<a href="#problem" class="down-arrows">
+			<a href="#important" class="down-arrows">
 				<i class="fas fa-chevron-down"></i>
 				<i class="fas fa-chevron-down"></i>
 				<i class="fas fa-chevron-down"></i>
@@ -139,16 +131,34 @@
 
 		<!-- Problem Section -->
 		<section
-			id="problem"
+			id="important"
 			class="page-section-1 sticky-section"
 			data-background="white"
 		>
-			<div class="container">
-				<h1 class="section-header">
+			<div class="container-problem">
+				<h1 class="section-header h-problem">
 					Why it's important to save the rainforest
 				</h1>
-				<div class="row justify-content-center">
-					<img class="section-img-dark" src="img/rainforest.jpg" />
+				<div
+					class="d-flex align-items-center justify-content-center flex-img"
+				>
+					<img
+						class="section-img-dark problem-img"
+						src="img/rainforest.jpg"
+					/>
+				</div>
+
+				<p class="section-text-small dark pt-5">
+					The way we humans are treating our earth could be fatal for
+					our planet’s future. Due to lack of sustainable consumption
+					and production, the climate is running into a downward
+					spiral towards the point of no return. Ruining nature - the
+					origin of our existence - is mankind’s greatest mistake, but
+					if we act now, we can gain a step towards the right
+					direction.
+				</p>
+				<div class="d-flex justify-content-center pt-3">
+					<a href="/problem/" class="button dark mt-1">Read more</a>
 				</div>
 			</div>
 		</section>
@@ -157,87 +167,50 @@
 		<!-- Solution Section solution  -->
 		<!-- Describes how the problem relates to the solution that you have identified. -->
 		<section
-			id="solution"
+			id="#"
 			class="page-section-2 sticky-section"
-			data-background="transparent-light"
+			data-background="dark green"
 		>
 			<div class="container">
-				<h1 class="section-header" style="padding-bottom: 0px">
+				<h1 class="section-header green-2" style="padding-bottom: 0px">
 					Solution
 				</h1>
+			</div>
 
-				<img
-					class="section-img-light solution-image"
-					src="/img/biobalance_display.png"
-				/>
-
-				<div class="row">
-					<!-- <div class="flexed-50">
-						<p class="section-text">
-							Our solution is regrowing parts at the partly
-							deforested rainforests to reconnect the fragments of
-							the forest areas that are separated due to
-							agriculture and logging. This is necessary to bring
-							back balance of the ecosystem, to reverse the
-							damages committed by humans, in order to stop
-							further massive destruction that an unbalanced
-							ecosystem will cause to the fragile biodiversity of
-							the rainforest. <br />
-							<br />
-							 Planting tree species that belong to the rainforest
-							on deforested grounds is not an easy task. According
-							to botanist Charlotte Bjorå, every plant in the
-							rainforest gets almost their entire source of
-							nutrients from the 25 cm layer of biomass on the
-							ground, since the ground is made of clay. Deforested
-							grounds are missing the neutricius biomass, due to
-							rain and extreme sunlight. In addition to this, the
-							sunlight will kill the entirety of new vegetations
-							planted in these conditions. Therefore we found a
-							solution, the Rainforest Lunchbox together with
-							large shadow cloths, that protect the new plants
-							from the sun. The Rainforest Lunchbox is designed to
-							keep moisture inside, while simultaneously providing
-							the planted vegetation with all the nutrients the
-							ground is lacking, simulating the perfect
-							environment for the regrowing plants to thrive.
-						</p>
-					</div> -->
+			<div class="solution-container">
+				<div class="solution-img">
+					<img
+						class="section-img-light"
+						src="/img/biobalance_display.png"
+					/>
+				</div>
+				<div class="solution-txt">
+					<h1 class="solution-txt-header">
+						The <span class="green-2">Rainforest</span> Lunchbox
+					</h1>
+					<p class="section-text-small">
+						Our solution is a product that will make it possible to
+						easilly restore deforested rainforest by turning
+						inhabitable habitable.
+						<br />
+						The Rainforest Lunchbox does so by simulating the
+						climate at the bottom of the rainforest.
+					</p>
+					<a href="/solution/" class="button white mt-4 mr-2"
+						>Read more</a
+					>
+					<a href="/solution/" class="button white mt-4"
+						>How it works</a
+					>
 				</div>
 			</div>
 		</section>
 		<!-- Solution Section End -->
 
-		<!-- product description -->
-		<!-- describing the atributes of the solution. Like the economical, materials and some fumctions -->
-		<section
-			id="product-description"
-			class="page-section-1 sticky-section"
-			data-background="white"
-		>
-			<div class="container">
-				<h1 class="section-header">Rainforest Lunchbox description</h1>
-			</div>
-		</section>
-		<!-- Product description -->
-
-		<!-- Gallery -->
-		<section
-			id="gallery"
-			class="sticky-section"
-			data-background="transparent-light"
-		>
-			<div class="product">
-				<img src="/img/biobalance_drenation.png" />
-			</div>
-			<img src="img/welcome.jpg" />
-		</section>
-		<!-- Gallery End -->
-
 		<!-- How it works -->
 		<!-- Describes what the solution is. For example, if your solution is a mobile app, then describe the app. You do not need to code the solution, but it is recommended that you create a lo-fi prototype to showcase your solution. -->
 		<section
-			id="how-it-works"
+			id="#"
 			class="page-section-1 sticky-section"
 			data-background="white"
 		>
@@ -247,125 +220,61 @@
 		</section>
 		<!-- How it works end -->
 
-		<!-- Why it works -->
-		<!-- In depth of how it works -->
-		<section
-			id="why-it-works"
-			class="page-section-2 sticky-section"
-			data-background="dark"
-		>
-			<div class="container why-it-works">
-				<h1 class="section-header">Why it works</h1>
-				<div class="row">
-					<div class="flexed-33">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Dolor, suscipit perspiciatis! Nesciunt, quos nam. Et
-						eveniet beatae exercitationem consequuntur itaque
-						delectus debitis ex iure illo animi laboriosam sequi
-						consectetur, vitae obcaecati voluptate provident?
-						Suscipit et, voluptatum beatae repellat tempore
-						dignissimos quos a impedit hic itaque temporibus amet
-						corporis nam reiciendis harum cum ipsa. Explicabo eaque
-						a reprehenderit ipsum impedit sequi officiis illo
-						dolorem dignissimos dolorum veniam omnis laboriosam ut
-						dicta nisi doloribus accusantium eveniet officia
-						molestias vero, minima, quam laudantium? Sapiente
-						dignissimos aperiam consequuntur, laborum ducimus atque
-						neque, eos nulla mollitia tenetur rerum, nemo ipsam
-						consectetur? Eaque distinctio est quidem!
-					</div>
-					<div class="flexed-33">
-						Lorem ipsum dolor sit amet consectetur, adipisicing
-						elit. Mollitia dolorem officia ducimus vel a magnam
-						laborum ab aliquam iste veritatis, minima odio ipsum
-						aspernatur molestias nesciunt nisi eum voluptas
-						accusantium! Nulla veritatis ipsa fugit optio facilis
-						officia labore expedita et error, minima repudiandae
-						omnis debitis perspiciatis in sunt autem doloremque
-						dolores. Fugiat dignissimos similique laudantium ducimus
-						nihil corrupti excepturi obcaecati molestiae esse,
-						consequatur debitis quidem illum maxime eligendi
-						blanditiis, est reprehenderit asperiores, maiores sed
-						nulla inventore culpa necessitatibus natus? Officiis
-						odio eum quidem reiciendis, error sunt minima odit
-						doloremque cupiditate dicta consequatur aliquid
-						exercitationem architecto voluptatem fugit doloribus, ea
-						impedit?
-					</div>
-					<div class="flexed-33">
-						Lorem, ipsum dolor sit amet consectetur adipisicing
-						elit. Maiores placeat excepturi tempore molestiae
-						voluptatum eaque nemo sapiente, cum officia tempora, hic
-						quam, nisi ea quis quasi aliquid labore minus sit
-						asperiores! Repudiandae nulla distinctio voluptates
-						numquam id sapiente enim perspiciatis animi, beatae
-						nostrum ea sunt, dolorem necessitatibus libero similique
-						est repellat dolorum, optio cum porro laudantium facilis
-						iste a ipsa. Facilis aliquam culpa quasi cupiditate quae
-						obcaecati itaque provident illo aperiam numquam
-						recusandae quos sed, ipsum at impedit fuga, debitis
-						temporibus nobis adipisci accusantium magni ad ut
-						incidunt eius? Beatae vero consects laboriosam, corrupti
-						quae quisquam totam excepturi eius.
-					</div>
-				</div>
+		<!-- footer start -->
+		<footer class="footer">
+			<div class="contact-info footer-column">
+				<h4>Contact Information</h4>
+				<ul>
+					<li>E-Mail: biobalance@bio.com</li>
+					<li>PhoneNumber: 12345678</li>
+				</ul>
 			</div>
-			<!-- footer start -->
-			<footer class="footer">
-				<div class="contact-info footer-column">
-					<h4>Contact Information</h4>
-					<ul>
-						<li>E-Mail: biobalance@bio.com</li>
-						<li>PhoneNumber: 12345678</li>
-					</ul>
-				</div>
-				<div class="location footer-column">
-					<h4>Location</h4>
-					<ul>
-						<li>Adress:</li>
-						<li>Pilestredet 32, Oslo</li>
-					</ul>
-				</div>
-				<div class="socials footer-column">
-					<h4>Social Media</h4>
-					<ul>
-						<li>
-							<a
-								href="https://www.facebook.com/BioBalance-100261931923249"
-								target="_blank"
-								class="instagram-icon"
-								><i class="fab fa-facebook"></i
-							></a>
-						</li>
-						<li>
-							<a
-								href="//instagram.com/biobalanceorg/"
-								target="_blank"
-								class="instagram-icon"
-								><i class="fab fa-instagram"></i
-							></a>
-						</li>
-						<li>
-							<a
-								href="//youtube.com"
-								target="_blank"
-								class="instagram-icon"
-								><i class="fab fa-youtube"></i
-							></a>
-						</li>
-						<li>
-							<a
-								href="//twitter.com"
-								target="_blank"
-								class="instagram-icon"
-								><i class="fab fa-twitter"></i
-							></a>
-						</li>
-					</ul>
-				</div>
-			</footer>
-			<!-- footer end -->
-		</section>
+			<div class="location footer-column">
+				<h4>Location</h4>
+				<ul>
+					<li>Adress:</li>
+					<li>Pilestredet 32, Oslo</li>
+				</ul>
+			</div>
+			<div class="socials footer-column">
+				<h4>Social Media</h4>
+				<ul>
+					<li>
+						<a
+							href="https://www.facebook.com/BioBalance-100261931923249"
+							target="_blank"
+							class="instagram-icon"
+							><i class="fab fa-facebook"></i
+						></a>
+					</li>
+					<li>
+						<a
+							href="//instagram.com/biobalanceorg/"
+							target="_blank"
+							class="instagram-icon"
+							><i class="fab fa-instagram"></i
+						></a>
+					</li>
+					<li>
+						<a
+							href="//youtube.com"
+							target="_blank"
+							class="instagram-icon"
+							><i class="fab fa-youtube"></i
+						></a>
+					</li>
+					<li>
+						<a
+							href="//twitter.com"
+							target="_blank"
+							class="instagram-icon"
+							><i class="fab fa-twitter"></i
+						></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+
 		<!-- Why it works end -->
 		<!-- Script -->
 		<script
@@ -374,5 +283,14 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="js/app.js"></script>
+		<script src="js/skew.js"></script>
+		<script>
+			// document.addEventListener('DOMContentLoaded', function () {
+			// 	const skewSolution = mouseSkew(
+			// 		document.querySelector('.solution-container'),
+			// 		document.querySelector('.solution-inner')
+			// 	);
+			// });
+		</script>
 	</body>
 </html>
