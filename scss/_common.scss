@@ -62,7 +62,11 @@ hr {
 	margin: 50px 0;
 }
 
-img .text-center {
+img {
+	user-select: none;
+}
+
+.text-center {
 	text-align: center;
 }
 
