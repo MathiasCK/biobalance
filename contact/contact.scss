@@ -17,7 +17,7 @@ html {
 	padding: 6rem 0 1rem 1rem;
 	background: whitesmoke;
 	h3 {
-		padding: 1.5rem 2rem;
+		padding: 0 1.5rem 2rem 2rem;
 	}
 	h3:after {
 		content: ' ';
@@ -26,6 +26,9 @@ html {
 		height: 1px;
 		margin: 20px 0 20px;
 		background: var(--secondary);
+	}
+	label {
+		padding: 2rem 0;
 	}
 }
 
