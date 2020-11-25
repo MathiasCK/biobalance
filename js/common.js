@@ -23,7 +23,7 @@ class Observer {
 
 function Drawer() {
 	// const navbar = document.querySelector('.nav-bar');
-	const menuTrigger = document.querySelector('.menuTrigger');
+	const menuTrigger = document.querySelector('.menu-trigger');
 	const drawerBackdrop = document.querySelector('.drawer-backdrop');
 	const navState = new Observer({ open: menuTrigger.checked });
 
