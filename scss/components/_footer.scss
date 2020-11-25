@@ -79,5 +79,8 @@
 	color: #282828;
 	&:hover {
 		color: var(--secondary);
+		&.green {
+			color: var(--green-2);
+		}
 	}
 }
