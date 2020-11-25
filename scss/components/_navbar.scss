@@ -1,3 +1,6 @@
+@import url('https://css.gg/menu.css');
+@import url('https://css.gg/close.css');
+
 /*
   ------ 
   Navbar
@@ -118,5 +121,110 @@
 	}
 	.nav-bar {
 		justify-content: space-between;
+	}
+}
+
+// Drawer
+.mobileCollapse {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 75%;
+	height: 100vh;
+	background-color: inherit;
+	z-index: 9998;
+	padding: 1rem;
+	transition: all 0.2s ease-in-out;
+	transform: translateX(-100%);
+	will-change: opacity, visibility, transform;
+}
+
+.transparent,
+.transparent-dark {
+	.mobileCollapse {
+		background-color: black;
+	}
+}
+
+.menuIcon,
+.closeIcon {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.menuTriggerIcon {
+	.menuIcon {
+		visibility: visible;
+		opacity: 1;
+	}
+	padding-right: 1rem;
+	padding-left: 0.75rem;
+	background-color: transparent;
+	transition: all 0.3s ease-in-out;
+	transition-property: background-color, filter, box-shadow;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	border-top-left-radius: 100px;
+	border-bottom-left-radius: 100px;
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	position: relative;
+	z-index: 9999;
+
+	@media screen and (min-width: 768px) {
+		display: none !important;
+	}
+}
+
+.menuTrigger {
+	display: none;
+}
+
+.drawer-backdrop {
+	opacity: 0;
+	transition: all 0.3s ease;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.menuTrigger:checked {
+	~ .mobileCollapse {
+		opacity: 1;
+		transform: translateX(0);
+		display: block;
+		visibility: visible;
+		pointer-events: unset;
+	}
+	~ .menuTriggerIcon {
+		// position: fixed;
+		// transform: translate(0.25rem, -0.5rem);
+		.menuIcon {
+			visibility: hidden;
+			opacity: 0;
+		}
+		.closeIcon {
+			visibility: visible;
+			opacity: 1;
+			position: fixed;
+			left: 60%;
+			z-index: 10000;
+			display: block;
+			transition: all 0.3s ease;
+			transition-delay: 300ms;
+		}
+	}
+	~ .drawer-backdrop {
+		z-index: 9990;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+	~ body {
+		max-height: 100vh;
+		overflow-y: hidden;
 	}
 }

@@ -63,13 +63,25 @@
 				<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
 			</div>
 			<!-- Responsive navbar btn -->
-			<button role="button" title="navbar" class="nav-btn">
+			<!-- <button role="button" title="navbar" class="nav-btn">
 				<i class="fas fa-bars"></i>
-			</button>
+			</button> -->
+			<input class="menuTrigger" type="checkbox" id="openmenu" />
+			<label class="menuTriggerIcon" for="openmenu">
+				<div
+					style="width: auto; min-height: 1rem"
+					class="d-flex align-items-center"
+				>
+					<i class="gg-menu menuIcon"></i>
+					<i class="gg-close closeIcon"></i>
+				</div>
+			</label>
+			<div class="mobileCollapse">JAJAJA</div>
+			<div class="drawer-backdrop"></div>
 		</nav>
 
 		<!-- Side nav -->
-		<div class="drawer-wrapper">
+		<!-- <div class="drawer-wrapper">
 			<aside class="drawer">
 				<ul class="side-nav-items justify-content-center">
 					<center>
@@ -98,7 +110,7 @@
 				</ul>
 			</aside>
 			<div class="drawer-backdrop"></div>
-		</div>
+		</div> -->
 		<!-- Side nav end -->
 		<!-- Navbar end -->
 
@@ -297,6 +309,7 @@
 		></script>
 		<script src="js/app.js"></script>
 		<script src="js/skew.js"></script>
+		<script src="/js/common.js"></script>
 		<script>
 			// document.addEventListener('DOMContentLoaded', function () {
 			// 	const skewSolution = mouseSkew(

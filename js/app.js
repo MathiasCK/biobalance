@@ -19,49 +19,28 @@ window.addEventListener('scroll', () => {
 
 	const currentSection = sections[currentIndex];
 	navBar.className = `nav-bar ${currentSection.dataset.background}`;
-
-	/* Add class active to nav links
-	navItems.forEach((navItem) => {
-		navItem.classList.remove('active');
-	});
-	const currentItem = navItems[currentIndex];
-	if (!currentItem.classList.contains('active'))
-		currentItem.classList.add('active');*/
-
-	// // Change title name on scroll
-	// if (currentIndex === sections.length)
-	// 	return (document.title = `${PRODUCT_NAME} | Saving the rainforest`);
-	// const title = `${PRODUCT_NAME} | ${
-	// 	currentItem.innerHTML || 'Saving the rainforest'
-	// }`;
-	// if (document.title !== title) document.title = title;
 });
 
 // Responsive Navbar
-const navBtn = document.querySelector('.nav-btn');
-const wrapper = document.querySelector('.drawer-wrapper');
-const backDrop = document.querySelector('.drawer-backdrop');
+// const navBtn = document.querySelector('.nav-btn');
+// const wrapper = document.querySelector('.drawer-wrapper');
+// const backDrop = document.querySelector('.drawer-backdrop');
 
-navBtn.addEventListener('click', (e) => {
-	wrapper.classList.toggle('open');
-	if (wrapper.classList.contains('open')) {
-		document.body.classList.add('no-scroll');
-	} else {
-		document.body.classList.remove('no-scroll');
-	}
-});
+// navBtn.addEventListener('click', (e) => {
+// 	wrapper.classList.toggle('open');
+// 	if (wrapper.classList.contains('open')) {
+// 		document.body.classList.add('no-scroll');
+// 	} else {
+// 		document.body.classList.remove('no-scroll');
+// 	}
+// });
 
-backDrop.addEventListener('click', (e) => {
-	wrapper.classList.remove('open');
-	document.body.classList.remove('no-scroll');
-});
-
-sideNavItems.forEach((sideNavItem) => {
-	sideNavItem.addEventListener('click', () => {
-		wrapper.classList.remove('open');
-		document.body.classList.remove('no-scroll');
-	});
-});
+// sideNavItems.forEach((sideNavItem) => {
+// 	sideNavItem.addEventListener('click', () => {
+// 		wrapper.classList.remove('open');
+// 		document.body.classList.remove('no-scroll');
+// 	});
+// });
 
 navBar.classList.remove('white');
 
