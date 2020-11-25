@@ -78,9 +78,9 @@
 .icon {
 	color: #282828;
 	&:hover {
-		color: var(--secondary);
+		color: var(--secondary) !important;
 		&.green {
-			color: var(--green-2);
+			color: var(--green-2) !important;
 		}
 	}
 }
