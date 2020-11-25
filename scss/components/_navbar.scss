@@ -28,20 +28,19 @@
 			width: 10px;
 			height: 10px;
 		}
+		.nav-countries {
+			display: flex;
+			img {
+				width: 1.7rem;
+				height: 1.7rem;
+				margin-right: 0.5rem;
+			}
+		}
 	}
 	.nav-link,
 	.logo,
 	.nav-btn {
 		color: inherit;
-	}
-
-	.nav-countries {
-		display: flex;
-		img {
-			width: 1.7rem;
-			height: 1.7rem;
-			margin-right: 0.5rem;
-		}
 	}
 
 	// box-shadow: var(--shadow-dark);
