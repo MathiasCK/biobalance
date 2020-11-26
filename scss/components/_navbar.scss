@@ -227,3 +227,31 @@
 		overflow-y: hidden;
 	}
 }
+
+.drawer-items {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.drawer-item {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		margin: 2rem;
+		padding: 2rem;
+		background-color: blue;
+	}
+
+	.drawer-icon {
+		padding: 1rem;
+		font-size: 2rem;
+	}
+
+	.drawer-link {
+		text-decoration: none;
+		color: red;
+	}
+}
