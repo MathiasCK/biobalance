@@ -130,13 +130,35 @@
 			</div>
 
 			<div class="contact-btn">
-				<button class="button secondary btn">Send</button>
+				<button type="submit" class="button secondary btn">Send</button>
 			</div>
 		</form>
 
 
 		<div class="wrapper">
-			<main class="content"></main>
+			<main class="content">
+			<section>
+				<div class="container donate">
+					<h3 class="contact-header">Donate to us.</h3>
+					<p class="contact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, molestias?</p>
+					<form action="/charge" method="post" id="payment-form">
+						<div class="form-row">
+						  <div id="card-element">
+							<!-- A Stripe Element will be inserted here. -->
+						  </div>
+					  
+						  <!-- Used to display form errors. -->
+						  <div id="card-errors" class="text-center mt-1" role="alert"></div>
+						</div>
+					  
+						<div class="d-flex justify-content-center mt-4">
+							<button class="button dark mx-auto">Submit Payment</button>
+						</div>
+					  </form>
+					  
+				</div>
+			</section>
+			</main>
 			<footer class="footer">
 				<div class="contact-info footer-column">
 					<h4>Contact Information</h4>
@@ -191,5 +213,9 @@
 				</div>
 			</footer>
 		</div>
+
+		<!-- Scripts -->
+		<script src="https://js.stripe.com/v3/"></script>
+		<script src="/js/donate.js"></script>
 	</body>
 </html>
