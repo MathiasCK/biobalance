@@ -6,6 +6,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	max-width: 100%;
+	overflow: hidden;
 	color: black;
 	h4 {
 		margin-bottom: 15px;
