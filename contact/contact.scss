@@ -133,3 +133,18 @@ html {
 		color: white;
 	}
 }
+
+// Stripe payments section
+#card-element {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 16px;
+	border-radius: 4px;
+	box-shadow: var(--shadow-dark);
+	@media screen and (min-width: 768px) {
+		max-width: 400px;
+	}
+}
+#card-errors {
+	color: red;
+}
