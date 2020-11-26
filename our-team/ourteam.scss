@@ -7,25 +7,30 @@ html {
 .banner-photo {
 	width: 100%;
 	height: 100vh;
-	background-image: url('https://images.unsplash.com/photo-1598520059393-1fd1b7f85e35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');
-	background-size: cover;
+	background-image: url('/img/ourteam/gruppebilde.JPG');
+	background-size: 120%;
+	background-position: -90px -20px;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	position: relative;
 }
 .banner-text {
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	text-align: left;
-	font-size: 2rem;
+	font-size: 3rem;
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 200px;
 	transform: translateY(-50%);
-	max-width: 45%;
+	max-width: 55%;
 }
 .persons {
 	display: flex;
 	flex-wrap: wrap;
 	img {
+		position: absolute;
+		top: 0;
+		left: 0;
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
@@ -139,5 +144,22 @@ html {
 	flex-basis: 100%;
 	@media screen and (min-width: 768px) {
 		flex-basis: 33.33333333333%;
+	}
+}
+
+.sanna {
+	@media screen and (min-width: 1200px) {
+		object-position: left -100px;
+	}
+}
+
+// Footer override
+.footer {
+	background-color: var(--black);
+	color: white;
+	padding-top: 2rem;
+	margin-top: 0;
+	.icon {
+		color: white;
 	}
 }

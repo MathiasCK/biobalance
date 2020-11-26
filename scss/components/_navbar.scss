@@ -154,7 +154,7 @@
 	opacity: 0;
 }
 
-.menuTriggerIcon {
+.menu-trigger-icon {
 	.menuIcon {
 		visibility: visible;
 		opacity: 1;
@@ -179,7 +179,7 @@
 	}
 }
 
-.menuTrigger {
+.menu-trigger {
 	display: none;
 }
 
@@ -190,7 +190,7 @@
 	pointer-events: none;
 }
 
-.menuTrigger:checked {
+.menu-trigger:checked {
 	~ .mobileCollapse {
 		opacity: 1;
 		transform: translateX(0);
@@ -198,7 +198,7 @@
 		visibility: visible;
 		pointer-events: unset;
 	}
-	~ .menuTriggerIcon {
+	~ .menu-trigger-icon {
 		// position: fixed;
 		// transform: translate(0.25rem, -0.5rem);
 		.menuIcon {
