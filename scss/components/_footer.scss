@@ -29,15 +29,18 @@
 @media screen and (max-width: 768px) {
 	.footer {
 		display: block;
+		padding-left: 1rem !important;
 	}
 }
 
 .footer-column {
-	margin: 1rem;
+	padding: 1rem;
+	padding-bottom: 0;
 	margin-bottom: 0;
 	@media screen and (min-width: 768px) {
 		width: 33%;
-		margin: 20px;
+		padding: 20px;
+		padding-bottom: 0;
 	}
 	width: 100%;
 }
