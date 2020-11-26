@@ -324,3 +324,7 @@ Intro section
 .footer {
 	box-shadow: var(--shadow-dark);
 }
+
+#funding {
+	scroll-snap-align: none;
+}
