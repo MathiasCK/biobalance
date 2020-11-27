@@ -25,7 +25,8 @@ body {
 	height: 60vh;
 	background-image: url('/img/biobalancevisionjpeg.jpg');
 	background-attachment: fixed;
-	background-position: bottom center;
+	background-position-y: 80vh;
+	background-position-x: center;
 	position: relative;
 	background-size: cover;
 	&::after {
