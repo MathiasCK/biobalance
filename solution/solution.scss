@@ -55,15 +55,13 @@ body {
 .solution-flex {
 	display: block;
 	.goals-img {
-		padding: 2rem 5rem;
-		margin: 0 auto;
-		height: 70%;
-		width: 70%;
+		height: 100%;
+		width: 100%;
 		img {
 			box-shadow: var(--shadow-dark);
 		}
 	}
-	@media screen and (min-width: 900px) {
+	@media screen and (min-width: 1000px) {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -114,16 +112,13 @@ body {
 	width: 70%;
 }
 
-.img-big {
-	height: 80vh;
-	width: 100%;
-	background-image: url('/img/biobalancevisionjpeg.jpg');
-	background-size: cover;
-	//background-attachment: fixed;
-}
-
 .goals-img {
 	height: 70%;
+}
+
+.solution-img {
+	width: 100%;
+	height: auto;
 }
 
 .solution-header {
