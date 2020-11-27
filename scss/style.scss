@@ -304,6 +304,8 @@ Intro section
 	}
 	.solution-txt {
 		flex: 35%;
+		margin-left: auto;
+		margin-right: auto;
 		color: white;
 		//padding-right: 1rem;
 		.solution-txt-header {
@@ -318,12 +320,11 @@ Intro section
 		padding-bottom: 2rem;
 	}
 }
-/*
-Test*/
 
-// Page sections
-// @import './home/gallery';
-// @import './home/intro';
-// @import './home/solution';
-// @import './home/whyitworks';
-// @import './home/howitworks';
+.footer {
+	box-shadow: var(--shadow-dark);
+}
+
+#funding {
+	scroll-snap-align: none;
+}

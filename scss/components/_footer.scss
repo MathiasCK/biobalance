@@ -6,6 +6,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	max-width: 100%;
+	overflow: hidden;
 	color: black;
 	h4 {
 		margin-bottom: 15px;
@@ -29,15 +31,18 @@
 @media screen and (max-width: 768px) {
 	.footer {
 		display: block;
+		padding-left: 1rem !important;
 	}
 }
 
 .footer-column {
-	margin: 1rem;
+	padding: 1rem;
+	padding-bottom: 0;
 	margin-bottom: 0;
 	@media screen and (min-width: 768px) {
 		width: 33%;
-		margin: 20px;
+		padding: 20px;
+		padding-bottom: 0;
 	}
 	width: 100%;
 }
@@ -45,10 +50,17 @@
 .contact-info {
 	li {
 		list-style: none;
+		color: inherit;
 	}
 	ul {
 		margin: 0;
 		padding: 0;
+		font-style: none;
+		color: inherit;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
 	}
 }
 
@@ -59,6 +71,11 @@
 	ul {
 		margin: 0;
 		padding: 0;
+		font-style: none;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
 	}
 }
 .socials {

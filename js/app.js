@@ -43,6 +43,7 @@ window.addEventListener('scroll', () => {
 // });
 
 navBar.classList.remove('white');
+navBar.classList.add('transparent');
 
 // Animations for intro section
 // Check if user is in current session, show animation if user has animated to the page for the first time
