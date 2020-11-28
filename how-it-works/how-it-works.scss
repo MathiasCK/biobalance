@@ -249,7 +249,8 @@ html {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			font-size: 0.8rem;
+			font-size: 1rem;
+			font-weight: 500;
 			&.small {
 				width: 1.5rem;
 				height: 1.5rem;
@@ -263,7 +264,6 @@ html {
 				bottom: 390px;
 				left: 0;
 				transform: translateX(50vw);
-				color: red;
 				@include md {
 					bottom: 570px;
 				}

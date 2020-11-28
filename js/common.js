@@ -1,3 +1,6 @@
+/**
+ * Observable
+ */
 class Observable {
 	listeners = [];
 	internal = null;
@@ -21,12 +24,13 @@ class Observable {
 		return this.listeners.filter((listener) => listener !== fn);
 	}
 }
-
 // Exporting Observable class.
 window.observable = Observable;
 
+/**
+ * Mobile navigation drawer
+ */
 function initDrawer() {
-	// const navbar = document.querySelector('.nav-bar');
 	const menuTrigger = document.querySelector('.menu-trigger');
 	const drawerBackdrop = document.querySelector('.drawer-backdrop');
 	// Creating observable state to track drawers's open state.
@@ -47,8 +51,11 @@ function initDrawer() {
 	}, true);
 }
 
+/**
+ * Page prefetcher
+ */
+
 function handleLoad() {
-	// init drawer
 	initDrawer();
 }
 document.addEventListener('DOMContentLoaded', handleLoad);
