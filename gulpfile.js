@@ -2,6 +2,9 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const plugins = require('gulp-load-plugins')();
 const rename = require('gulp-rename');
+const babel = require('gulp-babel');
+const browserify = require('gulp-browserify');
+const uglify = require('gulp-uglify');
 
 gulp.task('sass', () => {
 	return gulp
@@ -22,4 +25,30 @@ gulp.task('sass', () => {
 		.pipe(rename({ extname: '.min.css' }))
 		.pipe(plugins.sourcemaps.write('./'))
 		.pipe(gulp.dest('./css'));
+});
+
+gulp.task('js', () => {
+	return gulp
+		.src('./js/*.js', { allowEmpty: true })
+		.pipe(
+			babel({
+				sourceMap: true,
+				plugins: ['@babel/plugin-proposal-class-properties'],
+				presets: [
+					[
+						'@babel/preset-env',
+						{
+							useBuiltIns: 'usage',
+
+							// forceAllTransforms: true,
+							corejs: 3,
+						},
+					],
+				],
+			})
+		)
+		.pipe(browserify())
+		.pipe(uglify())
+		.pipe(plugins.sourcemaps.write('./'))
+		.pipe(gulp.dest('dist/js'));
 });
