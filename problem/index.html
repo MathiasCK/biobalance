@@ -21,24 +21,19 @@
 	<body id="page-top">
 		<!-- Navbar -->
 		<nav class="nav-bar dark">
-			<a href="#page-top" class="logo"
-				><i class="fab fa-acquisitions-incorporated"></i
-			></a>
+			<a class="logo" href="/">
+				<i class="fab fa-acquisitions-incorporated"></i>
+			</a>
 			<ul class="nav-items">
-				<li style="visibility: hidden" class="nav-link">
-					<a class="nav-item" href="/welcome"></a>
-				</li>
 				<li class="nav-link">
-					<a class="side-nav-item" href="/">Home</a>
+					<a class="nav-item" href="/">Home</a>
 				</li>
-				<li class="nav-link active">
-					<a class="nav-item" href="/problem">Problem</a>
+
+				<li class="nav-link">
+					<a class="nav-item active" href="/problem">Problem</a>
 				</li>
 				<li class="nav-link">
 					<a class="nav-item" href="/solution">Solution</a>
-				</li>
-				<li class="nav-link" aria-hidden="true" style="display: none">
-					<a class="nav-item" href="#product-description">Solution</a>
 				</li>
 				<li class="nav-link">
 					<a class="nav-item" href="/how-it-works">How It Works</a>
@@ -57,42 +52,71 @@
 				<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
 			</div>
 			<!-- Responsive navbar btn -->
-			<button role="button" title="navbar" class="nav-btn">
+			<!-- <button role="button" title="navbar" class="nav-btn">
 				<i class="fas fa-bars"></i>
-			</button>
-			<!--Side Nav -->
-			<aside class="mobileCollapse">
-				<ul class="drawer-items">
-					<li class="drawer-item">
-						<i class="drawer-icon fas fa-home"></i>
-						<a class="drawer-link" href="/">Home</a>
-					</li>
-					<li class="drawer-item active-item">
-						<i class="drawer-icon fas fa-question"></i>
-						<a class="drawer-link" href="#">Problem</a>
-					</li>
-					<li class="drawer-item">
-						<i class="drawer-icon fas fa-tasks"></i>
-						<a class="drawer-link" href="/solution/">Solution</a>
-					</li>
-					<li class="drawer-item">
-						<i class="drawer-icon fas fa-share-alt"></i>
-						<a class="drawer-link" href="/how-it-works/"
-							>How It Works</a
-						>
-					</li>
-					<li class="drawer-item">
-						<i class="drawer-icon fab fas fa-users"></i>
-						<a class="drawer-link" href="/our-team/">Our Team</a>
-					</li>
-					<li class="drawer-item">
-						<i class="drawer-icon fas fa-envelope"></i>
-						<a class="drawer-link" href="/contact/">Contact Us</a>
-					</li>
-				</ul>
+			</button> -->
+			<input class="menu-trigger" type="checkbox" id="openmenu" />
+			<label class="menu-trigger-icon" for="openmenu">
+				<div
+					style="width: auto; min-height: 1rem"
+					class="d-flex align-items-center"
+				>
+					<i class="gg-menu menuIcon"></i>
+					<i class="gg-close closeIcon"></i>
+				</div>
+			</label>
+			<aside class="drawer">
+				<div class="drawer-logo">BioBalance™</div>
+				<div class="drawer-content">
+					<ul class="drawer-items">
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-home"></i>
+							<a class="drawer-link" href="/">Home</a>
+						</li>
+						<li class="drawer-item active">
+							<i
+								class="drawer-icon fas fa-exclamation-triangle"
+							></i>
+							<a class="drawer-link" href="/problem/"
+								>The Problem</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-lightbulb"></i>
+							<a class="drawer-link" href="/solution/"
+								>The Solution</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-seedling"></i>
+							<a class="drawer-link" href="/how-it-works/"
+								>How It Works</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-users"></i>
+							<a class="drawer-link" href="/our-team/"
+								>Our Team</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon far fa-envelope"></i>
+							<a class="drawer-link" href="/contact/">Contact</a>
+						</li>
+					</ul>
+					<div class="drawer-footer">
+						<div class="nav-countries">
+							<a title="Norwegian flag" href="/no/"
+								><img
+									src="/img/norway.svg"
+									alt="Norwegian flag"
+							/></a>
+							<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+						</div>
+					</div>
+				</div>
 			</aside>
 			<div class="drawer-backdrop"></div>
-			<!-- Side Nav end -->
 		</nav>
 		<!-- Navbar end -->
 
@@ -166,6 +190,9 @@
 						further destruction of the forest areas around
 						deforested grounds.
 					</p>
+					<div class="d-flex justify-content-center">
+						<a href="/solution/" class="button">See The Solution</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -312,7 +339,7 @@
 		</div>
 
 		<div class="solution-btn">
-			<a class="button" href="/solution/index.html">View our solutuion</a>
+			<a class="button" href="/solution/">View our solutuion</a>
 		</div>
 		<!-- footer start -->
 		<footer class="footer">
@@ -391,7 +418,7 @@
 		</footer>
 
 		<!-- footer end -->
-		<script src="js/app.js"></script>
+		<script src="/js/common.js"></script>
 		<script src="/js/fade.js"></script>
 		<script src="/js/observer.js"></script>
 		<script>

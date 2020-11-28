@@ -39,3 +39,5 @@ function observe(
 
 	elements.forEach((element) => intersectionObserver.observe(element));
 }
+
+window.observe = observe;

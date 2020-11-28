@@ -17,14 +17,15 @@
 	</head>
 	<body id="page-top">
 		<!-- Navbar -->
-		<nav class="nav-bar dark">
-			<a class="logo" href="#page-top"
-				><i class="fab fa-acquisitions-incorporated"></i
-			></a>
+		<nav class="nav-bar white">
+			<a class="logo" href="/">
+				<i class="fab fa-acquisitions-incorporated"></i>
+			</a>
 			<ul class="nav-items">
 				<li class="nav-link">
-					<a class="side-nav-item" href="/">Home</a>
+					<a class="nav-item" href="/">Home</a>
 				</li>
+
 				<li class="nav-link">
 					<a class="nav-item" href="/problem">Problem</a>
 				</li>
@@ -34,55 +35,86 @@
 				<li class="nav-link">
 					<a class="nav-item" href="/how-it-works">How It Works</a>
 				</li>
-				<li class="nav-link" style="padding: 10px 5px">
+				<li class="nav-link">
 					<a class="nav-item" href="/our-team/">Our Team</a>
 				</li>
-				<li class="nav-link active">
-					<a class="nav-item" href="/contact/">Contact</a>
+				<li class="nav-link">
+					<a class="nav-item active" href="/contact/">Contact</a>
 				</li>
 			</ul>
 			<div class="nav-countries">
-				<a href="/no/"><img src="/img/norway.svg" alt="" /></a>
+				<a title="Norwegian flag" href="/no/"
+					><img src="/img/norway.svg" alt="Norwegian flag"
+				/></a>
 				<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
 			</div>
 			<!-- Responsive navbar btn -->
-			<button role="button" title="navbar" class="nav-btn">
+			<!-- <button role="button" title="navbar" class="nav-btn">
 				<i class="fas fa-bars"></i>
-			</button>
+			</button> -->
+			<input class="menu-trigger" type="checkbox" id="openmenu" />
+			<label class="menu-trigger-icon" for="openmenu">
+				<div
+					style="width: auto; min-height: 1rem"
+					class="d-flex align-items-center"
+				>
+					<i class="gg-menu menuIcon"></i>
+					<i class="gg-close closeIcon"></i>
+				</div>
+			</label>
+			<aside class="drawer">
+				<div class="drawer-logo">BioBalance™</div>
+				<div class="drawer-content">
+					<ul class="drawer-items">
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-home"></i>
+							<a class="drawer-link" href="/">Home</a>
+						</li>
+						<li class="drawer-item">
+							<i
+								class="drawer-icon fas fa-exclamation-triangle"
+							></i>
+							<a class="drawer-link" href="/problem/"
+								>The Problem</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-lightbulb"></i>
+							<a class="drawer-link" href="/solution/"
+								>The Solution</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-seedling"></i>
+							<a class="drawer-link" href="/how-it-works/"
+								>How It Works</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-users"></i>
+							<a class="drawer-link" href="/our-team/"
+								>Our Team</a
+							>
+						</li>
+						<li class="drawer-item active">
+							<i class="drawer-icon far fa-envelope"></i>
+							<a class="drawer-link" href="/contact/">Contact</a>
+						</li>
+					</ul>
+					<div class="drawer-footer">
+						<div class="nav-countries">
+							<a title="Norwegian flag" href="/no/"
+								><img
+									src="/img/norway.svg"
+									alt="Norwegian flag"
+							/></a>
+							<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+						</div>
+					</div>
+				</div>
+			</aside>
+			<div class="drawer-backdrop"></div>
 		</nav>
-		<!--Side Nav -->
-		<aside class="mobileCollapse">
-			<ul class="drawer-items">
-				<li class="drawer-item">
-					<i class="drawer-icon fas fa-home"></i>
-					<a class="drawer-link" href="/">Home</a>
-				</li>
-				<li class="drawer-item">
-					<i class="drawer-icon fas fa-question"></i>
-					<a class="drawer-link" href="#">Problem</a>
-				</li>
-				<li class="drawer-item">
-					<i class="drawer-icon fas fa-tasks"></i>
-					<a class="drawer-link" href="/solution/">Solution</a>
-				</li>
-				<li class="drawer-item">
-					<i class="drawer-icon fas fa-share-alt"></i>
-					<a class="drawer-link" href="/how-it-works/"
-						>How It Works</a
-					>
-				</li>
-				<li class="drawer-item">
-					<i class="drawer-icon fab fas fa-users"></i>
-					<a class="drawer-link" href="/our-team/">Our Team</a>
-				</li>
-				<li class="drawer-item active-item">
-					<i class="drawer-icon fas fa-envelope"></i>
-					<a class="drawer-link" href="#">Contact Us</a>
-				</li>
-			</ul>
-		</aside>
-		<div class="drawer-backdrop"></div>
-		<!-- Side Nav end -->
 		<!-- Navbar end -->
 
 		<!-- Contact us -->
@@ -162,6 +194,46 @@
 							elit. Officiis, molestias?
 						</p>
 						<form action="/charge" method="post" id="payment-form">
+							<div class="text-center">
+								<small> Pick an amount to donate </small>
+							</div>
+							<div class="d-flex justify-content-center mb-4">
+								<button
+									type="button"
+									class="button dark mx-2 donation-button"
+									data-js="donation-button"
+									data-amount="5"
+								>
+									$5.00
+								</button>
+								<button
+									type="button"
+									class="button dark mx-2 donation-button"
+									data-js="donation-button"
+									data-amount="10"
+								>
+									$10.00
+								</button>
+								<button
+									type="button"
+									class="button dark mx-2 donation-button"
+									data-js="donation-button"
+									data-amount="100"
+								>
+									$100.00
+								</button>
+							</div>
+							<div class="d-flex justify-content-center mb-4">
+								<label class="p-0" for="donationAmount"
+									><small> Custom amount: </small>
+									<input
+										class="input donation-amount"
+										type="number"
+										name="donationAmount"
+										id="donationAmount"
+									/>
+								</label>
+							</div>
 							<div class="form-row">
 								<div id="card-element">
 									<!-- A Stripe Element will be inserted here. -->
@@ -183,6 +255,9 @@
 									Submit Payment
 								</button>
 							</div>
+							<<<<<<< HEAD =======
+							<input type="hidden" name="amount" id="amount" />
+							>>>>>>> f43e6582979ba22a8caa25af6112b3669b60db1f
 						</form>
 					</div>
 				</section>
@@ -198,7 +273,7 @@
 							</a>
 						</li>
 						<li>
-							PhoneNumber:
+							Phone Number:
 							<a target="_blank" href="tel:+47-951-45-519"
 								>+47 951 45 519</a
 							>
@@ -254,6 +329,7 @@
 		</div>
 
 		<!-- Scripts -->
+		<script src="/js/common.js"></script>
 		<script src="https://js.stripe.com/v3/"></script>
 		<script src="/js/donate.js"></script>
 	</body>
