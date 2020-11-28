@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"build:scss": "rimraf css && gulp sass",
-		"build:js": "rimraf dist && gulp js"
+		"build:js": "gulp js",
+		"build": "npm run build:scss && npm run build:js"
 	},
 	"repository": {
 		"type": "git",

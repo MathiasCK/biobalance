@@ -49,6 +49,5 @@ gulp.task('js', () => {
 		)
 		.pipe(browserify())
 		.pipe(uglify())
-		.pipe(plugins.sourcemaps.write('./'))
-		.pipe(gulp.dest('dist/js'));
+		.pipe(gulp.dest('./js'));
 });
