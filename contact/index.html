@@ -50,83 +50,101 @@
 				<i class="fas fa-bars"></i>
 			</button>
 		</nav>
+		<!--Side Nav -->
+		<aside class="mobileCollapse">
+			<ul class="drawer-items">
+				<li class="drawer-item">
+					<i class="drawer-icon fas fa-home"></i>
+					<a class="drawer-link" href="/">Home</a>
+				</li>
+				<li class="drawer-item">
+					<i class="drawer-icon fas fa-question"></i>
+					<a class="drawer-link" href="#">Problem</a>
+				</li>
+				<li class="drawer-item">
+					<i class="drawer-icon fas fa-tasks"></i>
+					<a class="drawer-link" href="/solution/">Solution</a>
+				</li>
+				<li class="drawer-item">
+					<i class="drawer-icon fas fa-share-alt"></i>
+					<a class="drawer-link" href="/how-it-works/"
+						>How It Works</a
+					>
+				</li>
+				<li class="drawer-item">
+					<i class="drawer-icon fab fas fa-users"></i>
+					<a class="drawer-link" href="/our-team/">Our Team</a>
+				</li>
+				<li class="drawer-item active-item">
+					<i class="drawer-icon fas fa-envelope"></i>
+					<a class="drawer-link" href="#">Contact Us</a>
+				</li>
+			</ul>
+		</aside>
+		<div class="drawer-backdrop"></div>
+		<!-- Side Nav end -->
 		<!-- Navbar end -->
 
-		<!-- Side nav -->
-		<div class="drawer-wrapper">
-			<aside class="drawer">
-				<ul class="side-nav-items justify-content-center">
-					<center>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/">Home</a>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/problem">Problem</a>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/solution"
-								>Solution</a
-							>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/how-it-works"
-								>How It Works</a
-							>
-						</li>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/our-team/"
-								>Our Team</a
-							>
-						</li>
-					</center>
-				</ul>
-			</aside>
-			<div class="drawer-backdrop"></div>
-		</div>
-		
 		<!-- Contact us -->
 		<form class="container">
 			<h3 class="contact-header">Stay connected.</h3>
-			<p class="contact-text">Get in touch and let us know how we may help.</p>
-				<div class="form-group">
-						<label for="name">Your full name *</label>
-						<div class="input-div">
-							<input class="input" type="text"
-							name="name"
-							class="form-input"
-							placeholder="Please enter your name ..."
-							required/>
-							<span class="border"></span>
-						</div>
+			<p class="contact-text">
+				Get in touch and let us know how we may help.
+			</p>
+			<div class="form-group">
+				<label for="name">Your full name *</label>
+				<div class="input-div">
+					<input
+						class="input"
+						type="text"
+						name="name"
+						class="form-input"
+						placeholder="Please enter your name ..."
+						required
+					/>
+					<span class="border"></span>
 				</div>
+			</div>
 
-				<div class="form-group">
-						<label for="subject">Subject *</label>
-						<div class="input-div">
-							<input class="input" type="text"
-							name="subject"
-							class="form-input"
-							placeholder="Subject ..."
-							required/>
-						<span class="border"></span>
-						</div>
+			<div class="form-group">
+				<label for="subject">Subject *</label>
+				<div class="input-div">
+					<input
+						class="input"
+						type="text"
+						name="subject"
+						class="form-input"
+						placeholder="Subject ..."
+						required
+					/>
+					<span class="border"></span>
 				</div>
+			</div>
 
-				<div class="form-group">
-						<label for="email">Your email adress *</label>
-						<div class="input-div">
-							<input name="email" type="email" class="input" placeholder="Email adress ..." requried/>
-							<span class="border"></span>
-						</div>
+			<div class="form-group">
+				<label for="email">Your email adress *</label>
+				<div class="input-div">
+					<input
+						name="email"
+						type="email"
+						class="input"
+						placeholder="Email adress ..."
+						requried
+					/>
+					<span class="border"></span>
 				</div>
+			</div>
 
-				<div class="form-group">
-						<label for="textarea">Your message for us *</label>
-						<div class="input-div">
-							<textarea name="textarea" class="text-area" placeholder="Message ..."></textarea>
-							<span class="border"></span>
-					</div>
+			<div class="form-group">
+				<label for="textarea">Your message for us *</label>
+				<div class="input-div">
+					<textarea
+						name="textarea"
+						class="text-area"
+						placeholder="Message ..."
+					></textarea>
+					<span class="border"></span>
+				</div>
 			</div>
 
 			<div class="contact-btn">
@@ -134,30 +152,40 @@
 			</div>
 		</form>
 
-
 		<div class="wrapper">
 			<main class="content">
-			<section>
-				<div class="container donate">
-					<h3 class="contact-header">Donate to us.</h3>
-					<p class="contact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, molestias?</p>
-					<form action="/charge" method="post" id="payment-form">
-						<div class="form-row">
-						  <div id="card-element">
-							<!-- A Stripe Element will be inserted here. -->
-						  </div>
-					  
-						  <!-- Used to display form errors. -->
-						  <div id="card-errors" class="text-center mt-1" role="alert"></div>
-						</div>
-					  
-						<div class="d-flex justify-content-center mt-4">
-							<button type="submit" class="button dark mx-auto">Submit Payment</button>
-						</div>
-					  </form>
-					  
-				</div>
-			</section>
+				<section>
+					<div class="container donate">
+						<h3 class="contact-header">Donate to us.</h3>
+						<p class="contact-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Officiis, molestias?
+						</p>
+						<form action="/charge" method="post" id="payment-form">
+							<div class="form-row">
+								<div id="card-element">
+									<!-- A Stripe Element will be inserted here. -->
+								</div>
+
+								<!-- Used to display form errors. -->
+								<div
+									id="card-errors"
+									class="text-center mt-1"
+									role="alert"
+								></div>
+							</div>
+
+							<div class="d-flex justify-content-center mt-4">
+								<button
+									type="submit"
+									class="button dark mx-auto"
+								>
+									Submit Payment
+								</button>
+							</div>
+						</form>
+					</div>
+				</section>
 			</main>
 			<footer class="footer">
 				<div class="contact-info footer-column">
@@ -211,18 +239,12 @@
 							></a>
 						</li>
 						<li>
-							<a
-								href="//youtube.com"
-								target="_blank"
-								class="icon"
+							<a href="//youtube.com" target="_blank" class="icon"
 								><i class="fab fa-youtube"></i
 							></a>
 						</li>
 						<li>
-							<a
-								href="//twitter.com"
-								target="_blank"
-								class="icon"
+							<a href="//twitter.com" target="_blank" class="icon"
 								><i class="fab fa-twitter"></i
 							></a>
 						</li>

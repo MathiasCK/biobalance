@@ -201,13 +201,14 @@ Animations
 	color: #a1a1a6;
 	font-size: 1.2rem;
 	line-height: 1.2;
+
 	&.dark {
 		color: black;
 		font-size: 1.2rem;
 		line-height: 1.2;
 	}
-	&.pt-5 {
-		padding-top: 5rem;
+	&.p-5 {
+		padding: 5rem;
 	}
 }
 

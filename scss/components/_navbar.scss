@@ -240,18 +240,24 @@
 		width: 100%;
 		align-items: center;
 		justify-content: space-between;
-		margin: 2rem;
-		padding: 2rem;
-		background-color: blue;
+		padding: 1rem;
+		margin: 1rem;
+		border: 1px solid white;
+		&.active-item {
+			background-color: var(--secondary);
+		}
+		&:hover {
+			background-color: #fc4d4d;
+		}
 	}
 
 	.drawer-icon {
-		padding: 1rem;
 		font-size: 2rem;
+		color: white;
 	}
 
 	.drawer-link {
 		text-decoration: none;
-		color: red;
+		color: white;
 	}
 }
