@@ -12,17 +12,17 @@ General
 	box-sizing: border-box;
 }
 
-@media screen and (min-width: 768px) {
-	html {
-		scroll-behavior: smooth;
-		scroll-snap-type: y proximity;
-	}
+// @media screen and (min-width: 768px) {
+// 	html {
+// 		-webkit-scroll-behavior: smooth;
+// 		-webkit-scroll-snap-type: y proximity;
+// 	}
 
-	body {
-		font-family: var(--h-font);
-		scroll-snap-type: y proximity;
-	}
-}
+// 	body {
+// 		font-family: var(--h-font);
+// 		scroll-snap-type: y proximity;
+// 	}
+// }
 /*
   ------- 
   Section 
