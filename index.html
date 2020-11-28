@@ -31,7 +31,6 @@
 			<button
 				onclick="window.scrollTo({top: 0, behaviour: 'smooth'})"
 				class="logo"
-				href="#page-top"
 			>
 				<i class="fab fa-acquisitions-incorporated"></i>
 			</button>
@@ -79,81 +78,59 @@
 					<i class="gg-close closeIcon"></i>
 				</div>
 			</label>
-			<aside class="mobileCollapse">
-				<ul class="drawer-items">
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-				</ul>
-			</aside>
-			<div class="drawer-backdrop"></div>
-		</nav>
-
-		<!-- Side nav -->
-		<!-- <div class="drawer-wrapper">
 			<aside class="drawer">
-				<ul class="side-nav-items justify-content-center">
-					<center>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/">Home</a>
+				<div class="drawer-logo">BioBalance™</div>
+				<div class="drawer-content">
+					<ul class="drawer-items">
+						<li class="drawer-item active">
+							<i class="drawer-icon fas fa-home"></i>
+							<a class="drawer-link" href="/">Home</a>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="problem">Problem</a>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/solution"
-								>Solution</a
+						<li class="drawer-item">
+							<i
+								class="drawer-icon fas fa-exclamation-triangle"
+							></i>
+							<a class="drawer-link" href="/problem/"
+								>The Problem</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/how-it-works"
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-lightbulb"></i>
+							<a class="drawer-link" href="/solution/"
+								>The Solution</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-seedling"></i>
+							<a class="drawer-link" href="/how-it-works/"
 								>How It Works</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/our-team/"
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-users"></i>
+							<a class="drawer-link" href="/our-team/"
 								>Our Team</a
 							>
 						</li>
-					</center>
-				</ul>
+						<li class="drawer-item">
+							<i class="drawer-icon far fa-envelope"></i>
+							<a class="drawer-link" href="/contact/">Contact</a>
+						</li>
+					</ul>
+					<div class="drawer-footer">
+						<div class="nav-countries">
+							<a title="Norwegian flag" href="/no/"
+								><img
+									src="/img/norway.svg"
+									alt="Norwegian flag"
+							/></a>
+							<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+						</div>
+					</div>
+				</div>
 			</aside>
 			<div class="drawer-backdrop"></div>
-		</div> -->
-		<!-- Side nav end -->
+		</nav>
 		<!-- Navbar end -->
 
 		<div id="/"></div>
@@ -389,9 +366,9 @@
 			integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
 			crossorigin="anonymous"
 		></script>
+		<script src="/js/common.js"></script>
 		<script src="/js/app.js"></script>
 		<script src="/js/skew.js"></script>
-		<script src="/js/common.js"></script>
 		<script>
 			// document.addEventListener('DOMContentLoaded', function () {
 			// 	const skewSolution = mouseSkew(

@@ -1,7 +1,35 @@
+const amountInput = document.getElementById('donationAmount');
+const amountHidden = document.getElementById('amount');
+const donationButtons = document.querySelectorAll(
+	'[data-js="donation-button"]'
+);
+
+const donationAmount = new Observable(5);
+
+// Listen to events
+donationButtons.forEach((button) =>
+	button.addEventListener('click', () => {
+		donationAmount.set(Number(button.getAttribute('data-amount')));
+	})
+);
+amountInput.addEventListener('input', (e) => {
+	const amount = Number(e.target.value);
+	if (!isNaN(amount)) donationAmount.set(amount);
+});
+
+// Listen to amount changes
+donationAmount.subscribe((amount) => {
+	donationButtons.forEach((button) => {
+		const btnAmount = Number(button.getAttribute('data-amount'));
+		if (btnAmount === amount) button.classList.add('active');
+		else button.classList.remove('active');
+	});
+}, true);
+
+/**
+ * Stripe card element
+ */
 const stripe = Stripe('pk_test_KPhR9OlBPdYaEOv9bZ1j4AZy00hdygCni7');
-
-const elements = stripe.elements();
-
 const style = {
 	base: {
 		color: '#32325d',
@@ -17,15 +45,15 @@ const style = {
 		iconColor: '#fa755a',
 	},
 };
-
+const elements = stripe.elements();
 const card = elements.create('card', { style: style });
 card.mount('#card-element');
 
 // Handle real-time validation errors from the card Element.
-card.on('change', function (event) {
+card.on('change', (e) => {
 	const displayError = document.getElementById('card-errors');
-	if (event.error) {
-		displayError.textContent = event.error.message;
+	if (e.error) {
+		displayError.textContent = e.error.message;
 	} else {
 		displayError.textContent = '';
 	}
@@ -33,8 +61,8 @@ card.on('change', function (event) {
 
 // Handle form submission.
 const form = document.getElementById('payment-form');
-form.addEventListener('submit', function (event) {
-	event.preventDefault();
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
 
 	stripe.createToken(card).then(function (result) {
 		if (result.error) {

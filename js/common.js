@@ -1,4 +1,4 @@
-class Observer {
+class Observable {
 	listeners = [];
 	internal = null;
 	constructor(initState) {
@@ -15,38 +15,40 @@ class Observer {
 	get state() {
 		return this.state;
 	}
-	subscribe(fn) {
+	subscribe(fn, onMount = false) {
 		this.listeners.push(fn);
+		if (onMount) fn(this.internal);
 		return this.listeners.filter((listener) => listener !== fn);
 	}
 }
 
-function Drawer() {
+// Exporting Observable class.
+window.observable = Observable;
+
+function initDrawer() {
 	// const navbar = document.querySelector('.nav-bar');
 	const menuTrigger = document.querySelector('.menu-trigger');
 	const drawerBackdrop = document.querySelector('.drawer-backdrop');
-	const navState = new Observer({ open: menuTrigger.checked });
+	// Creating observable state to track drawers's open state.
+	const navState = new Observable({ open: menuTrigger?.checked });
 
-	drawerBackdrop.addEventListener('click', () => {
+	drawerBackdrop?.addEventListener('click', () => {
 		menuTrigger.click();
 	});
 
-	menuTrigger.addEventListener('change', (e) => {
+	menuTrigger?.addEventListener('change', (e) => {
 		navState.set({ open: e.target.checked });
 	});
 
+	// Subscribing to the drawers's open state and toggles scrolling the body on or off.
 	navState.subscribe(({ open }) => {
-		console.log(
-			'🚀 ~ file: common.js ~ line 39 ~ navState.subscribe ~ open',
-			open
-		);
 		if (open) document.body.classList.add('no-scroll');
 		else document.body.classList.remove('no-scroll');
-	});
+	}, true);
 }
 
 function handleLoad() {
 	// init drawer
-	Drawer();
+	initDrawer();
 }
 document.addEventListener('DOMContentLoaded', handleLoad);
