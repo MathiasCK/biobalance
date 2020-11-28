@@ -21,6 +21,7 @@
 	height: 57px;
 	transition: all 0.3s ease;
 	color: white;
+
 	.nav-countries {
 		img {
 			width: 1.7rem;
@@ -32,11 +33,12 @@
 		display: none;
 	}
 	@media screen and (min-width: 768px) {
+		backdrop-filter: saturate(180%) blur(5px);
+		opacity: 0.9;
 		.nav-countries {
 			display: flex;
 		}
-		backdrop-filter: saturate(180%) blur(5px);
-		opacity: 0.9;
+
 		img {
 			width: 10px;
 			height: 10px;
