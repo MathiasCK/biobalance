@@ -25,7 +25,7 @@ class Observable {
 	}
 }
 // Exporting Observable class.
-window.observable = Observable;
+window.Observable = Observable;
 
 /**
  * Mobile navigation drawer
