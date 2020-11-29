@@ -150,3 +150,14 @@ html {
 	justify-content: center;
 	margin: 3rem;
 }
+@media screen and (max-width: 300px) {
+	.youtube-description{
+		display: none;
+	}
+
+	.youtubevideo-container{
+		display: none;
+	}
+
+
+}
