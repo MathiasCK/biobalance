@@ -330,3 +330,35 @@ Intro section
 	scroll-snap-align: none;
 	min-height: 100vh;
 }
+
+// Stripe payments section
+.donation-button {
+	&.active {
+		box-shadow: inherit;
+		color: var(--green-2);
+		border-color: var(--green-2);
+	}
+}
+.donation-amount {
+	padding: 8px 16px;
+	width: 100px;
+	font-weight: 500;
+	&:focus {
+		border: 2px solid black;
+	}
+}
+
+#card-element {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 16px;
+	border-radius: 4px;
+	box-shadow: var(--shadow-dark);
+	@media screen and (min-width: 768px) {
+		max-width: 400px;
+	}
+}
+#card-errors {
+	color: red;
+}
+
