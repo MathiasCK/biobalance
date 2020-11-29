@@ -96,6 +96,12 @@ body {
 .person:hover .slider {
 	transform: translateX(0%);
 }
+.rebmat:hover .slider {
+	transform: translateX(0%);
+}
+.rebmat:hover .slider {
+	transform: translateX(0%);
+}
 .person-full:hover .slider {
 	transform: translateX(0%);
 }
@@ -156,12 +162,25 @@ body {
 		flex-basis: 50%;
 	}
 }
+
+.rebmat {
+	display: none;
+	flex-basis: 100%;
+	height: 70vh;
+	overflow: hidden;
+	position: relative;
+	@include md {
+		height: 100vh;
+	}
+	@include lg {
+		flex-basis: 50%;
+	}
+}
 .person-full {
 	@extend .person;
 	flex-basis: 100%;
 }
 .person-bottom {
-	
 	height: 70vh;
 	overflow: hidden;
 	position: relative;
@@ -172,10 +191,10 @@ body {
 	@include lg {
 		flex-basis: 33.33333333333%;
 	}
-	.soppel{
+	.soppel {
 		object-position: top center;
 	}
-	.shavez{
+	.shavez {
 		object-position: top center;
 	}
 }
@@ -199,7 +218,6 @@ body {
 	object-position: top center;
 }
 
-
 // Footer override
 .footer {
 	background-color: var(--black);
@@ -208,5 +226,14 @@ body {
 	margin-top: 0;
 	.icon {
 		color: white;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.rebmat {
+		display: block;
+	}
+	.person-full {
+		display: none;
 	}
 }
