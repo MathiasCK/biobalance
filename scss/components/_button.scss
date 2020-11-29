@@ -10,6 +10,10 @@
 		--color: var(--secondary);
 		--focus-color: var(--light);
 	}
+	&.green {
+		--color: var(--green-2);
+		--focus-color: var(--light);
+	}
 	display: inline-block;
 	width: auto;
 	outline: none !important;
