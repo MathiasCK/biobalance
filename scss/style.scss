@@ -12,17 +12,17 @@ General
 	box-sizing: border-box;
 }
 
-@media screen and (min-width: 768px) {
-	html {
-		scroll-behavior: smooth;
-		scroll-snap-type: y proximity;
-	}
+// @media screen and (min-width: 768px) {
+// 	html {
+// 		-webkit-scroll-behavior: smooth;
+// 		-webkit-scroll-snap-type: y proximity;
+// 	}
 
-	body {
-		font-family: var(--h-font);
-		scroll-snap-type: y proximity;
-	}
-}
+// 	body {
+// 		font-family: var(--h-font);
+// 		scroll-snap-type: y proximity;
+// 	}
+// }
 /*
   ------- 
   Section 
@@ -51,13 +51,13 @@ General
 .section-img-dark {
 	object-fit: cover;
 	width: 80%;
-	height: auto;
+	min-height: 40vh;
 	box-shadow: var(--shadow-dark);
 }
 
 .section-img-light {
 	object-fit: contain;
-	height: 80%;
+	min-height: 40vh;
 	width: 80%;
 	box-shadow: var(--shadow-light);
 }
@@ -74,6 +74,9 @@ General
 
 #welcome {
 	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
 }
 
 .overlay {
@@ -247,9 +250,6 @@ Intro section
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 15px;
-	p {
-		font-size: 0.9rem;
-	}
 	@media screen and (min-width: 768px) {
 		width: 80%;
 		.flex-img {
@@ -328,4 +328,5 @@ Intro section
 
 #funding {
 	scroll-snap-align: none;
+	min-height: 100vh;
 }

@@ -149,8 +149,11 @@ body {
 	height: 70vh;
 	overflow: hidden;
 	position: relative;
-	@media screen and (min-width: 768px) {
+	@include md {
 		height: 100vh;
+	}
+	@include lg {
+		flex-basis: 50%;
 	}
 }
 .person-full {
@@ -162,15 +165,18 @@ body {
 	overflow: hidden;
 	position: relative;
 	flex-basis: 100%;
-	@media screen and (min-width: 768px) {
-		flex-basis: 33.33333333333%;
+	@include md {
 		height: 100vh;
+	}
+	@include lg {
+		flex-basis: 33.33333333333%;
 	}
 }
 
 .mobile-full {
 	flex-basis: 100%;
-	@media screen and (min-width: 768px) {
+
+	@include lg {
 		flex-basis: 33.33333333333%;
 	}
 }

@@ -21,24 +21,21 @@
 	<body id="page-top">
 		<!-- Navbar -->
 		<nav class="nav-bar dark">
-			<a href="#page-top" class="logo"
-				><i class="fab fa-acquisitions-incorporated"></i
-			></a>
+			<a title="Logo" class="logo" href="/">
+				<i class="fab fa-acquisitions-incorporated"></i>
+			</a>
 			<ul class="nav-items">
-				<li style="visibility: hidden" class="nav-link">
-					<a class="nav-item" href="/welcome"></a>
-				</li>
 				<li class="nav-link">
-					<a class="side-nav-item" href="/">Home</a>
+					<a class="nav-item" href="/">Home</a>
 				</li>
+
 				<li class="nav-link">
 					<a class="nav-item" href="/problem">Problem</a>
 				</li>
-				<li class="nav-link active green">
-					<a class="nav-item" href="/solution">Solution</a>
-				</li>
-				<li class="nav-link" aria-hidden="true" style="display: none">
-					<a class="nav-item" href="#product-description">Solution</a>
+				<li class="nav-link">
+					<a class="nav-item active green" href="/solution"
+						>Solution</a
+					>
 				</li>
 				<li class="nav-link">
 					<a class="nav-item" href="/how-it-works">How It Works</a>
@@ -51,53 +48,90 @@
 				</li>
 			</ul>
 			<div class="nav-countries">
-				<a href="/no/"><img src="/img/norway.svg" alt="" /></a>
+				<a title="Norwegian flag" href="/no/"
+					><img src="/img/norway.svg" alt="Norwegian flag"
+				/></a>
 				<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
 			</div>
 			<!-- Responsive navbar btn -->
-			<button role="button" title="navbar" class="nav-btn">
+			<!-- <button role="button" title="navbar" class="nav-btn">
 				<i class="fas fa-bars"></i>
-			</button>
-		</nav>
-		<!-- Navbar end -->
-
-		<!-- Side nav -->
-		<div class="drawer-wrapper">
+			</button> -->
+			<input
+				title="Click to trigger menu"
+				class="menu-trigger"
+				type="checkbox"
+				id="openmenu"
+			/>
+			<label class="menu-trigger-icon" for="openmenu">
+				<div
+					style="width: auto; min-height: 1rem"
+					class="d-flex align-items-center"
+				>
+					<span style="display: none">Lorem.</span>
+					<i class="gg-menu menuIcon"></i>
+					<i class="gg-close closeIcon"></i>
+				</div>
+			</label>
 			<aside class="drawer">
-				<ul class="side-nav-items justify-content-center">
-					<center>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/">Home</a>
+				<div class="drawer-logo">BioBalance™</div>
+				<div class="drawer-content">
+					<ul class="drawer-items">
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-home"></i>
+							<a class="drawer-link" href="/">Home</a>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/problem">Problem</a>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/solution"
-								>Solution</a
+						<li class="drawer-item">
+							<i
+								class="drawer-icon fas fa-exclamation-triangle"
+							></i>
+							<a class="drawer-link" href="/problem/"
+								>The Problem</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/how-it-works"
+						<li class="drawer-item active">
+							<i class="drawer-icon fas fa-lightbulb"></i>
+							<a class="drawer-link" href="/solution/"
+								>The Solution</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-seedling"></i>
+							<a class="drawer-link" href="/how-it-works/"
 								>How It Works</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/our-team/"
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-users"></i>
+							<a class="drawer-link" href="/our-team/"
 								>Our Team</a
 							>
 						</li>
-					</center>
-				</ul>
+						<li class="drawer-item">
+							<i class="drawer-icon far fa-envelope"></i>
+							<a class="drawer-link" href="/contact/">Contact</a>
+						</li>
+					</ul>
+					<div class="drawer-footer">
+						<div class="nav-countries">
+							<a title="Norwegian flag" href="/no/"
+								><img
+									src="/img/norway.svg"
+									alt="Norwegian flag"
+							/></a>
+							<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+						</div>
+					</div>
+				</div>
 			</aside>
 			<div class="drawer-backdrop"></div>
-		</div>
-		<!-- Side nav end -->
+		</nav>
+		<!-- Navbar end -->
 
 		<!-- Solution -->
-		<div class="hero"></div>
-		<section class="solution-section">
-			<div class="svg-secondary">
+		<!-- <div class="hero"></div> -->
+		<section class="solution-section secondary">
+			<div class="svg">
 				<svg
 					viewBox="0 0 1440 363"
 					fill="none"
@@ -107,8 +141,8 @@
 				>
 					<path
 						d="M1440 27.4774C1352.73 19.8184 1122.41 49.0556 899.331
-				227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165
-				49.0556 -4.21721 8.32998 0.487081 5"
+					227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165
+					49.0556 -4.21721 8.32998 0.487081 5"
 						stroke="var(--green-1)"
 						strokeOpacity="0.5"
 						strokeWidth="10"
@@ -124,7 +158,7 @@
 						rainforest.
 					</h1>
 					<div class="solution-flex secondary">
-						<div class="flex-item big mb-20">
+						<div class="flex-item big">
 							<!--<h2 class="solution-header-small">
 							Decrease <span>death</span> rate.
 						</h2>-->
@@ -144,12 +178,47 @@
 								grow strong.
 							</p>
 						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="solution-img">
+			<img
+				src="/img/biobalancevisionjpeg.jpg"
+				alt="Large product image"
+			/>
+		</div>
+
+		<section class="solution-section secondary">
+			<div class="svg">
+				<svg
+					viewBox="0 0 1440 363"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					data-observer-in="in"
+					class="stroke-line"
+				>
+					<path
+						class="right"
+						d="M1440 27.4774C1352.73 19.8184 1122.41 49.0556 899.331
+				227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165
+				49.0556 -4.21721 8.32998 0.487081 5"
+						stroke="var(--green-1)"
+						strokeOpacity="0.5"
+						strokeWidth="10"
+					/>
+				</svg>
+				<div class="container">
+					<div class="solution-flex secondary">
 						<div class="flex-item fade">
-							<img
-								class="img-small"
-								class="section-img-light solution-image"
-								src="/img/biobalance_display.png"
-							/>
+							<center>
+								<img
+									class="img-small"
+									src="/img/biobalance_display.png"
+									alt="Small product image"
+								/>
+							</center>
 						</div>
 						<div class="flex-item fade">
 							<h2 class="solution-header-small">
@@ -172,60 +241,40 @@
 		</section>
 
 		<section class="solution-section fade">
-			<div class="svg">
-				<svg
-					viewBox="0 0 1440 363"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-					data-observer-in="in"
-					class="stroke-line"
-				>
-					<path
-						class="right"
-						d="M1440 27.4774C1352.73 19.8184 1122.41 49.0556 899.331
-				227.276C620.48 450.052 354.282 355.647 170.328 185.318C23.165
-				49.0556 -4.21721 8.32998 0.487081 5"
-						stroke="var(--green-1)"
-						strokeOpacity="0.5"
-						strokeWidth="10"
-					/>
-				</svg>
-				<div class="container">
-					<h1 class="solution-header">
-						Our <span class="green">goals</span>.
-					</h1>
-					<div class="solution-flex secondary">
-						<div class="flex-item">
-							<div class="goals-img">
-								<img class="fade" src="/img/goals.jpg" alt="" />
-							</div>
+			<div class="container">
+				<h1 class="solution-header">
+					What does it <span class="green">solve</span>?
+				</h1>
+				<div class="solution-flex secondary">
+					<div class="flex-item">
+						<div class="goals-img">
+							<img class="fade" src="/img/goals.jpg" alt="" />
 						</div>
-						<div class="flex-item">
-							<p class="solution-text fade">
-								Increase the survival rate of restored
-								rainforest.
-							</p>
-							<p class="solution-text fade">
-								Contribute to carbon capture.
-							</p>
-							<p class="solution-text fade">
-								Create possibilities for easier and more
-								affordable rainforest restoring that doesn't
-								need too much maintenance.
-							</p>
-							<p class="solution-text fade">
-								Create balance in the ecosystem, to stop natural
-								disasters in the rainforests due to unstable
-								biodiversity
-							</p>
-							<p class="solution-text fade">
-								Create jobs for everyone who is interested in
-								saving the rainforest. As planting the plants
-								inside the Rainforest lunchbox is quite easy,
-								people with developmental disabilities may
-								contribute just as easily as any other person.
-							</p>
-						</div>
+					</div>
+					<div class="flex-item">
+						<p class="solution-text fade">
+							Increase the survival rate of restored rainforest.
+						</p>
+						<p class="solution-text fade">
+							Contribute to carbon capture.
+						</p>
+						<p class="solution-text fade">
+							Create possibilities for easier and more affordable
+							rainforest restoring that doesn't need too much
+							maintenance.
+						</p>
+						<p class="solution-text fade">
+							Create balance in the ecosystem, to stop natural
+							disasters in the rainforests due to unstable
+							biodiversity
+						</p>
+						<p class="solution-text fade">
+							Create jobs for everyone who is interested in saving
+							the rainforest. As planting the plants inside the
+							Rainforest lunchbox is quite easy, people with
+							developmental disabilities may contribute just as
+							easily as any other person.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -356,6 +405,7 @@
 					<li>
 						<a
 							href="https://www.facebook.com/BioBalance-100261931923249"
+							title="Facebook"
 							target="_blank"
 							class="icon green"
 							><i class="fab fa-facebook"></i
@@ -364,6 +414,7 @@
 					<li>
 						<a
 							href="//instagram.com/biobalanceorg/"
+							title="Instagram"
 							target="_blank"
 							class="icon green"
 							><i class="fab fa-instagram"></i
@@ -372,6 +423,7 @@
 					<li>
 						<a
 							href="//youtube.com"
+							title="Youtube"
 							target="_blank"
 							class="icon green"
 							><i class="fab fa-youtube"></i
@@ -380,6 +432,7 @@
 					<li>
 						<a
 							href="//twitter.com"
+							title="Twitter"
 							target="_blank"
 							class="icon green"
 							><i class="fab fa-twitter"></i
@@ -396,6 +449,7 @@
 		</div>
 		<!-- footer end -->
 		<!-- Scripts -->
+		<script src="/js/common.js"></script>
 		<script src="/js/popup.js"></script>
 		<script src="/js/fade.js"></script>
 		<script src="/js/observer.js"></script>

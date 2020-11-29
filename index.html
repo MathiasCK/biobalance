@@ -28,16 +28,10 @@
 
 		<!-- Navbar -->
 		<nav class="nav-bar white">
-			<span
-				onclick="window.scrollTo({top: 0, behaviour: 'smooth'})"
-				class="logo"
-				href="#page-top"
-				><i class="fab fa-acquisitions-incorporated"></i
-			></span>
+			<a title="Click on logo" class="logo" href="/">
+				<i class="fab fa-acquisitions-incorporated"></i>
+			</a>
 			<ul class="nav-items">
-				<li style="visibility: hidden" class="nav-link">
-					<a class="nav-item" href="/welcome"></a>
-				</li>
 				<li class="nav-link">
 					<a class="nav-item active" href="/">Home</a>
 				</li>
@@ -59,98 +53,88 @@
 				</li>
 			</ul>
 			<div class="nav-countries">
-				<a href="/no/"><img src="/img/norway.svg" alt="" /></a>
+				<a title="Norwegian flag" href="/no/"
+					><img src="/img/norway.svg" alt="Norwegian flag"
+				/></a>
 				<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
 			</div>
 			<!-- Responsive navbar btn -->
 			<!-- <button role="button" title="navbar" class="nav-btn">
 				<i class="fas fa-bars"></i>
 			</button> -->
-			<input class="menu-trigger" type="checkbox" id="openmenu" />
-			<label class="menu-trigger-icon" for="openmenu">
+			<input
+				title="Menu Trigger"
+				class="menu-trigger"
+				type="checkbox"
+				id="openmenu"
+			/>
+			<label
+				title="Menu Trigger"
+				class="menu-trigger-icon"
+				for="openmenu"
+			>
 				<div
 					style="width: auto; min-height: 1rem"
 					class="d-flex align-items-center" 
 				>
+					<span style="display: none">Lorem.</span>
 					<i class="gg-menu menuIcon"></i>
 					<i class="gg-close closeIcon"></i>
 				</div>
 			</label>
-			<aside class="mobileCollapse">
-				<ul class="drawer-items">
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-					<li class="drawer-item">
-						<i
-							class="drawer-icon fab fa-acquisitions-incorporated"
-						></i>
-						<a class="drawer-link" href="#">Home</a>
-					</li>
-				</ul>
-			</aside>
-			<div class="drawer-backdrop"></div>
-		</nav>
-
-		<!-- Side nav -->
-		<!-- <div class="drawer-wrapper">
 			<aside class="drawer">
-				<ul class="side-nav-items justify-content-center">
-					<center>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/">Home</a>
+				<div class="drawer-logo">BioBalance™</div>
+				<div class="drawer-content">
+					<ul class="drawer-items">
+						<li class="drawer-item active">
+							<i class="drawer-icon fas fa-home"></i>
+							<a class="drawer-link" href="/">Home</a>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="problem">Problem</a>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/solution"
-								>Solution</a
+						<li class="drawer-item">
+							<i
+								class="drawer-icon fas fa-exclamation-triangle"
+							></i>
+							<a class="drawer-link" href="/problem/"
+								>The Problem</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/how-it-works"
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-lightbulb"></i>
+							<a class="drawer-link" href="/solution/"
+								>The Solution</a
+							>
+						</li>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-seedling"></i>
+							<a class="drawer-link" href="/how-it-works/"
 								>How It Works</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/our-team/"
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-users"></i>
+							<a class="drawer-link" href="/our-team/"
 								>Our Team</a
 							>
 						</li>
-					</center>
-				</ul>
+						<li class="drawer-item">
+							<i class="drawer-icon far fa-envelope"></i>
+							<a class="drawer-link" href="/contact/">Contact</a>
+						</li>
+					</ul>
+					<div class="drawer-footer">
+						<div class="nav-countries">
+							<a title="Norwegian flag" href="/no/"
+								><img
+									src="/img/norway.svg"
+									alt="Norwegian flag"
+							/></a>
+							<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+						</div>
+					</div>
+				</div>
 			</aside>
 			<div class="drawer-backdrop"></div>
-		</div> -->
-		<!-- Side nav end -->
+		</nav>
 		<!-- Navbar end -->
 
 		<div id="/"></div>
@@ -175,7 +159,11 @@
 					</h2>
 				</div>
 			</div>
-			<a href="#important" class="down-arrows">
+			<a
+				title="Click To Scroll Down"
+				href="#important"
+				class="down-arrows"
+			>
 				<i class="fas fa-chevron-down"></i>
 				<i class="fas fa-chevron-down"></i>
 				<i class="fas fa-chevron-down"></i>
@@ -199,6 +187,7 @@
 						<img
 							class="section-img-dark problem-img"
 							src="img/rainforest.jpg"
+							alt="Rainforest"
 						/>
 					</div>
 					<p class="section-text-small dark">
@@ -227,7 +216,7 @@
 		>
 			<div class="container">
 				<h1 class="section-header green-2" style="padding-bottom: 0px">
-					Solution
+					Our Solution
 				</h1>
 			</div>
 
@@ -236,6 +225,7 @@
 					<img
 						class="section-img-light"
 						src="/img/biobalance_display.png"
+						alt="Solution image"
 					/>
 				</div>
 				<div class="solution-txt">
@@ -272,8 +262,8 @@
 		>
 			<div class="container">
 				<h1 class="section-header">Help us save the rainforest</h1>
-				<p class="section-text">
-					This project requires more than just a brilliant idea and a
+				<p class="section-text-small dark p-2">
+					<!-- This project requires more than just a brilliant idea and a
 					product. To be able to create such a product on a massive
 					scale it requires funding. As a company that seeks to
 					prevent more deforestation, we intend to seek funding
@@ -281,9 +271,9 @@
 					ethics. After reviewing a lot of companies and their mission
 					statements, we found some companies that are adequate enough
 					to be associated with our company and the direction we
-					intend to take it.
+					intend to take it.-->
 				</p>
-				<p class="section-text">
+				<p class="section-text-small dark p-2">
 					We are going to seek funding from countries and their
 					government that can benefit from the product. That includes
 					countries such as Brazil and Singapore. Brazil’s government
@@ -294,13 +284,28 @@
 					to make agreements with these countries and hopefully create
 					a snowball effect.
 				</p>
-				<p class="section-text">
+				<p class="section-text-small dark p-2">
 					We aim to launch a kickstarter fund for our company and
 					collaborate with World Wildlife Fund and their organizations
 					for more funding, as well as Rainforest Foundation Norway
 					and Small Grants Funds.
 				</p>
+				<div class="flexed">
+					<p class="section-text-small dark p-2">
+						We need <span>Your</span> help aswell, click below to
+						donate to us now.
+					</p>
+					<center>
+						<a
+							href="/contact/"
+							type="submit"
+							class="button secondary btn"
+							>Donate Now</a
+						>
+					</center>
+				</div>
 			</div>
+
 			<!-- footer start -->
 			<footer class="footer">
 				<div class="contact-info footer-column">
@@ -313,7 +318,7 @@
 							</a>
 						</li>
 						<li>
-							PhoneNumber:
+							Phone Number:
 							<a target="_blank" href="tel:+47-951-45-519"
 								>+47 951 45 519</a
 							>
@@ -325,12 +330,14 @@
 					<h4>Location</h4>
 					<ul>
 						<li>Adress:</li>
-						<a
-							target="blank"
-							href="https://www.google.no/maps/place/Pilestredet+32,+0166+Oslo/@59.9200718,10.7335951,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e7be22c2035:0xf51095d184aa1954!8m2!3d59.9200718!4d10.7357838"
-						>
-							Pilestredet 32, Oslo</a
-						>
+						<li>
+							<a
+								target="blank"
+								href="https://www.google.no/maps/place/Pilestredet+32,+0166+Oslo/@59.9200718,10.7335951,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e7be22c2035:0xf51095d184aa1954!8m2!3d59.9200718!4d10.7357838"
+							>
+								Pilestredet 32, Oslo</a
+							>
+						</li>
 					</ul>
 				</div>
 				<div class="socials footer-column">
@@ -338,39 +345,44 @@
 					<ul>
 						<li>
 							<a
+								title="Facebook"
 								href="https://www.facebook.com/BioBalance-100261931923249"
 								target="_blank"
-								class="icon green"
+								class="icon"
 								><i class="fab fa-facebook"></i
 							></a>
 						</li>
 						<li>
 							<a
+								title="Instagram"
 								href="//instagram.com/biobalanceorg/"
 								target="_blank"
-								class="icon green"
+								class="icon"
 								><i class="fab fa-instagram"></i
 							></a>
 						</li>
 						<li>
 							<a
+								title="Youtube"
 								href="//youtube.com"
 								target="_blank"
-								class="icon green"
+								class="icon"
 								><i class="fab fa-youtube"></i
 							></a>
 						</li>
 						<li>
 							<a
+								title="Twitter"
 								href="//twitter.com"
 								target="_blank"
-								class="icon green"
+								class="icon"
 								><i class="fab fa-twitter"></i
 							></a>
 						</li>
 					</ul>
 				</div>
 			</footer>
+			<!-- Footer end -->
 		</section>
 		<!-- How it works end -->
 
@@ -381,9 +393,9 @@
 			integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
 			crossorigin="anonymous"
 		></script>
-		<script src="js/app.js"></script>
-		<script src="js/skew.js"></script>
 		<script src="/js/common.js"></script>
+		<script src="/js/app.js"></script>
+		<script src="/js/skew.js"></script>
 		<script>
 			// document.addEventListener('DOMContentLoaded', function () {
 			// 	const skewSolution = mouseSkew(
