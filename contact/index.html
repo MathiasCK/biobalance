@@ -240,12 +240,21 @@
 							<div class="d-flex justify-content-center mb-4">
 								<label class="p-0" for="donationAmount"
 									><small> Custom amount: </small>
-									<input
+									<!-- <input
 										class="input donation-amount"
 										type="number"
-										name="donationAmount"
-										id="donationAmount"
-									/>
+									/> -->
+									<div
+										class="input-field icon donation-amount"
+									>
+										<span class="green"> $ </span>
+										<input
+											min="1"
+											type="number"
+											name="donationAmount"
+											id="donationAmount"
+										/>
+									</div>
 								</label>
 							</div>
 							<div class="form-row">
@@ -269,7 +278,6 @@
 									Submit Payment
 								</button>
 							</div>
-
 							<input type="hidden" name="amount" id="amount" />
 						</form>
 					</div>
