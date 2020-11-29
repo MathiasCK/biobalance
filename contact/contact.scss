@@ -1,4 +1,4 @@
-@import '../common';
+@import '../scss/common';
 
 body {
 	// background-image: url('/img/welcome.jpg');
@@ -7,13 +7,17 @@ body {
 	height: 100vh;
 }
 
+html {
+	scroll-behavior: smooth !important;
+}
+
 .container {
 	width: 70%;
 	margin-top: 6rem;
 	padding: 6rem 0 1rem 1rem;
 	background: whitesmoke;
 	h3 {
-		padding: 1.5rem 2rem;
+		padding: 0 1.5rem 2rem 2rem;
 	}
 	h3:after {
 		content: ' ';
@@ -22,6 +26,9 @@ body {
 		height: 1px;
 		margin: 20px 0 20px;
 		background: var(--secondary);
+	}
+	label {
+		padding: 2rem 0;
 	}
 }
 
@@ -74,18 +81,20 @@ body {
 
 // Input animations
 
-.input ~ .border {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 2px;
-	background-color: var(--secondary);
-}
-
-.input:focus ~ .border {
-	width: 100%;
-	transition: 0.5s;
+.input,
+.text-area {
+	& ~ .border {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: var(--secondary);
+	}
+	&:focus ~ .border {
+		width: 100%;
+		transition: 0.5s;
+	}
 }
 
 .input-div {
@@ -101,28 +110,57 @@ body {
 	justify-content: center;
 }
 
-.btn {
-	cursor: pointer;
-	text-decoration: none;
-	color: black;
-	float: right;
-	border: 1px solid var(--secondary);
-	padding: 0.8rem;
-	margin: 2rem;
-	width: 20%;
-	text-align: center;
-	text-transform: uppercase;
-	background: linear-gradient(
-		to right,
-		var(--secondary) 50%,
-		transparent 50%
-	);
-	background-size: 200% 100%;
-	background-position: right bottom;
-	transition: all 0.3s ease-out;
+.contact-text {
+	padding: 0 2rem;
+	margin-bottom: 2rem;
 }
 
-.btn:hover {
-	background-position: left bottom;
-	color: var(--light);
+.btn {
+	padding: 0.5rem 2rem;
+	margin-top: 1rem;
+	color: black;
+}
+
+.footer {
+	background-color: var(--black);
+	h4 {
+		color: white;
+	}
+	li {
+		color: white;
+	}
+	a {
+		color: white;
+	}
+}
+
+// Stripe payments section
+.donation-button {
+	&.active {
+		box-shadow: inherit;
+		color: var(--green-2);
+		border-color: var(--green-2);
+	}
+}
+.donation-amount {
+	padding: 8px 16px;
+	width: 100px;
+	font-weight: 500;
+	&:focus {
+		border: 2px solid black;
+	}
+}
+
+#card-element {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 16px;
+	border-radius: 4px;
+	box-shadow: var(--shadow-dark);
+	@media screen and (min-width: 768px) {
+		max-width: 400px;
+	}
+}
+#card-errors {
+	color: red;
 }

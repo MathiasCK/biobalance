@@ -1,26 +1,64 @@
-@import '../common';
+@import '../scss/common';
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
 
 .banner-photo {
 	width: 100%;
-	height: 100vh;
-	background-image: url('https://images.unsplash.com/photo-1598520059393-1fd1b7f85e35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');
-	background-size: cover;
+	max-width: 100%;
+	overflow: hidden;
+	height: auto;
 	position: relative;
+	img {
+		transform: scale(1.1);
+		object-position: 0px 20px;
+	}
+	@media screen and (min-width: 768px) {
+		height: 100vh;
+		background-size: 120%;
+		background-image: url('/img/ourteam/gruppebilde.jpg');
+		background-attachment: fixed;
+		background-position: -90px -20px;
+		background-repeat: no-repeat;
+		img {
+			display: none;
+		}
+	}
 }
 .banner-text {
-	color: rgb(255, 255, 255);
+	color: var(--light);
 	text-align: left;
-	font-size: 2rem;
 	position: absolute;
-	top: 50%;
-	left: 200px;
-	transform: translateY(-50%);
-	max-width: 45%;
+	z-index: 2;
+	left: 2rem;
+	bottom: 20%;
+	@media screen and (min-width: 768px) {
+		bottom: initial;
+		left: 200px;
+		top: 30%;
+		font-size: 3rem;
+		transform: translateY(-50%);
+		color: var(--light);
+		max-width: 55%;
+	}
+
+	h2 {
+		text-shadow: 0px 8px 30px rgba(black, 0.8);
+	}
 }
 .persons {
 	display: flex;
 	flex-wrap: wrap;
 	img {
+		position: absolute;
+		top: 0;
+		left: 0;
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
@@ -33,7 +71,7 @@
 		}
 	}
 }
-//the logic of the slider has been used before by Tobias Fremming in "make it responsive". Its not the same code, but the same logic.
+// The logic of the slider has been used before by Tobias Fremming in "make it responsive". Its not the same code, but the same logic.
 .slider {
 	transition: transform 0.3s ease;
 	transform: translateX(-100%);
@@ -47,6 +85,9 @@
 	height: 100%;
 	width: 100%;
 	z-index: 10;
+	h2 {
+		cursor: pointer;
+	}
 }
 
 .person:hover .slider {
@@ -104,12 +145,15 @@
 }
 
 .person {
-	flex-basis: 50%;
+	flex-basis: 100%;
 	height: 70vh;
 	overflow: hidden;
 	position: relative;
-	@media screen and (min-width: 768px) {
+	@include md {
 		height: 100vh;
+	}
+	@include lg {
+		flex-basis: 50%;
 	}
 }
 .person-full {
@@ -120,16 +164,40 @@
 	height: 70vh;
 	overflow: hidden;
 	position: relative;
-	flex-basis: 50%;
-	@media screen and (min-width: 768px) {
-		flex-basis: 33.33333333333%;
+	flex-basis: 100%;
+	@include md {
 		height: 100vh;
+	}
+	@include lg {
+		flex-basis: 33.33333333333%;
 	}
 }
 
 .mobile-full {
 	flex-basis: 100%;
-	@media screen and (min-width: 768px) {
+
+	@include lg {
 		flex-basis: 33.33333333333%;
+	}
+}
+
+.sanna {
+	@media screen and (min-width: 1200px) {
+		object-position: left -100px;
+	}
+}
+
+.rebandmathias {
+	object-position: top center;
+}
+
+// Footer override
+.footer {
+	background-color: var(--black);
+	color: white;
+	padding-top: 2rem;
+	margin-top: 0;
+	.icon {
+		color: white;
 	}
 }

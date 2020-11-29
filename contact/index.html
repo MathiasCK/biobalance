@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>BioBalance | Contact</title>
+		<title>BioBalance™ | Contact</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -15,149 +15,296 @@
 		<link rel="icon" type="image/jpg" href="/img/tree.jpg" />
 		<link rel="stylesheet" href="/css/contact.min.css" />
 	</head>
-	<body>
+	<body id="page-top">
 		<!-- Navbar -->
 		<nav class="nav-bar white">
-			<a href="/" class="logo"
-				><i class="fab fa-acquisitions-incorporated"></i
-			></a>
+			<a title="Logo" class="logo" href="/">
+				<i class="fab fa-acquisitions-incorporated"></i>
+			</a>
 			<ul class="nav-items">
-				<li style="visibility: hidden" class="nav-link">
-					<a class="nav-item" href="/#welcome"></a>
-				</li>
 				<li class="nav-link">
-					<a class="nav-item" href="/#problem">Problem</a>
-				</li>
-				<li class="nav-link">
-					<a class="nav-item" href="/#solution">Solution</a>
-				</li>
-				<li class="nav-link">
-					<a class="nav-item" href="/#gallery">Gallery</a>
-				</li>
-				<li class="nav-link">
-					<a class="nav-item" href="/#how-it-works">How It Works</a>
+					<a class="nav-item" href="/">Home</a>
 				</li>
 
-				<!--<li class="nav-link">
-					<a class="nav-item" href="/#why-it-works">Why It Works</a>
-				</li>-->
-
-				<li class="nav-link" style="padding: 10px 5px">
+				<li class="nav-link">
+					<a class="nav-item" href="/problem">Problem</a>
+				</li>
+				<li class="nav-link">
+					<a class="nav-item" href="/solution">Solution</a>
+				</li>
+				<li class="nav-link">
+					<a class="nav-item" href="/how-it-works">How It Works</a>
+				</li>
+				<li class="nav-link">
 					<a class="nav-item" href="/our-team/">Our Team</a>
 				</li>
-				<li class="nav-link active">
-					<a class="nav-item" href="/contact/">Contact</a>
+				<li class="nav-link">
+					<a class="nav-item active" href="/contact/">Contact</a>
 				</li>
 			</ul>
+			<div class="nav-countries">
+				<a title="Norwegian flag" href="/no/"
+					><img src="/img/norway.svg" alt="Norwegian flag"
+				/></a>
+				<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+			</div>
 			<!-- Responsive navbar btn -->
-			<button role="button" title="navbar" class="nav-btn">
+			<!-- <button role="button" title="navbar" class="nav-btn">
 				<i class="fas fa-bars"></i>
-			</button>
-		</nav>
-		<!-- Navbar end -->
-
-		<!-- Side nav -->
-		<div class="drawer-wrapper">
+			</button> -->
+			<input
+				title="Click to trigger menu"
+				class="menu-trigger"
+				type="checkbox"
+				id="openmenu"
+			/>
+			<label class="menu-trigger-icon" for="openmenu">
+				<div
+					style="width: auto; min-height: 1rem"
+					class="d-flex align-items-center"
+				>
+					<span style="display: none">Lorem.</span>
+					<i class="gg-menu menuIcon"></i>
+					<i class="gg-close closeIcon"></i>
+				</div>
+			</label>
 			<aside class="drawer">
-				<ul class="side-nav-items justify-content-center">
-					<center>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#problem">Problem</a>
+				<div class="drawer-logo">BioBalance™</div>
+				<div class="drawer-content">
+					<ul class="drawer-items">
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-home"></i>
+							<a class="drawer-link" href="/">Home</a>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#solution"
-								>Solution</a
+						<li class="drawer-item">
+							<i
+								class="drawer-icon fas fa-exclamation-triangle"
+							></i>
+							<a class="drawer-link" href="/problem/"
+								>The Problem</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#gallery">Gallery</a>
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-lightbulb"></i>
+							<a class="drawer-link" href="/solution/"
+								>The Solution</a
+							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#how-it-works"
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-seedling"></i>
+							<a class="drawer-link" href="/how-it-works/"
 								>How It Works</a
 							>
 						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="#why-it-works"
-								>Why It Works</a
-							>
-						</li>
-						<li class="side-nav-link">
-							<a class="side-nav-item" href="/our-team/"
+						<li class="drawer-item">
+							<i class="drawer-icon fas fa-users"></i>
+							<a class="drawer-link" href="/our-team/"
 								>Our Team</a
 							>
 						</li>
-					</center>
-				</ul>
+						<li class="drawer-item active">
+							<i class="drawer-icon far fa-envelope"></i>
+							<a class="drawer-link" href="/contact/">Contact</a>
+						</li>
+					</ul>
+					<div class="drawer-footer">
+						<div class="nav-countries">
+							<a title="Norwegian flag" href="/no/"
+								><img
+									src="/img/norway.svg"
+									alt="Norwegian flag"
+							/></a>
+							<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+						</div>
+					</div>
+				</div>
 			</aside>
 			<div class="drawer-backdrop"></div>
-		</div>
-		
+		</nav>
+		<!-- Navbar end -->
+
 		<!-- Contact us -->
 		<form class="container">
 			<h3 class="contact-header">Stay connected.</h3>
-
-				<div class="form-group">
-						<label for="name">Your full name *</label>
-						<div class="input-div">
-							<input class="input" type="text"
-							name="name"
-							class="form-input"
-							placeholder="Please enter your name ..."
-							required/>
-							<span class="border"></span>
-						</div>
+			<p class="contact-text">
+				Get in touch and let us know how we may help.
+			</p>
+			<div class="form-group">
+				<label for="name">Your full name *</label>
+				<div class="input-div">
+					<input
+						id="name"
+						title="Please enter your name ..."
+						class="input"
+						type="text"
+						name="name"
+						class="form-input"
+						placeholder="Please enter your name ..."
+						required
+					/>
+					<span class="border"></span>
 				</div>
+			</div>
 
-				<div class="form-group">
-						<label for="subject">Subject *</label>
-						<div class="input-div">
-							<input class="input" type="text"
-							name="subject"
-							class="form-input"
-							placeholder="Subject ..."
-							required/>
-						<span class="border"></span>
-						</div>
+			<div class="form-group">
+				<label for="subject">Subject *</label>
+				<div class="input-div">
+					<input
+						id="subject"
+						title="Subject ..."
+						class="input"
+						type="text"
+						name="subject"
+						class="form-input"
+						placeholder="Subject ..."
+						required
+					/>
+					<span class="border"></span>
 				</div>
+			</div>
 
-				<div class="form-group">
-						<label for="email">Your email adress *</label>
-						<div class="input-div">
-							<input name="email" type="email" class="input" placeholder="Email adress ..." requried/>
-							<span class="border"></span>
-						</div>
+			<div class="form-group">
+				<label for="email">Your email adress *</label>
+				<div class="input-div">
+					<input
+						id="email"
+						title="Email adress"
+						name="email"
+						type="email"
+						class="input"
+						placeholder="Email adress ..."
+						requried
+					/>
+					<span class="border"></span>
 				</div>
+			</div>
 
-				<div class="form-group">
-						<label for="email">Your message for us *</label>
-						<div class="input-div">
-							<textarea class="text-area" placeholder="Message ..."></textarea>
-							<span class="border"></span>
-					</div>
+			<div class="form-group">
+				<label for="textarea">Your message for us *</label>
+				<div class="input-div">
+					<textarea
+						id="textarea"
+						title="Message..."
+						name="textarea"
+						class="text-area"
+						placeholder="Message ..."
+					></textarea>
+					<span class="border"></span>
+				</div>
 			</div>
 
 			<div class="contact-btn">
-				<button class="btn">Send</button>
+				<button type="submit" class="button secondary btn">Send</button>
 			</div>
 		</form>
 
-
 		<div class="wrapper">
-			<main class="content"></main>
+			<main class="content">
+				<section>
+					<div class="container donate">
+						<h3 class="contact-header">Donate to us.</h3>
+						<p class="contact-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Officiis, molestias?
+						</p>
+						<form action="/charge" method="post" id="payment-form">
+							<div class="text-center">
+								<small> Pick an amount to donate </small>
+							</div>
+							<div class="d-flex justify-content-center mb-4">
+								<button
+									type="button"
+									class="button dark mx-2 donation-button"
+									data-js="donation-button"
+									data-amount="5"
+								>
+									$5.00
+								</button>
+								<button
+									type="button"
+									class="button dark mx-2 donation-button"
+									data-js="donation-button"
+									data-amount="10"
+								>
+									$10.00
+								</button>
+								<button
+									type="button"
+									class="button dark mx-2 donation-button"
+									data-js="donation-button"
+									data-amount="100"
+								>
+									$100.00
+								</button>
+							</div>
+							<div class="d-flex justify-content-center mb-4">
+								<label class="p-0" for="donationAmount"
+									><small> Custom amount: </small>
+									<input
+										class="input donation-amount"
+										type="number"
+										name="donationAmount"
+										id="donationAmount"
+									/>
+								</label>
+							</div>
+							<div class="form-row">
+								<div id="card-element">
+									<!-- A Stripe Element will be inserted here. -->
+								</div>
+
+								<!-- Used to display form errors. -->
+								<div
+									id="card-errors"
+									class="text-center mt-1"
+									role="alert"
+								></div>
+							</div>
+
+							<div class="d-flex justify-content-center mt-4">
+								<button
+									type="submit"
+									class="button dark mx-auto"
+								>
+									Submit Payment
+								</button>
+							</div>
+
+							<input type="hidden" name="amount" id="amount" />
+						</form>
+					</div>
+				</section>
+			</main>
 			<footer class="footer">
 				<div class="contact-info footer-column">
 					<h4>Contact Information</h4>
 					<ul>
-						<li>E-Mail: biobalance@bio.com</li>
-						<li>PhoneNumber: 12345678</li>
+						<li>
+							E-Mail:
+							<a target="_blank" href="info@biobalanceorg.no "
+								>info@biobalanceorg.no
+							</a>
+						</li>
+						<li>
+							Phone Number:
+							<a target="_blank" href="tel:+47-951-45-519"
+								>+47 951 45 519</a
+							>
+						</li>
 					</ul>
 				</div>
 				<div class="location footer-column">
 					<h4>Location</h4>
 					<ul>
 						<li>Adress:</li>
-						<li>Pilestredet 32, Oslo</li>
+						<li>
+							<a
+								target="blank"
+								href="https://www.google.no/maps/place/Pilestredet+32,+0166+Oslo/@59.9200718,10.7335951,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e7be22c2035:0xf51095d184aa1954!8m2!3d59.9200718!4d10.7357838"
+							>
+								Pilestredet 32, Oslo</a
+							>
+						</li>
 					</ul>
 				</div>
 				<div class="socials footer-column">
@@ -165,6 +312,7 @@
 					<ul>
 						<li>
 							<a
+								title="Facebook"
 								href="https://www.facebook.com/BioBalance-100261931923249"
 								target="_blank"
 								class="icon"
@@ -173,6 +321,7 @@
 						</li>
 						<li>
 							<a
+								title="Instagram"
 								href="//instagram.com/biobalanceorg/"
 								target="_blank"
 								class="icon"
@@ -181,6 +330,7 @@
 						</li>
 						<li>
 							<a
+								title="Youtube"
 								href="//youtube.com"
 								target="_blank"
 								class="icon"
@@ -189,6 +339,7 @@
 						</li>
 						<li>
 							<a
+								title="Twitter"
 								href="//twitter.com"
 								target="_blank"
 								class="icon"
@@ -200,5 +351,9 @@
 			</footer>
 		</div>
 
+		<!-- Scripts -->
+		<script src="/js/common.js"></script>
+		<script src="https://js.stripe.com/v3/"></script>
+		<script src="/js/donate.js"></script>
 	</body>
 </html>

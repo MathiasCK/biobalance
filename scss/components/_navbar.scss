@@ -1,3 +1,6 @@
+@import url('https://css.gg/menu.css');
+@import url('https://css.gg/close.css');
+
 /*
   ------ 
   Navbar
@@ -10,6 +13,7 @@
 	position: fixed;
 	overflow: hidden;
 	align-items: center;
+	justify-content: space-between;
 	left: 0;
 	top: 0;
 	z-index: 1000;
@@ -17,9 +21,28 @@
 	height: 57px;
 	transition: all 0.3s ease;
 	color: white;
+
+	.nav-countries {
+		img {
+			width: 1.7rem;
+			height: 1.7rem;
+			margin-right: 0.5rem;
+		}
+	}
+	> .nav-countries {
+		display: none;
+	}
 	@media screen and (min-width: 768px) {
-		// backdrop-filter: blur(20px);
-		opacity: 0.95;
+		backdrop-filter: saturate(180%) blur(5px);
+		opacity: 0.9;
+		.nav-countries {
+			display: flex;
+		}
+
+		img {
+			width: 10px;
+			height: 10px;
+		}
 	}
 	.nav-link,
 	.logo,
@@ -36,6 +59,7 @@
 	&.transparent {
 		color: var(--light);
 		background-color: transparent;
+		backdrop-filter: none;
 	}
 	&.transparent-light {
 		color: var(--light);
@@ -44,6 +68,11 @@
 	&.dark {
 		background-color: var(--black);
 		color: var(--light);
+		&.green {
+			.active {
+				border-color: var(--green-2);
+			}
+		}
 	}
 	&.transparent-dark {
 		background-color: rgba(0, 0, 0, 0.1);
@@ -54,6 +83,9 @@
 
 .active {
 	border-bottom: 1px solid var(--secondary);
+	&.green {
+		border-color: var(--green-2);
+	}
 }
 
 .nav-btn {
@@ -96,4 +128,176 @@
 	.nav-bar {
 		justify-content: space-between;
 	}
+}
+
+.transparent,
+.transparent-dark {
+	.drawer {
+		background-color: black;
+	}
+}
+
+.menuIcon,
+.closeIcon {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.menu-trigger-icon {
+	.menuIcon {
+		visibility: visible;
+		opacity: 1;
+	}
+	padding-right: 1rem;
+	padding-left: 0.75rem;
+	background-color: transparent;
+	transition: all 0.3s ease-in-out;
+	transition-property: background-color, filter, box-shadow;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	border-top-left-radius: 100px;
+	border-bottom-left-radius: 100px;
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	position: relative;
+	z-index: 9999;
+
+	@media screen and (min-width: 768px) {
+		display: none !important;
+	}
+}
+
+.menu-trigger {
+	display: none;
+}
+
+.drawer-backdrop {
+	opacity: 0;
+	transition: all 0.3s ease;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.menu-trigger:checked {
+	~ .drawer {
+		opacity: 1;
+		transform: translateX(0);
+		display: flex;
+		visibility: visible;
+		pointer-events: unset;
+	}
+	~ .menu-trigger-icon {
+		// position: fixed;
+		// transform: translate(0.25rem, -0.5rem);
+		.menuIcon {
+			visibility: hidden;
+			opacity: 0;
+		}
+		.closeIcon {
+			visibility: visible;
+			opacity: 1;
+			position: fixed;
+			left: 60%;
+			z-index: 10000;
+			display: block;
+			transition: all 0.3s ease;
+			transition-delay: 300ms;
+			cursor: pointer;
+		}
+	}
+	~ .drawer-backdrop {
+		z-index: 9990;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+	~ body {
+		max-height: 100vh;
+		overflow-y: hidden;
+	}
+}
+
+// Drawer
+.drawer {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 75%;
+	height: 100vh;
+	background-color: inherit;
+	z-index: 9998;
+	padding: 1rem;
+	transition: all 0.2s ease-in-out;
+	transform: translateX(-100%);
+	will-change: opacity, visibility, transform;
+	padding-top: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.drawer-content {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	flex-basis: 100%;
+	align-items: start;
+	flex-direction: column;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+
+.drawer-logo {
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.drawer-items {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2rem;
+
+	.drawer-item {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		margin: 1rem 0;
+		padding: 10px 16px;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+		&.active {
+			background-color: var(--primary);
+			border: initial;
+			color: var(--light);
+		}
+	}
+
+	.drawer-icon {
+		font-size: 1.5rem;
+		min-width: 3rem;
+	}
+
+	.drawer-link {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.drawer-footer {
+	padding-bottom: 2rem;
+	padding-left: 1rem;
 }
