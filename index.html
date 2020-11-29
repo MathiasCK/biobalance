@@ -302,7 +302,7 @@
 
 			<div class="container mt-6 pb-6 donate">
 				<form action="/charge" method="post" id="payment-form">
-					<div class="text-center section-text-small">
+					<div class="text-center section-text-small mb-2">
 						<small> Pick an amount to donate </small>
 					</div>
 					<div class="d-flex justify-content-center mb-4">
@@ -331,12 +331,16 @@
 							$100.00
 						</button>
 					</div>
-					<div class="d-flex justify-content-center mb-4">
-						<label
-							class="p-0 section-text-small"
-							for="donationAmount"
-							><small> Custom amount: </small>
-							<div class="input-field icon donation-amount">
+					<div class="mb-6 d-flex justify-content-center">
+						<div>
+							<label
+								class="p-0 section-text-small text-center mb-2"
+								style="display: block"
+								for="donationAmount"
+							>
+								<small>Enter custom amount</small>
+							</label>
+							<div class="input-field has-icon">
 								$
 								<input
 									min="1"
@@ -345,7 +349,7 @@
 									id="donationAmount"
 								/>
 							</div>
-						</label>
+						</div>
 					</div>
 					<div class="form-row">
 						<div id="card-element">
@@ -361,7 +365,7 @@
 					</div>
 
 					<div class="d-flex justify-content-center mt-4">
-						<button type="submit" class="button dark mx-auto">
+						<button type="submit" class="button dark mx-auto mt-2">
 							Submit Payment
 						</button>
 					</div>
@@ -376,15 +380,13 @@
 					<ul>
 						<li>
 							E-Mail:
-							<a target="_blank" href="info@biobalanceorg.no "
+							<a href="mailto:info@biobalanceorg.no "
 								>info@biobalanceorg.no
 							</a>
 						</li>
 						<li>
 							Phone Number:
-							<a target="_blank" href="tel:+47-951-45-519"
-								>+47 951 45 519</a
-							>
+							<a href="tel:+47-951-45-519">+47 951 45 519</a>
 						</li>
 					</ul>
 				</div>
