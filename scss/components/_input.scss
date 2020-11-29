@@ -1,10 +1,39 @@
 .input-field {
-	input {
-		padding: 0;
-		margin: 0;
-		background: transparent;
-		color: inherit;
-		border: none;
-		outline: none;
+	input,
+	text-area {
+		background: white;
+		border: 1px solid transparent;
+		padding: 1.5rem 2rem;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			box-shadow: var(--shadow-dark);
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	&.icon {
+		display: flex;
+		align-items: center;
+		padding: 1.5rem 2rem;
+		border: 1px solid transparent;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			box-shadow: var(--shadow-dark);
+		}
+		&:focus-within {
+			box-shadow: var(--shadow-dark);
+		}
+		input,
+		text-area {
+			background: inherit;
+			border: none;
+			padding: 0;
+			margin: 0;
+			color: inherit;
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 }
