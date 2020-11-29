@@ -15,13 +15,13 @@
 	}
 
 	> div {
-		border-left: var(--secondary) 1px solid;
+		border-left: #ff6b6b 1px solid;
 		height: 100px;
 		padding-left: 20px;
 	}
 	&.green {
 		> div {
-			border-color: var(--green-2);
+			border-color: #00a187;
 		}
 	}
 	@media screen and (min-width: 768px) {
@@ -99,9 +99,9 @@
 .icon {
 	color: #282828;
 	&:hover {
-		color: var(--secondary) !important;
+		color: #ff6b6b !important;
 		&.green {
-			color: var(--green-2) !important;
+			color: #00a187 !important;
 		}
 	}
 }

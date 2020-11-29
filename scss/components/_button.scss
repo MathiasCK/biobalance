@@ -1,18 +1,18 @@
 .button {
-	--color: var(--light);
+	--color: #fff;
 	--focus-color: var(--text-on-light);
 	margin: 0;
 	&.dark {
-		--color: var(--black);
-		--focus-color: var(--light);
+		--color: #080808;
+		--focus-color: #fff;
 	}
 	&.secondary {
-		--color: var(--secondary);
-		--focus-color: var(--light);
+		--color: #ff6b6b;
+		--focus-color: #fff;
 	}
 	&.green {
-		--color: var(--green-2);
-		--focus-color: var(--light);
+		--color: #00a187;
+		--focus-color: #fff;
 	}
 	display: inline-block;
 	width: auto;
