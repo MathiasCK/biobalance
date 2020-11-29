@@ -229,3 +229,13 @@ Animations
 // .green-2 {
 // 	color: var(--green-2) !important;
 // }
+
+.source-link {
+	text-decoration: none;
+	&.red {
+		color: var(--secondary);
+	}
+	&.green {
+		color: var(--green-2);
+	}
+}
