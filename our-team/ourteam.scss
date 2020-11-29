@@ -161,6 +161,7 @@ body {
 	flex-basis: 100%;
 }
 .person-bottom {
+	
 	height: 70vh;
 	overflow: hidden;
 	position: relative;
@@ -170,6 +171,12 @@ body {
 	}
 	@include lg {
 		flex-basis: 33.33333333333%;
+	}
+	.soppel{
+		object-position: top center;
+	}
+	.shavez{
+		object-position: top center;
 	}
 }
 
@@ -182,6 +189,7 @@ body {
 }
 
 .sanna {
+	object-position: top center;
 	@media screen and (min-width: 1200px) {
 		object-position: left -100px;
 	}
@@ -190,6 +198,7 @@ body {
 .rebandmathias {
 	object-position: top center;
 }
+
 
 // Footer override
 .footer {
