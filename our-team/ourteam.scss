@@ -164,6 +164,7 @@ body {
 }
 
 .rebmat {
+	position: relative;
 	display: none;
 	flex-basis: 100%;
 	height: 70vh;
@@ -236,4 +237,8 @@ body {
 	.person-full {
 		display: none;
 	}
+}
+
+.our-team-img {
+	filter: brightness(50%);
 }
