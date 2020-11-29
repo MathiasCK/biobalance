@@ -16,7 +16,7 @@ class Observable {
 		this.listeners.forEach((listener) => listener(this.internal));
 	}
 	get state() {
-		return this.state;
+		return this.internal;
 	}
 	subscribe(fn, onMount = false) {
 		this.listeners.push(fn);
@@ -24,7 +24,7 @@ class Observable {
 		return this.listeners.filter((listener) => listener !== fn);
 	}
 }
-// Exporting Observable class.
+// Exporting Observable class (as window due to transpiler)
 window.Observable = Observable;
 
 /**

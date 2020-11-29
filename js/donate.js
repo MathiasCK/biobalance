@@ -25,6 +25,7 @@ donationAmount.subscribe((amount) => {
 		else button.classList.remove('active');
 	});
 	amountHidden.value = String(amount);
+	console.log(amount);
 }, true);
 
 /**
@@ -62,31 +63,47 @@ card.on('change', (e) => {
 
 // Handle form submission.
 const form = document.getElementById('payment-form');
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
 	e.preventDefault();
 
-	stripe.createToken(card).then(function (result) {
-		if (result.error) {
-			// Inform the user if there was an error.
-			const errorElement = document.getElementById('card-errors');
-			errorElement.textContent = result.error.message;
-		} else {
-			// Send the token to your server.
-			stripeTokenHandler(result.token);
-		}
-	});
+	const errorElement = document.getElementById('card-errors');
+	const result = await stripe.createToken(card);
+	if (result.error) {
+		// Inform the user if there was an error.
+		errorElement.textContent = result.error.message;
+		return;
+	}
+	try {
+		// const donationRequest = await fetch(
+		// 	'http://localhost:3000/api/donate',
+		// 	{
+		// 		method: 'POST',
+		// 		body: JSON.stringify({
+		// 			stripeToken: result.token.id,
+		// 			currency: form.getAttribute('data-currency') || 'USD',
+		// 			amount: donationAmount.state,
+		// 		}),
+		// 	}
+		// );
+
+		// const response = await donationRequest.json();
+		// if (!donationRequest.ok) {
+		// 	console.log('ERROR');
+		// 	throw new Error('Failed to donate.');
+		// }
+
+		const submitBtn = form.querySelector('button[type="submit"]');
+		submitBtn.textContent = 'Donation Success!';
+		submitBtn.classList.add('green');
+		alert('Due to this being a school project you have not been charged');
+		setTimeout(() => {
+			submitBtn.textContent = 'Submit donation';
+			submitBtn.classList.remove('green');
+		}, 3000);
+	} catch (error) {
+		errorElement.textContent = error.message || 'Donation failed';
+	} finally {
+		form.reset();
+		card.clear();
+	}
 });
-
-// Submit the form with the token ID.
-function stripeTokenHandler(token) {
-	// Insert the token ID into the form so it gets submitted to the server
-	const form = document.getElementById('payment-form');
-	const hiddenInput = document.createElement('input');
-	hiddenInput.setAttribute('type', 'hidden');
-	hiddenInput.setAttribute('name', 'stripeToken');
-	hiddenInput.setAttribute('value', token.id);
-	form.appendChild(hiddenInput);
-
-	// Submit the form
-	form.submit();
-}

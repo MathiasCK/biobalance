@@ -6,7 +6,8 @@
 	"scripts": {
 		"build:scss": "rimraf css && gulp sass",
 		"build:js": "gulp js",
-		"build": "npm run build:scss && npm run build:js"
+		"build:vercel": "npm run build:scss && npm run build:js",
+		"build": "npm run build:scss"
 	},
 	"repository": {
 		"type": "git",
