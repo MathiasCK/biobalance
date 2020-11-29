@@ -59,3 +59,5 @@ function handleLoad() {
 	initDrawer();
 }
 document.addEventListener('DOMContentLoaded', handleLoad);
+// Add global IE11 feature test
+window.isExplorer = Boolean(window.msCrypto);
