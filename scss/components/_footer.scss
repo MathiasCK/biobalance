@@ -15,7 +15,7 @@
 	}
 
 	> div {
-		border-left: var(--secondary) 1px solid;
+		border-left: #ff6b6b 1px solid;
 		height: 100px;
 		padding-left: 20px;
 	}
@@ -99,7 +99,7 @@
 .icon {
 	color: #282828;
 	&:hover {
-		color: var(--secondary) !important;
+		color: #ff6b6b !important;
 		&.green {
 			color: var(--green-2) !important;
 		}

@@ -25,7 +25,7 @@ html {
 		width: 100px;
 		height: 1px;
 		margin: 20px 0 20px;
-		background: var(--secondary);
+		background: #ff6b6b;
 	}
 	label {
 		padding: 2rem 0;
@@ -89,7 +89,7 @@ html {
 		left: 0;
 		width: 0;
 		height: 2px;
-		background-color: var(--secondary);
+		background-color: #ff6b6b;
 	}
 	&:focus ~ .border {
 		width: 100%;
@@ -133,4 +133,3 @@ html {
 		color: white;
 	}
 }
-
