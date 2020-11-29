@@ -20,7 +20,8 @@
 	"dependencies": {
 		"core-js": "^3.8.0",
 		"gulp-uglify": "^3.0.2",
-		"rollup-plugin-commonjs": "^10.1.0"
+		"rollup-plugin-commonjs": "^10.1.0",
+		"stripe": "^8.126.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.9",
