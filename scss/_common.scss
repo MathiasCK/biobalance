@@ -239,3 +239,15 @@ Animations
 		color: var(--green-2);
 	}
 }
+
+.links {
+	display: block;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	font-weight: normal;
+}
