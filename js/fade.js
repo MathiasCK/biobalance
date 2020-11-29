@@ -56,21 +56,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	fadeElms.forEach((el) => {
 		observer.observe(el);
 	});
-	// const run = async () => {
-	// 	await Promise.all(
-	// 		[...fadeElms].map(
-	// 			(elm) =>
-	// 				new Promise((res) => {
-	// 					elm.ontransitionend = () => {
-	// 						res();
-	// 					};
-	// 				})
-	// 		)
-	// 	);
-
-	// 	fadeElms.forEach((el) => {
-	// 		observer.observe(el);
-	// 	});
-	// };
-	// run();
 });
