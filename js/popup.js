@@ -1,3 +1,4 @@
+// Utilities
 const getRect = (elm) => elm.getBoundingClientRect();
 const getTotalHeight = (t, margin = 0) => margin + getRect(t).height;
 const getTopPlacement = (target, popperElm) => {
@@ -37,9 +38,8 @@ function getRelativeCords(elem) {
  */
 const CONTAINER_ID = 'popperContainer';
 function getContainer() {
-	const prevContainer = document
-		.createDocumentFragment()
-		.querySelector(`#CONTAINER_ID`);
+	// Avoid creating multiple containers if one exists.
+	const prevContainer = document.querySelector(`#${CONTAINER_ID}`);
 	if (prevContainer) return prevContainer;
 	const elm = createElement('div', { id: CONTAINER_ID });
 	document.body.appendChild(elm);
@@ -173,9 +173,11 @@ function createPopper(target, content, options = {}) {
 document.addEventListener('DOMContentLoaded', () => {
 	const popperElms = document.querySelectorAll('.popper');
 	popperElms.forEach((node) => {
+		// Check data attribute for content
 		const nodeContent =
 			node.getAttribute('data-content') ||
 			'Use data-content="[SELECTOR] or [string]"';
+		// Create a popper element with the appropriate content.
 		const popper = createPopper(
 			node,
 			isSelectorValid(nodeContent)
@@ -210,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+// Utility
 function createElement(type = 'div', props = {}) {
 	const elm = document.createElement(type);
 	Object.entries(props).forEach(([key, val]) => {

@@ -5,6 +5,8 @@
 		border: 1px solid transparent;
 		padding: 1.5rem 2rem;
 		transition: all 0.3s ease-in-out;
+		max-width: 100%;
+		color: var(--black);
 		&:hover {
 			box-shadow: var(--shadow-dark);
 		}
@@ -15,14 +17,15 @@
 	&.icon {
 		display: flex;
 		align-items: center;
-		padding: 1.5rem 2rem;
+		box-shadow: var(--shadow-dark);
+
 		border: 1px solid transparent;
 		transition: all 0.3s ease-in-out;
 		&:hover {
 			box-shadow: var(--shadow-dark);
 		}
 		&:focus-within {
-			box-shadow: var(--shadow-dark);
+			border: 2px solid black;
 		}
 		input,
 		text-area {
@@ -30,7 +33,11 @@
 			border: none;
 			padding: 0;
 			margin: 0;
+			padding: 0.5rem 1rem;
 			color: inherit;
+			display: block;
+			width: auto;
+			box-shadow: none;
 			&:focus {
 				outline: none;
 			}

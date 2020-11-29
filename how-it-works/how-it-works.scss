@@ -13,6 +13,7 @@
 	}
 }
 
+
 // Rem Overwrite
 body {
 	background-color: black;
@@ -150,6 +151,8 @@ html {
 		}
 	}
 }
+
+
 
 @media screen and (max-width: 950px) {
 	.image {
@@ -330,4 +333,21 @@ html {
 			}
 		}
 	}
+}
+
+@media screen and (max-width: 300px) {
+	h1{
+		font-size: 10vw !important;
+	}
+	.youtube-video{
+		display: none;
+	}
+	.youtube-description{
+		display: none;
+	}
+	
+	.contact-info{
+		padding-bottom: 150px !important;
+	}
+
 }
