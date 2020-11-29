@@ -43,7 +43,7 @@ General
 
 	&.green-2 {
 		&::after {
-			background: var(--green-2);
+			background: #00a187;
 		}
 	}
 }
@@ -52,7 +52,7 @@ General
 	object-fit: cover;
 	width: 80%;
 	min-height: 40vh;
-	box-shadow: var(--shadow-dark);
+	box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .section-img-light {
@@ -130,12 +130,12 @@ General
 
 .welcome-header {
 	padding: 10px;
-	color: var(--light);
+	color: #fff;
 }
 
 .welcome-text {
 	padding: 10px;
-	color: var(--light);
+	color: #fff;
 	font-weight: 400;
 }
 
@@ -144,13 +144,13 @@ General
 }
 
 .welcome-icon {
-	color: var(--light);
+	color: #fff;
 	padding: 10px;
 	font-size: 30px;
 }
 
 .down-arrows {
-	color: var(--light);
+	color: #fff;
 	text-decoration: none;
 	display: block;
 	position: absolute;
@@ -211,7 +211,7 @@ Intro section
 
 .page-section-2 {
 	color: white;
-	background: var(--black);
+	background: #080808;
 	min-height: 100vh !important;
 }
 
@@ -269,7 +269,7 @@ Intro section
 	padding-right: 1rem;
 	.problem-img {
 		// margin-top: -50px;
-		box-shadow: var(--shadow-dark);
+		box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
 		border-radius: 4px;
 		width: 100%;
 		height: 300px;
@@ -322,7 +322,7 @@ Intro section
 }
 
 .footer {
-	box-shadow: var(--shadow-dark);
+	box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
 	width: 100%;
 }
 
@@ -335,8 +335,8 @@ Intro section
 .donation-button {
 	&.active {
 		box-shadow: inherit;
-		color: var(--green-2);
-		border-color: var(--green-2);
+		color: #00a187;
+		border-color: #00a187;
 	}
 }
 .donation-amount {
@@ -353,7 +353,7 @@ Intro section
 	margin: 0 auto;
 	padding: 16px;
 	border-radius: 4px;
-	box-shadow: var(--shadow-dark);
+	box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
 	@media screen and (min-width: 768px) {
 		max-width: 400px;
 	}

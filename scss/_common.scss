@@ -13,18 +13,18 @@
 	--green-1: #1ebc61;
 	--green-2: #00a187;
 
-	--primary: var(--green-2);
+	--primary: #00a187;
 	--secondary: var(--bittersweet);
 	--dark: var(--dark);
-	--bg-1: var(--light);
+	--bg-1: #fff;
 	--bg-2: var(--richblack);
 	--bg-3: var(--eggplant);
 	--text-on-bg-1: var(--dark);
-	--text-on-bg-2: var(--light);
-	--text-on-bg-3: var(--light);
-	--text-on-light: var(--black);
-	--text-on-primary: var(--light);
-	--text-on-secondary: var(--light);
+	--text-on-bg-2: #fff;
+	--text-on-bg-3: #fff;
+	--text-on-light: #080808;
+	--text-on-primary: #fff;
+	--text-on-secondary: #fff;
 	--border: 1px solid rgba(0, 0, 0, 0.1);
 	--border-bottom: 1px solid #ff6b6b;
 	--shadow-dark: 0px 8px 30px rgba(0, 0, 0, 0.12);
@@ -124,10 +124,10 @@ hr.divider {
 span {
 	color: #ff6b6b;
 	&.green {
-		color: var(--green-1);
+		color: #1ebc61;
 	}
 	&.green-2 {
-		color: var(--green-2);
+		color: #00a187;
 	}
 }
 
@@ -198,7 +198,7 @@ Animations
 		transform: translate(-50%, -50%);
 	}
 	&.green {
-		color: var(--green-1);
+		color: #1ebc61;
 	}
 }
 .section-text-small {
@@ -227,7 +227,7 @@ Animations
 
 // Text colors
 // .green-2 {
-// 	color: var(--green-2) !important;
+// 	color: #00a187 !important;
 // }
 
 .source-link {
@@ -236,7 +236,7 @@ Animations
 		color: #ff6b6b;
 	}
 	&.green {
-		color: var(--green-2);
+		color: #00a187;
 	}
 }
 
