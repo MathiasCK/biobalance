@@ -201,19 +201,27 @@ Animations
 		color: var(--green-1);
 	}
 }
-
 .section-text-small {
 	color: #a1a1a6;
-	font-size: 1.2rem;
 	line-height: 1.2;
 
 	&.dark {
 		color: black;
-		font-size: 1.2rem;
-		line-height: 1.2;
 	}
-	&.p-5 {
-		padding: 5rem;
+	&.p-2 {
+		padding: 2rem;
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.section-text-small {
+		font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.section-text-small {
+		font-size: calc(22px * 1.2);
 	}
 }
 
