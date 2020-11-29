@@ -5,7 +5,7 @@
 		border: 1px solid transparent;
 		padding: 1.5rem 2rem;
 		transition: all 0.3s ease-in-out;
-		max-width: 100%;
+		min-width: 150px;
 		color: var(--black);
 		&:hover {
 			box-shadow: var(--shadow-dark);
@@ -14,15 +14,17 @@
 			outline: none;
 		}
 	}
-	&.icon {
-		display: flex;
+	&.has-icon {
+		width: auto;
+		display: inline-flex;
 		align-items: center;
 		box-shadow: var(--shadow-dark);
-
+		padding-left: 1rem;
 		border: 1px solid transparent;
 		transition: all 0.3s ease-in-out;
 		&:hover {
 			box-shadow: var(--shadow-dark);
+			color: inherit;
 		}
 		&:focus-within {
 			border: 2px solid black;
@@ -33,11 +35,14 @@
 			border: none;
 			padding: 0;
 			margin: 0;
-			padding: 0.5rem 1rem;
+			padding: 1rem 1.5rem;
 			color: inherit;
 			display: block;
 			width: auto;
 			box-shadow: none;
+			&:hover {
+				color: inherit;
+			}
 			&:focus {
 				outline: none;
 			}

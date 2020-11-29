@@ -1,3 +1,4 @@
+const isExplorer = Boolean(window.msCrypto);
 // This concept is ispired by make-it-responsive
 let scrollingUp;
 let oldScroll = 0;
@@ -40,6 +41,7 @@ function observerCallback(entries) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	if (isExplorer) return;
 	const fadeElms = document.querySelectorAll('.fade');
 	fadeElms.forEach((elm) => {
 		elm.style.opacity = 0;

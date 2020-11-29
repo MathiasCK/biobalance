@@ -21,27 +21,6 @@ window.addEventListener('scroll', () => {
 	navBar.className = `nav-bar ${currentSection.dataset.background}`;
 });
 
-// Responsive Navbar
-// const navBtn = document.querySelector('.nav-btn');
-// const wrapper = document.querySelector('.drawer-wrapper');
-// const backDrop = document.querySelector('.drawer-backdrop');
-
-// navBtn.addEventListener('click', (e) => {
-// 	wrapper.classList.toggle('open');
-// 	if (wrapper.classList.contains('open')) {
-// 		document.body.classList.add('no-scroll');
-// 	} else {
-// 		document.body.classList.remove('no-scroll');
-// 	}
-// });
-
-// sideNavItems.forEach((sideNavItem) => {
-// 	sideNavItem.addEventListener('click', () => {
-// 		wrapper.classList.remove('open');
-// 		document.body.classList.remove('no-scroll');
-// 	});
-// });
-
 navBar.classList.remove('white');
 navBar.classList.add('transparent');
 
