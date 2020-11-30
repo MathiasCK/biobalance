@@ -55,6 +55,11 @@
 		background-color: #fff;
 		color: black;
 		box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+		&.green {
+			.active {
+				border-color: #1ebc61;
+			}
+		}
 	}
 	&.transparent {
 		color: #fff;
