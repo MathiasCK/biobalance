@@ -17,6 +17,9 @@ Grid
 	margin: auto;
 }
 
+.wrap {
+	flex-wrap: wrap !important;
+}
 .flexed-10 {
 	-ms-flex: 0 0 10%;
 	flex: 0 0 10%;
@@ -99,6 +102,6 @@ Grid
 		height: auto;
 	}
 	#welcome {
-		padding-top: 50%;
+		padding-top: 50vh;
 	}
 }
