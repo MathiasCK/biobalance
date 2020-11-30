@@ -371,3 +371,10 @@ Intro section
 #card-errors {
 	color: red;
 }
+@media screen and (max-width: 310) {
+	.d-flex {
+		img {
+			display: none !important;
+		}
+	}
+}
