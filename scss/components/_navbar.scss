@@ -16,7 +16,7 @@
 	justify-content: space-between;
 	left: 0;
 	top: 0;
-	z-index: 1000;
+	z-index: 9999;
 	overflow: hidden;
 	height: 57px;
 	transition: all 0.3s ease;
@@ -161,7 +161,7 @@
 	align-items: center;
 	font-size: 1.5rem;
 	position: relative;
-	z-index: 9999;
+	z-index: 1000;
 
 	@media screen and (min-width: 768px) {
 		display: none !important;
@@ -207,7 +207,7 @@
 		}
 	}
 	~ .drawer-backdrop {
-		z-index: 9990;
+		z-index: 1000;
 		opacity: 1;
 		visibility: visible;
 		pointer-events: all;
@@ -229,7 +229,7 @@
 	width: 75%;
 	height: 100vh;
 	background-color: inherit;
-	z-index: 9998;
+	z-index: 1001;
 	padding: 1rem;
 	transition: all 0.2s ease-in-out;
 	transform: translateX(-100%);
