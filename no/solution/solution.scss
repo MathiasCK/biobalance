@@ -1,0 +1,181 @@
+@import '../scss/common';
+
+html {
+	scroll-behavior: smooth;
+}
+//container overwrite
+.container {
+	padding: 0 0 !important;
+	@media screen and (min-width: 768px) {
+		width: 75%;
+		margin-top: 2rem;
+	}
+	.section-text {
+		margin: 0 2rem;
+	}
+}
+// Rem Overwrite
+body {
+	color: black;
+	background-color: #f6f6f6;
+}
+
+// Hero
+.hero {
+	width: 100%;
+	height: 60vh;
+	background-image: url('/img/biobalancevisionjpeg.jpg');
+	background-attachment: fixed;
+	background-position-y: 80vh;
+	background-position-x: center;
+	position: relative;
+	background-size: cover;
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		// transform: translateX(-50%);
+		background: rgba(0, 0, 0, 0.2);
+		z-index: 999;
+		margin: 0;
+	}
+}
+
+.solution-section {
+	padding-bottom: 5vh;
+	&.secondary {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+	}
+}
+
+.solution-flex {
+	display: block;
+	.goals-img {
+		height: 100%;
+		width: 100%;
+		img {
+			box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+		}
+	}
+	@media screen and (min-width: 1000px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		&.secondary {
+			align-items: center;
+			justify-content: center;
+		}
+		.goals-img {
+			padding: 0 5rem;
+			height: 100%;
+			width: 100%;
+			img {
+				box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+			}
+		}
+	}
+}
+
+.flex-item {
+	flex: 100%;
+	padding: 2rem 0;
+
+	&.big {
+		flex: 100%;
+		padding: 0rem;
+	}
+	@media screen and (min-width: 768px) {
+		flex: 50%;
+		padding: 1rem;
+
+		&.big {
+			flex: 100%;
+			padding: 1rem;
+		}
+	}
+	&.secondary {
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.img-small {
+	height: 70%;
+	width: 70%;
+}
+
+.goals-img {
+	height: 70%;
+}
+
+.solution-img {
+	width: 100%;
+	height: auto;
+}
+
+.solution-header {
+	font-size: 3rem;
+	color: black;
+	margin-bottom: 1rem;
+	padding-top: 0rem;
+	padding-top: 5rem;
+}
+
+.solution-header-small {
+	font-size: 1.5rem;
+	padding: 1rem 0.5rem;
+	color: black;
+	@media screen and (min-width: 768px) {
+		padding: 1rem;
+	}
+}
+
+.solution-text {
+	color: black;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	padding: 1rem 0.5rem;
+	@media screen and (min-width: 768px) {
+		padding: 1rem;
+	}
+}
+
+.pb-20 {
+	padding-bottom: 5rem;
+	@media screen and (min-width: 768px) {
+		padding-bottom: 20rem;
+	}
+}
+
+//footer overwrite
+.footer {
+	background-color: #080808;
+	h4 {
+		color: white;
+	}
+	li {
+		color: white;
+	}
+	a {
+		color: white;
+	}
+}
+
+.solution-btn {
+	margin: 0 1rem;
+	padding-top: 1rem;
+}
+
+.mb-20 {
+	margin-bottom: 20rem;
+}

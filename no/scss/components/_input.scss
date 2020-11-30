@@ -1,0 +1,51 @@
+.input-field {
+	input,
+	text-area {
+		background: white;
+		border: 1px solid transparent;
+		padding: 1.5rem 2rem;
+		transition: all 0.3s ease-in-out;
+		min-width: 150px;
+		color: #080808;
+		&:hover {
+			box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	&.has-icon {
+		width: auto;
+		display: inline-flex;
+		align-items: center;
+		box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+		padding-left: 1rem;
+		border: 1px solid transparent;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+			color: inherit;
+		}
+		&:focus-within {
+			border: 2px solid black;
+		}
+		input,
+		text-area {
+			background: inherit;
+			border: none;
+			padding: 0;
+			margin: 0;
+			padding: 1rem 1.5rem;
+			color: inherit;
+			display: block;
+			width: auto;
+			box-shadow: none;
+			&:hover {
+				color: inherit;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}

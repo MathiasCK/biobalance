@@ -1,0 +1,44 @@
+{
+	"name": "treecubator",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build:scss": "rimraf css && gulp sass",
+		"build:js": "gulp js",
+		"build:vercel": "npm run build:scss && npm run build:js",
+		"build": "npm run build:scss"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sannajammeh/biobalance.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sannajammeh/biobalance/issues"
+	},
+	"homepage": "https://github.com/sannajammeh/biobalance#readme",
+	"dependencies": {
+		"core-js": "^3.8.0",
+		"gulp-uglify": "^3.0.2",
+		"rollup-plugin-commonjs": "^10.1.0",
+		"stripe": "^8.126.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.12.9",
+		"@babel/plugin-proposal-class-properties": "^7.12.1",
+		"@babel/preset-env": "^7.12.7",
+		"babel-plugin-transform-dynamic-import": "^2.1.0",
+		"babel-preset-minify": "^0.5.1",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-browserify": "^0.5.1",
+		"gulp-load-plugins": "^2.0.5",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"rimraf": "^3.0.2",
+		"vercel": "^21.0.1"
+	}
+}
