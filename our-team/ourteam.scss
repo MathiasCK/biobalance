@@ -181,6 +181,13 @@ body {
 .person-full {
 	@extend .person;
 	flex-basis: 100%;
+
+	.column-left {
+		padding-left: 20px;
+	}
+	.column-right {
+		padding-right: 20px;
+	}
 }
 .person-bottom {
 	height: 70vh;
