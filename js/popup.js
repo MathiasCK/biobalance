@@ -9,7 +9,9 @@ const getTopPlacement = (target, popperElm) => {
 const getBottomPlacement = (target) =>
 	getRelativeCords(target).top + getRect(target).height;
 const getLeftPlacement = (target, popperElm) => {
-	return getRect(target).left - getRect(popperElm).width;
+	const targetRect = getRect(target);
+	const popperRect = getRect(popperElm);
+	return targetRect.left - popperRect.width;
 };
 
 const getNormalPlacement = (target) => getRect(target).left;
@@ -74,10 +76,9 @@ function createPopper(target, content, options = {}) {
 	const container = getContainer();
 	const cssText = /*css*/ `
 		position: absolute;
-		top: ${target.offsetTop}px;
-		left: ${target.offsetLeft}px;
+		top: 0px;
+		left: 0px;
 		visibility: hidden;
-		display: none;
 		opacity: 0;
 		transition: all 0.3s ease;
 		transition-property: opacity, visibility;
@@ -145,7 +146,7 @@ function createPopper(target, content, options = {}) {
 	};
 	const show = () => {
 		popperElm.style.visibility = 'visible';
-		popperElm.style.display = 'block';
+		// popperElm.style.display = 'block';
 		popperElm.style.opacity = 1;
 		setPopperPlacement();
 
@@ -161,7 +162,7 @@ function createPopper(target, content, options = {}) {
 	};
 	const hide = () => {
 		popperElm.style.visibility = 'hidden';
-		popperElm.style.display = 'none';
+		// popperElm.style.display = 'none';
 		popperElm.style.opacity = 0;
 		window.removeEventListener('scroll', positionHandler);
 		window.removeEventListener('resize', positionHandler);
