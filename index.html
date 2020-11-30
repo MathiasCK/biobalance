@@ -52,11 +52,21 @@
 					<a class="nav-item" href="/contact/">Contact</a>
 				</li>
 			</ul>
-			<div class="nav-countries">
-				<a title="Norwegian flag" href="/no/"
-					><img src="/img/norway.svg" alt="Norwegian flag"
-				/></a>
-				<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+			<div class="d-flex align-items-center">
+				<div
+					class="mx-2 popper popper:click"
+					style="cursor: pointer"
+					data-placement="left"
+					data-content="#options"
+				>
+					<i class="fas fa-cog"></i>
+				</div>
+				<div class="nav-countries">
+					<a title="Norwegian flag" href="/no/"
+						><img src="/img/norway.svg" alt="Norwegian flag"
+					/></a>
+					<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
+				</div>
 			</div>
 			<!-- Responsive navbar btn -->
 			<!-- <button role="button" title="navbar" class="nav-btn">
@@ -471,6 +481,21 @@
 		</section>
 		<!-- How it works end -->
 
+		<!-- Popper Contents -->
+		<div id="options" class="popper-tooltip">
+			<div class="title">Options</div>
+			<label for="stickySections">
+				Enable card style scrolling
+				<br />
+				<input
+					type="checkbox"
+					id="stickySections"
+					class="sticky-section-toggle"
+					checked
+				/>
+			</label>
+		</div>
+
 		<!-- Why it works end -->
 		<!-- Script -->
 		<script
@@ -482,5 +507,6 @@
 		<script src="/js/app.js"></script>
 		<script src="https://js.stripe.com/v3/"></script>
 		<script src="/js/donate.js"></script>
+		<script defer src="/js/popup.js"></script>
 	</body>
 </html>
