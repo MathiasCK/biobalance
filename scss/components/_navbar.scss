@@ -32,11 +32,11 @@
 	> .nav-countries {
 		display: none;
 	}
-	@media screen and (min-width: 768px) {
+	@include md {
 		backdrop-filter: saturate(180%) blur(5px);
 		opacity: 0.9;
 		.nav-countries {
-			display: flex;
+			display: flex !important;
 		}
 
 		img {

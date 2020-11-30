@@ -4,7 +4,6 @@ const sections = document.querySelectorAll('section');
 const navBar = document.querySelector('.nav-bar');
 const navItems = document.querySelectorAll('.nav-item');
 const sideNavItems = document.querySelectorAll('.side-nav-item');
-navBar.classList.remove('white');
 
 // addEventListener when scrolling
 window.addEventListener('scroll', () => {
@@ -57,37 +56,3 @@ function showStartAnimation() {
 	tl.to('.intro', { y: '-100%', duration: 1, delay: 1 }, '-=1');
 	tl.to(['.content', '.nav-bar'], { opacity: 1, duration: 1 }, '-=0.5');
 }
-
-/**
- * Home settings controller
- */
-
-// Creating settings state
-const settings = new Observable({
-	stickySections: true,
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-	const poppers = Popper('.popper');
-
-	const stickySectionToggle = poppers[0].target.querySelector(
-		'#stickySections'
-	);
-
-	// When user toggles sticky scroll - update state
-	stickySectionToggle.addEventListener('change', function (e) {
-		settings.set((prevSettings) => ({
-			...prevSettings,
-			stickySections: e.target.checked,
-		}));
-	});
-});
-
-// Listening to settings changes
-settings.subscribe(({ stickySections }) => {
-	// Disable or enable sticky sections
-	const sections = document.querySelectorAll('.sticky-section');
-	sections.forEach(
-		(s) => (s.style.position = stickySections ? 'sticky' : 'relative')
-	);
-});

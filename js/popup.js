@@ -162,7 +162,8 @@ function createPopper(target, content, options = {}) {
 			isVisible = false;
 		};
 	};
-
+	// Set initial positions;
+	setPopperPlacement();
 	return {
 		target: popperElm,
 		hide,
