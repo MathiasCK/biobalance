@@ -1,8 +1,9 @@
 .slideshow {
 	width: 100vw;
-	height: 80vh;
+	height: 58vw;
 	position: relative;
 	margin: auto;
+	box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
 	img {
 		height: 100%;
 		width: 100%;
@@ -18,34 +19,7 @@
 		height: 100%;
 		transition: all 1s ease-in-out;
 	}
-	/*.prev,
-	.next {
-		cursor: pointer;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: auto;
-		padding: 1rem;
-		color: black;
-		opacity: 0.7;
-		font-size: 5rem;
-		transition: 0.6s ease;
-		user-select: none;
-		&:hover {
-			color: #080808;
-			opacity: 1;
-		}
+	@media screen and (min-width: 768px) {
+		height: 80vh;
 	}
-	.next {
-		right: 0;
-	}
-	.caption-txt {
-		color: white;
-		font-size: 1rem;
-		padding: 0.5rem;
-		position: absolute;
-		bottom: 10%;
-		width: 100%;
-		text-align: center;
-	}*/
 }
