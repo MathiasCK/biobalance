@@ -52,7 +52,7 @@
 					<a class="nav-item" href="/contact/">Contact</a>
 				</li>
 			</ul>
-			<div class="d-flex align-items-center">
+			<div class="d-flex align-items-center show-md">
 				<div
 					class="mx-2 popper popper:click"
 					style="cursor: pointer"
@@ -65,13 +65,8 @@
 					<a title="Norwegian flag" href="/no/"
 						><img src="/img/norway.svg" alt="Norwegian flag"
 					/></a>
-					<!-- <a href="/"><img src="/img/united-states.svg" alt="" /></a> -->
 				</div>
 			</div>
-			<!-- Responsive navbar btn -->
-			<!-- <button role="button" title="navbar" class="nav-btn">
-				<i class="fas fa-bars"></i>
-			</button> -->
 			<input
 				title="Menu Trigger"
 				class="menu-trigger"
@@ -161,8 +156,7 @@
 					<div class="row">
 						<i
 							class="welcome-icon fab fa-acquisitions-incorporated"
-						></i
-						>, ,,,,,,,,,,,
+						></i>
 						<h1 class="welcome-header">BioBalance™</h1>
 					</div>
 					<h2 class="welcome-text">
@@ -485,14 +479,16 @@
 		<!-- Popper Contents -->
 		<div id="options" class="popper-tooltip">
 			<div class="title">Options</div>
-			<label for="stickySections">
+			<label
+				style="display: flex; align-items: center; white-space: nowrap"
+				for="stickySections"
+			>
 				Enable card style scrolling
-				<br />
+
 				<input
 					type="checkbox"
 					id="stickySections"
-					class="sticky-section-toggle"
-					checked
+					class="sticky-section-toggle ml-2"
 				/>
 			</label>
 		</div>

@@ -69,8 +69,9 @@ const settings = new Observable({
 
 document.addEventListener('DOMContentLoaded', () => {
 	const poppers = Popper('.popper');
-
-	const stickySectionToggle = poppers[0].target.querySelector(
+	// Settings popper
+	const { target: settingsPopperElm, hide: hideSettings } = poppers[0];
+	const stickySectionToggle = settingsPopperElm.querySelector(
 		'#stickySections'
 	);
 
@@ -80,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			...prevSettings,
 			stickySections: e.target.checked,
 		}));
+		hideSettings();
 	});
 });
 
