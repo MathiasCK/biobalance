@@ -1,0 +1,135 @@
+@import '../scss/common';
+
+body {
+	// background-image: url('/img/welcome.jpg');
+	background: whitesmoke;
+	background-size: cover;
+	height: 100vh;
+}
+
+html {
+	scroll-behavior: smooth !important;
+}
+
+.container {
+	width: 70%;
+	margin-top: 6rem;
+	padding: 6rem 0 1rem 0rem;
+	background: whitesmoke;
+	h3 {
+		padding: 0 1.5rem 2rem 2rem;
+	}
+	h3:after {
+		content: ' ';
+		display: block;
+		width: 100px;
+		height: 1px;
+		margin: 20px 0 20px;
+		background: #ff6b6b;
+	}
+	label {
+		padding: 2rem 0;
+	}
+}
+
+.form-group {
+	padding: 0.5rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	label {
+		flex: 25%;
+		user-select: none;
+	}
+	input {
+		flex: 75%;
+	}
+	textarea {
+		flex: 75%;
+		resize: none;
+		height: 10rem;
+	}
+}
+
+@media screen and (max-width: 774px) {
+	.form-group {
+		display: block;
+		.input-div {
+			padding-top: 2rem;
+		}
+	}
+
+	.container {
+		width: 90%;
+	}
+}
+
+.input,
+.text-area {
+	background: white;
+	border: 1px solid transparent;
+	padding: 1.5rem 2rem;
+	width: 90%;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+// Input animations
+
+.input,
+.text-area {
+	& ~ .border {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: #ff6b6b;
+	}
+	&:focus ~ .border {
+		width: 100%;
+		transition: 0.5s;
+	}
+}
+
+.input-div {
+	display: flex;
+	flex: 75%;
+	width: 100%;
+	position: relative;
+}
+
+.contact-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-text {
+	padding: 0 2rem;
+	margin-bottom: 2rem;
+}
+
+.btn {
+	padding: 0.5rem 2rem;
+	margin-top: 1rem;
+	color: black;
+}
+
+.footer {
+	background-color: #080808;
+	h4 {
+		color: white;
+	}
+	li {
+		color: white;
+	}
+	a {
+		color: white;
+	}
+}
