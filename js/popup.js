@@ -91,7 +91,7 @@ function createPopper(target, content, options = {}) {
 	if (typeof content === 'string') popperElm.innerHTML = content;
 	else {
 		const node = content.cloneNode(true);
-		node.id = `popper_content_${popperCount}`;
+		node.id = `popper_content_${node.id || popperCount}`;
 		popperElm.appendChild(node);
 	}
 
@@ -174,9 +174,12 @@ function createPopper(target, content, options = {}) {
 }
 
 // Init popper
-document.addEventListener('DOMContentLoaded', () => {
-	const popperElms = document.querySelectorAll('.popper');
-	popperElms.forEach((node) => {
+function Popper(elms = '.popper') {
+	const popperElms =
+		typeof elms === 'string' && isSelectorValid(elms)
+			? document.querySelectorAll(elms)
+			: elms;
+	const poppers = [...popperElms].map((node) => {
 		// Check data attribute for content
 		const nodeContent =
 			node.getAttribute('data-content') ||
@@ -213,8 +216,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			});
 		}
+		return popper;
 	});
-});
+	return poppers;
+}
+
+window.Popper = Popper;
 
 // Utility
 function createElement(type = 'div', props = {}) {
@@ -224,6 +231,9 @@ function createElement(type = 'div', props = {}) {
 		elm.setAttribute(key, val);
 	});
 	return elm;
+}
+function isDOM(elm) {
+	return elm instanceof Element;
 }
 
 function isSelectorValid(selector) {

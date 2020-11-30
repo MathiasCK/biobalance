@@ -258,3 +258,17 @@ Animations
 	line-height: 1.5;
 	font-weight: normal;
 }
+
+// Hide utils
+
+.hide-md {
+	@include md {
+		display: none !important;
+	}
+}
+
+.show-md {
+	@include max-md {
+		display: none !important;
+	}
+}

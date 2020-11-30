@@ -57,3 +57,39 @@ function showStartAnimation() {
 	tl.to('.intro', { y: '-100%', duration: 1, delay: 1 }, '-=1');
 	tl.to(['.content', '.nav-bar'], { opacity: 1, duration: 1 }, '-=0.5');
 }
+
+/**
+ * Home settings controller
+ */
+
+// Creating settings state
+const settings = new Observable({
+	stickySections: true,
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	const poppers = Popper('.popper');
+	// Settings popper
+	const { target: settingsPopperElm, hide: hideSettings } = poppers[0];
+	const stickySectionToggle = settingsPopperElm.querySelector(
+		'#stickySections'
+	);
+
+	// When user toggles sticky scroll - update state
+	stickySectionToggle.addEventListener('change', function (e) {
+		settings.set((prevSettings) => ({
+			...prevSettings,
+			stickySections: e.target.checked,
+		}));
+		hideSettings();
+	});
+});
+
+// Listening to settings changes
+settings.subscribe(({ stickySections }) => {
+	// Disable or enable sticky sections
+	const sections = document.querySelectorAll('.sticky-section');
+	sections.forEach(
+		(s) => (s.style.position = stickySections ? 'sticky' : 'relative')
+	);
+});

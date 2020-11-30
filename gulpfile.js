@@ -6,6 +6,7 @@ const babel = require('gulp-babel');
 const browserify = require('gulp-browserify');
 const uglify = require('gulp-uglify');
 
+// Converts all sass to minified css files with autoprefixing for older browsers
 gulp.task('sass', () => {
 	return gulp
 		.src(
@@ -27,6 +28,7 @@ gulp.task('sass', () => {
 		.pipe(gulp.dest('./css'));
 });
 
+// Transpiles all ESNEXT javascript files to older ES5 for IE support
 gulp.task('js', () => {
 	return gulp
 		.src('./js/*.js', { allowEmpty: true })

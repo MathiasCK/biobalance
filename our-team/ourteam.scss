@@ -7,6 +7,7 @@ html {
 body {
 	max-width: 100%;
 	overflow-x: hidden;
+	background-color: rgb(34, 34, 34);
 }
 
 .banner-photo {
@@ -180,6 +181,13 @@ body {
 .person-full {
 	@extend .person;
 	flex-basis: 100%;
+
+	.column-left {
+		padding-left: 20px;
+	}
+	.column-right {
+		padding-right: 20px;
+	}
 }
 .person-bottom {
 	height: 70vh;
@@ -240,5 +248,5 @@ body {
 }
 
 .our-team-img {
-	filter: brightness(50%);
+	// filter: brightness(50%);
 }
