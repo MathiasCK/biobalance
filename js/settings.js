@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Settings popper
 	const { target: settingsPopperElm, hide: hideSettings } = poppers[0];
 	const stickySectionToggle = settingsPopperElm.querySelector(
-		'#stickySections'
+		'input[type="checkbox"]'
 	);
 
 	// When user toggles sticky scroll - update state
