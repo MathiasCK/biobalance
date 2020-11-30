@@ -25,7 +25,6 @@ donationAmount.subscribe((amount) => {
 		else button.classList.remove('active');
 	});
 	amountHidden.value = String(amount);
-	console.log(amount);
 }, true);
 
 /**
