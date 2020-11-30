@@ -77,6 +77,7 @@ function createPopper(target, content, options = {}) {
 		top: ${target.offsetTop}px;
 		left: ${target.offsetLeft}px;
 		visibility: hidden;
+		display: none;
 		opacity: 0;
 		transition: all 0.3s ease;
 		transition-property: opacity, visibility;
@@ -145,6 +146,7 @@ function createPopper(target, content, options = {}) {
 	const show = () => {
 		setPopperPlacement();
 		popperElm.style.visibility = 'visible';
+		popperElm.style.display = 'block';
 		popperElm.style.opacity = 1;
 
 		window.addEventListener('scroll', positionHandler);
@@ -155,6 +157,7 @@ function createPopper(target, content, options = {}) {
 	};
 	const hide = () => {
 		popperElm.style.visibility = 'hidden';
+		popperElm.style.display = 'none';
 		popperElm.style.opacity = 0;
 		window.removeEventListener('scroll', positionHandler);
 		window.removeEventListener('resize', positionHandler);

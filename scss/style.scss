@@ -121,9 +121,7 @@ General
 	position: relative;
 	width: 100%;
 	top: 50%;
-	-webkit-transform: translate(0, -50%);
-	transform: translate(0, -50%);
-	-webkit-transition: all 0.3s;
+	transform: translateY(-50%);
 	transition: all 0.3s;
 	z-index: 10;
 }
@@ -137,6 +135,18 @@ General
 	padding: 10px;
 	color: #fff;
 	font-weight: 400;
+}
+.hero-text {
+	flex-direction: column;
+	@include xs {
+		flex-direction: row;
+	}
+}
+.welcome-logo {
+	width: 75px;
+	@include md {
+		width: 150px;
+	}
 }
 
 .welcome-btn {
