@@ -144,16 +144,20 @@ function createPopper(target, content, options = {}) {
 		setPopperPlacement();
 	};
 	const show = () => {
-		setPopperPlacement();
 		popperElm.style.visibility = 'visible';
 		popperElm.style.display = 'block';
 		popperElm.style.opacity = 1;
+		setPopperPlacement();
 
 		window.addEventListener('scroll', positionHandler);
 		window.addEventListener('resize', positionHandler);
-		popperElm.ontransitionend = () => {
+		setTimeout(() => {
 			isVisible = true;
-		};
+		}, 1);
+
+		// popperElm.ontransitionend = () => {
+		// 	isVisible = true;
+		// };
 	};
 	const hide = () => {
 		popperElm.style.visibility = 'hidden';
@@ -161,9 +165,9 @@ function createPopper(target, content, options = {}) {
 		popperElm.style.opacity = 0;
 		window.removeEventListener('scroll', positionHandler);
 		window.removeEventListener('resize', positionHandler);
-		popperElm.ontransitionend = () => {
+		setTimeout(() => {
 			isVisible = false;
-		};
+		}, 1);
 	};
 	// Set initial positions;
 	setPopperPlacement();
