@@ -34,6 +34,12 @@
 }
 
 // MAX QUERIES
+// Devices that still dont exist.
+@mixin max-xs {
+	@media (max-width: #{$screen-xs-min}) {
+		@content;
+	}
+}
 // Small devices
 @mixin max-sm {
 	@media (max-width: #{$screen-sm-min}) {
