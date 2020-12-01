@@ -339,7 +339,50 @@ Intro section
 	min-height: 100vh;
 }
 
-// Stripe payments section
+// Funding
+.funding-description {
+	flex-basis: 100%;
+	@include md {
+		flex-basis: 50%;
+		min-width: 50%;
+	}
+	@include lg {
+		flex-basis: 60%;
+		min-width: 60%;
+		padding-right: 1rem;
+	}
+}
+
+.donation-title {
+	text-align: center;
+	@include md {
+		text-align: right;
+	}
+}
+
+.donation-buttons {
+	justify-content: center;
+	@include md {
+		justify-content: flex-end;
+	}
+	@include lg {
+		justify-content: space-between;
+	}
+}
+
+.donation-input {
+	justify-content: center;
+	@include md {
+		justify-content: flex-end;
+	}
+}
+.donation-submit {
+	justify-content: center;
+	@include md {
+		justify-content: flex-end;
+	}
+}
+
 .donation-button {
 	&.active {
 		box-shadow: inherit;
@@ -353,6 +396,13 @@ Intro section
 	font-weight: 500;
 	&:focus {
 		border: 2px solid black;
+	}
+}
+
+.donation-amount-label {
+	text-align: center;
+	@include md {
+		text-align: right;
 	}
 }
 

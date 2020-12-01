@@ -82,6 +82,10 @@ img {
 	user-select: none;
 }
 
+.w-100 {
+	width: 100% !important;
+}
+
 /*
 * Text styles
 */
@@ -109,6 +113,13 @@ img {
 
 .text-center {
 	text-align: center;
+}
+.text-right {
+	text-align: right !important;
+}
+
+.text-left {
+	text-align: left !important;
 }
 
 .d-inline {
@@ -282,7 +293,7 @@ Animations
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	.content {
+	.sticky-content {
 		flex: 1;
 	}
 }
