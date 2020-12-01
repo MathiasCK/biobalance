@@ -63,6 +63,12 @@ html {
 		text-align: center;
 		padding-left: 0rem;
 	}
+	&.space-bottom {
+		padding-bottom: 3rem;
+		@media screen and (min-width: 768px) {
+			padding-bottom: 5rem;
+		}
+	}
 }
 
 .page-text {
@@ -81,7 +87,7 @@ html {
 	&.space-top {
 		margin-top: 3rem;
 		@media screen and (min-width: 768px) {
-			margin-top: 5rem;
+			margin-top: 10rem;
 		}
 	}
 	&.space-bottom {
