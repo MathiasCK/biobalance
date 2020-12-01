@@ -9,7 +9,7 @@ This allows our group members to work on their own pages in isolation without me
 
 All scss files are transpiled at build time to browser compatible css with source maps. In addition we auto-prefix all css properties for older browser support.
 
-All Javascript is transpiled using Babel and model API's like the `IntersectionObserver` is polyfilled to improve browser support before 2015.
+All Javascript is transpiled using Babel and modern API's like the `IntersectionObserver` is polyfilled to improve browser support before 2015.
 
 ### Size & Performance
 
