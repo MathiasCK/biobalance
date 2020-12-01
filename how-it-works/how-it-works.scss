@@ -319,7 +319,9 @@ html {
 				transform: translateX(50vw);
 				left: -150px;
 				// left: 25vw;
-
+				@include max-xs {
+					left: -100px;
+				}
 				@include md {
 					bottom: 350px;
 					left: -200px;
