@@ -58,7 +58,6 @@ html {
 	color: white;
 	hyphens: auto;
 	margin-top: 5rem;
-	margin-bottom: 2rem;
 	padding-left: 1rem;
 	@media screen and (min-width: 768px) {
 		text-align: center;
@@ -82,7 +81,7 @@ html {
 	&.space-top {
 		margin-top: 3rem;
 		@media screen and (min-width: 768px) {
-			margin-top: 10rem;
+			margin-top: 5rem;
 		}
 	}
 	&.space-bottom {
