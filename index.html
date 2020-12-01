@@ -264,137 +264,133 @@
 			data-background="white green"
 			style="min-height: auto"
 		>
-			<div class="content">
-				<div class="container">
-					<h1 class="section-header green-2">
-						Help us save the rainforest
-					</h1>
-					<p class="section-text-small dark p-2">
-						This project requires more than just a brilliant idea
-						and a product. We are going to seek funding from
-						countries and their government that can benefit from the
-						product. That includes countries such as Brazil and
-						Singapore. Brazil’s government and World Wildlife Fund
-						has pledged 215 million dollars to save 150 million
-						acres of brazilian rainforest
-						<a
-							href="https://philanthropynewsdigest.org/news/215-million-fund-to-protect-brazilian-amazon-rainforest-launched"
-							target="_blank"
-							class="source-link blue"
-							>(1) </a
-						>. Singapore plans to plant 1 million trees within 2030
-						and they have pledged millions of dollars to reach their
-						goal.<a
-							href="https://www.channelnewsasia.com/news/singapore/singapore-to-plant-1-million-trees-develop-more-gardens-and-12500858)"
-							target="_blank"
-							class="source-link blue"
-							>(2)
-						</a>
-						<a
-							href="(https://www.kepcorp.com/en/media/media-releases-sgx-filings/keppel-corporation-pledges-to-plant-10000-trees-in-singapore/"
-							target="_blank"
-							class="source-link blue"
-							>(3)</a
-						>
-						Our aim is to make agreements with these countries and
-						hopefully create a snowball effect.
-					</p>
-					<!-- <p class="section-text-small dark p-2">
+			<div class="sticky-content container">
+				<h1 class="section-header green-2">
+					Help us save the rainforest
+				</h1>
+				<div class="row align-items-center">
+					<div class="funding-description">
+						<p class="section-text-small dark p-2">
+							This project requires more than just a brilliant
+							idea and a product. We are going to seek funding
+							from countries and their government that can benefit
+							from the product.
+							<a
+								href="https://philanthropynewsdigest.org/news/215-million-fund-to-protect-brazilian-amazon-rainforest-launched"
+								target="_blank"
+								class="source-link blue"
+								>(1) </a
+							>. <br />
+							<br />
+							Singapore for instance plans to plant 1 million
+							trees within 2030 and they have pledged millions of
+							dollars to reach their goal.<a
+								href="https://www.channelnewsasia.com/news/singapore/singapore-to-plant-1-million-trees-develop-more-gardens-and-12500858)"
+								target="_blank"
+								class="source-link blue"
+								>(2)
+							</a>
+							<a
+								href="(https://www.kepcorp.com/en/media/media-releases-sgx-filings/keppel-corporation-pledges-to-plant-10000-trees-in-singapore/"
+								target="_blank"
+								class="source-link blue"
+								>(3)</a
+							>
+							Our aim is to make agreements with these countries
+							and hopefully create a snowball effect.
+						</p>
+						<!-- <p class="section-text-small dark p-2">
 						We aim to launch a kickstarter fund for our company and
 						collaborate with World Wildlife Fund and their
 						organizations for more funding, as well as Rainforest
 						Foundation Norway and Small Grants Funds.
 					</p> -->
-					<div class="flexed">
-						<p class="section-text-small dark p-2">
+					</div>
+
+					<div class="container mt-6 pb-6 donate">
+						<!-- <p class="section-text-small dark p-2">
 							We need <span class="green">Your</span> help aswell,
 							click below to donate to us now.
-						</p>
-					</div>
-				</div>
-
-				<div class="container mt-6 pb-6 donate">
-					<form
-						action="/charge"
-						method="post"
-						id="payment-form"
-						data-currency="USD"
-					>
-						<div class="text-center section-text-small mb-2">
-							<small> Pick an amount to donate </small>
-						</div>
-						<div class="d-flex justify-content-center mb-4 wrap">
-							<button
-								type="button"
-								class="button dark mx-2 donation-button"
-								data-js="donation-button"
-								data-amount="5"
-							>
-								$5.00
-							</button>
-							<button
-								type="button"
-								class="button dark mx-2 donation-button"
-								data-js="donation-button"
-								data-amount="10"
-							>
-								$10.00
-							</button>
-							<button
-								type="button"
-								class="button dark mx-2 donation-button"
-								data-js="donation-button"
-								data-amount="100"
-							>
-								$100.00
-							</button>
-						</div>
-						<div class="mb-6 d-flex justify-content-center">
-							<div>
-								<label
-									class="p-0 section-text-small text-center mb-2"
-									style="display: block"
-									for="donationAmount"
+						</p> -->
+						<form
+							action="/charge"
+							method="post"
+							id="payment-form"
+							data-currency="USD"
+						>
+							<div class="donation-title section-text-small mb-2">
+								<small> Pick an amount to donate </small>
+							</div>
+							<div class="d-flex mb-4 wrap donation-buttons">
+								<button
+									type="button"
+									class="button dark mb-2 mx-2 donation-button"
+									data-js="donation-button"
+									data-amount="5"
 								>
-									<small>Enter custom amount</small>
-								</label>
-								<div class="input-field has-icon">
-									$
-									<input
-										min="1"
-										type="number"
-										name="donationAmount"
-										id="donationAmount"
-									/>
+									$5.00
+								</button>
+								<button
+									type="button"
+									class="button dark mb-2 mx-2 donation-button"
+									data-js="donation-button"
+									data-amount="10"
+								>
+									$10.00
+								</button>
+								<button
+									type="button"
+									class="button dark mb-2 mx-2 mr-0 donation-button"
+									data-js="donation-button"
+									data-amount="100"
+								>
+									$100.00
+								</button>
+							</div>
+							<div class="mb-6 d-flex donation-input">
+								<div class="w-100">
+									<label
+										class="p-0 section-text-small mb-2 donation-amount-label"
+										style="display: block"
+										for="donationAmount"
+									>
+										<small>Enter custom amount</small>
+									</label>
+									<div class="w-100 input-field has-icon">
+										$
+										<input
+											class="w-100"
+											min="1"
+											type="number"
+											name="donationAmount"
+											id="donationAmount"
+										/>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="form-row">
-							<div id="card-element">
-								<!-- A Stripe Element will be inserted here. -->
+							<div class="form-row">
+								<div id="card-element">
+									<!-- A Stripe Element will be inserted here. -->
+								</div>
+
+								<!-- Used to display form errors. -->
+								<div
+									id="card-errors"
+									class="donation-errors mt-1"
+									role="alert"
+								></div>
 							</div>
 
-							<!-- Used to display form errors. -->
-							<div
-								id="card-errors"
-								class="text-center mt-1"
-								role="alert"
-							></div>
-						</div>
-
-						<div class="d-flex justify-content-center mt-4">
-							<button
-								type="submit"
-								class="button dark mx-auto mt-2"
-							>
-								Submit Donation
-							</button>
-						</div>
-						<input type="hidden" name="amount" id="amount" />
-					</form>
+							<div class="d-flex donation-submit mt-4">
+								<button type="submit" class="button dark mt-2">
+									Submit Donation
+								</button>
+							</div>
+							<input type="hidden" name="amount" id="amount" />
+						</form>
+					</div>
 				</div>
 			</div>
-
 			<!-- footer start -->
 			<footer class="footer">
 				<a
