@@ -277,3 +277,12 @@ Animations
 		display: none !important;
 	}
 }
+
+.sticky-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	.content {
+		flex: 1;
+	}
+}
