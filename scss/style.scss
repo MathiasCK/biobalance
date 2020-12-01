@@ -368,6 +368,9 @@ Intro section
 	@include lg {
 		justify-content: space-between;
 	}
+	@include xl {
+		justify-content: flex-end;
+	}
 }
 
 .donation-input {
