@@ -428,6 +428,9 @@ Intro section
 	max-width: 100%;
 	width: 100% !important;
 	flex-wrap: wrap;
+	input {
+		width: 100% !important;
+	}
 	&.card-details {
 		input {
 			padding: 1rem 0.25rem;
