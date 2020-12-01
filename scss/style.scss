@@ -419,6 +419,36 @@ Intro section
 #card-errors {
 	color: red;
 }
+
+.input-field input {
+	min-width: 0;
+}
+
+.input-field.card {
+	max-width: 100%;
+	width: 100% !important;
+	flex-wrap: wrap;
+	&.card-details {
+		input {
+			padding: 1rem 0.25rem;
+			&:first-child {
+				padding: 1rem 1rem;
+			}
+			width: 40% !important;
+			@include lg {
+				width: 50% !important;
+			}
+		}
+		.exp-year,
+		.exp-month {
+			width: 30% !important;
+
+			@include lg {
+				width: 25% !important;
+			}
+		}
+	}
+}
 // @media screen and (max-width: 310) {
 // 	.d-flex {
 // 		img {
