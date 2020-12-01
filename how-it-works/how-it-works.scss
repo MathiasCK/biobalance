@@ -258,6 +258,14 @@ html {
 			&:hover {
 				background-color: rgba(white, 0.5);
 			}
+			.noscript-link {
+				top: 0;
+				left: 0;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				pointer-events: all;
+			}
 
 			// Circles
 			&.plant {
@@ -345,5 +353,64 @@ html {
 
 	.contact-info {
 		padding-bottom: 150px !important;
+	}
+}
+.section-layout {
+	margin-bottom: 5rem;
+	@media screen and (min-width: 768px) {
+		margin-bottom: 20rem;
+	}
+}
+
+.section-header {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 1rem;
+	@media screen and (min-width: 768px) {
+		font-size: 3rem;
+		text-align: center;
+		&.small {
+			font-size: 2.5rem;
+			margin-top: 2rem;
+			text-align: left;
+		}
+		&.pt-5 {
+			padding-top: 5rem !important;
+		}
+	}
+}
+
+.section-text {
+	color: #a1a1a6;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	padding: 1rem;
+	@media screen and (min-width: 768px) {
+		padding-right: 1rem;
+		font-size: 1.5rem;
+		text-align: center;
+		padding-left: 0rem;
+		&.small {
+			padding-right: 1rem;
+			color: #a1a1a6;
+			font-size: 1.1rem;
+			line-height: 1.5;
+			text-align: left;
+		}
+	}
+}
+
+.f-50 {
+	flex-basis: 100%;
+	@media screen and (min-width: 768px) {
+		flex-basis: 50%;
+	}
+}
+
+.section-item {
+	scroll-margin-top: 57px;
+	padding: 1rem 0;
+	@media screen and (min-width: 768px) {
+		padding: 1rem 1.5rem;
 	}
 }
