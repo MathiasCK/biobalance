@@ -412,9 +412,6 @@ Intro section
 	padding: 16px;
 	border-radius: 4px;
 	box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
-	@media screen and (min-width: 768px) {
-		max-width: 400px;
-	}
 }
 #card-errors {
 	color: red;
